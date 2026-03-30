@@ -1,0 +1,98 @@
+---
+title: "Connect your own MCP server"
+description: "Add a remote or local MCP server to Runner with mcp.json."
+---
+
+Runner can load your own MCP servers without any app-specific plugin work. You add them to `mcp.json`, save the file, and Runner exposes the server's tools inside the workspace.
+
+<Info>
+  Runner reads the same top-level `mcp.json` shape used by Claude Code:
+  `{"mcpServers": { ... }}`
+</Info>
+
+## Pick the right file
+
+Use one of these files:
+
+- `~/.runner/mcp.json` for servers you want in every workspace.
+- `~/.runner/workspaces/<workspace-id>/mcp.json` for servers you want in one workspace.
+
+The workspace file wins if both files use the same slug.
+
+<Note>
+  `workspace-id` is the folder name inside `~/.runner/workspaces/`.
+</Note>
+
+## Use the right config shape
+
+`mcp.json` entries use the MCP server shape directly. Do not use Runner's older connector fields like `transport` or `authType` here.
+
+- For remote servers, use `type`, `url`, and optional `headers`.
+- For local servers, use `type`, `command`, optional `args`, and optional `env`.
+
+## Add a remote MCP server
+
+Use `type: "http"` for streamable HTTP servers or `type: "sse"` for SSE servers. Use the full MCP endpoint URL, including `/mcp` or `/sse` when your server requires it.
+
+```json
+{
+  "mcpServers": {
+    "notion": {
+      "type": "http",
+      "url": "https://mcp.notion.com/mcp"
+    },
+    "internal-tools": {
+      "type": "http",
+      "url": "https://example.com/mcp",
+      "headers": {
+        "Authorization": "Bearer YOUR_TOKEN"
+      }
+    }
+  }
+}
+```
+
+## Add a local stdio server
+
+Use `type: "stdio"` when Runner should start the MCP server on your machine.
+
+```json
+{
+  "mcpServers": {
+    "local-db": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@your-org/db-mcp"],
+      "env": {
+        "DATABASE_URL": "postgres://localhost:5432/app"
+      }
+    }
+  }
+}
+```
+
+Before you use a local server, turn on **Settings** > **Workspace** > **Local MCP Servers**. If that setting is off, Runner skips `stdio` servers for that workspace. Remote HTTP and SSE servers still work.
+
+## Understand authentication
+
+Hand-written `mcp.json` entries do not get a built-in OAuth flow from Runner.
+
+- If a remote server needs auth, send it in `headers`.
+- If a local server needs auth, pass it through `env`.
+- If a local server depends on environment variables, set them explicitly in `env`.
+
+Runner filters many secret-looking ambient environment variables before it starts local MCP subprocesses. If you rely on a token or API key, put it in the server's `env` block instead of assuming your shell will pass it through.
+
+## Reload the server list
+
+After you save `mcp.json`, start a new conversation in that workspace. New conversations read the latest file.
+
+If an existing conversation does not see the new tools, reopen the conversation or restart Runner.
+
+## Troubleshooting
+
+- If nothing shows up, validate that the file starts with a top-level `mcpServers` object.
+- If a remote server fails to connect, confirm that you used the full MCP endpoint URL.
+- If a local server fails to start, run the same `command` and `args` in your terminal first.
+- If a local server stays unavailable, make sure **Local MCP Servers** is enabled for that workspace.
+- If you want one workspace to override a shared server, reuse the same slug in the workspace-level file.
