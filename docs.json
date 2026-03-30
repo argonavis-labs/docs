@@ -51,8 +51,8 @@
     }
   },
   "logo": {
-    "light": "/images/runner-logo.png",
-    "dark": "/images/runner-logo.png"
+    "light": "/logo/runner-docs-light.svg",
+    "dark": "/logo/runner-docs-dark.svg"
   },
   "navbar": {
     "links": [
