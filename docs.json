@@ -22,6 +22,7 @@
             "pages": [
               "get-started/installation",
               "get-started/connecting-accounts",
+              "get-started/workspaces",
               "quickstart"
             ]
           }
