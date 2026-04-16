@@ -100,18 +100,7 @@
       }
     ],
     "global": {
-      "anchors": [
-        {
-          "anchor": "Website",
-          "href": "https://runner.now",
-          "icon": "globe"
-        },
-        {
-          "anchor": "What's New",
-          "href": "https://runner.now/changelog",
-          "icon": "sparkles"
-        }
-      ]
+      "anchors": []
     }
   },
   "logo": {
