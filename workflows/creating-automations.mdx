@@ -1,37 +1,37 @@
 ---
 title: "Automations"
-description: "Set Runner to handle tasks on a schedule so they're done before you even think about them."
+description: "Schedule any workflow to run automatically so it's done before you even think about it."
 ---
 
-Automations are workflows that run on a timer. Set one up, and Runner does the work at the time you choose. Every day, every week, whatever fits.
+Automations are workflows that run on a timer. Pick a workflow, schedule it, and Runner does the work at the time you choose. Every day, every week, whatever fits.
 
 Your morning briefing can be ready before you sit down. Your follow-up tracker can run every evening. You stop doing the small, predictable work.
 
 {/* TODO: Graphic — a clock icon with workflow cards appearing at scheduled times: 8am "Morning Briefing", 5pm "Follow-up Check", Friday 4pm "Weekly Summary" */}
 
-## Set up your first automation
+## Schedule your first automation
 
-Let's create a morning briefing that runs every weekday at 8am.
+Let's schedule a morning briefing to run every weekday at 8am.
 
 <Steps>
-  <Step title="Start a conversation">
-    Open Runner and start a new conversation in the workspace where your email and calendar are connected.
-  </Step>
-  <Step title="Tell Runner what you want">
-    Describe the task and the schedule:
+  <Step title="Pick a workflow">
+    Open the **Workflows** panel in your sidebar. You can use any of the built-in workflows (like Morning Briefing) or one you've created yourself.
 
-    *"Every weekday at 8am, check my Gmail for unread emails from the last 12 hours and check my calendar for today's meetings. Give me a briefing grouped by: urgent, needs reply, and FYI. Keep it short."*
+    Don't have a workflow yet? [Browse starter workflows →](/workflows/starter-workflows) or ask Runner to create one for you.
   </Step>
-  <Step title="Review the automation">
-    Runner shows you a summary before activating:
-    - **Schedule:** Weekdays at 8:00 AM
-    - **What it does:** Reads Gmail, checks Calendar, generates summary
-    - **Where results go:** Your Runner inbox
+  <Step title="Schedule the workflow">
+    Click on the workflow you want to automate, then select **Schedule this Workflow**. Runner asks you to set:
 
-    {/* TODO: Screenshot — the automation review card showing schedule, actions, and output */}
+    - **Frequency:** Daily, weekdays only, weekly, etc.
+    - **Time:** When it should run
+    - **Workspace:** Which connected apps to use
+
+    {/* TODO: Screenshot — the schedule workflow dialog showing frequency, time, and workspace options */}
   </Step>
-  <Step title="Turn it on">
-    Confirm, and Runner starts running it at the next scheduled time. New automations start paused so you can review them first.
+  <Step title="Confirm and activate">
+    Review the schedule summary and confirm. Runner starts running it at the next scheduled time.
+
+    {/* TODO: Screenshot — the automation confirmation card showing schedule and next run time */}
   </Step>
 </Steps>
 
@@ -41,43 +41,27 @@ Let's create a morning briefing that runs every weekday at 8am.
 
 ---
 
-## Automation ideas to try
+## Best workflows to automate
 
-### <img src="/images/apps/gmail.svg" alt="Gmail" width="20" height="20" /> For your inbox
+These are the workflows people schedule most often:
 
-<AccordionGroup>
-  <Accordion title="Morning email digest">
-    *"Every weekday at 8am, summarize my unread emails. Group them by priority: urgent, needs reply, and FYI. Highlight anything from my manager or direct reports."*
-  </Accordion>
-  <Accordion title="Follow-up tracker">
-    *"Every evening at 5pm, check my sent emails from the last 48 hours. Flag any that haven't gotten a reply. List the recipient, subject, and how long it's been."*
-  </Accordion>
-  <Accordion title="Weekend newsletter digest">
-    *"Every Saturday morning, find all newsletter emails from the past week. Summarize the highlights from each one in a single digest."*
-  </Accordion>
-</AccordionGroup>
+### <img src="/images/apps/gmail.svg" alt="Gmail" width="20" height="20" /> <img src="/images/apps/google-calendar.svg" alt="Google Calendar" width="20" height="20" /> Morning Briefing
 
-### <img src="/images/apps/google-calendar.svg" alt="Google Calendar" width="20" height="20" /> For your calendar
+Schedule for **weekdays at 8am**. Runner checks your calendar, triages your inbox, and delivers a ranked brief before your first meeting.
 
-<AccordionGroup>
-  <Accordion title="Daily meeting prep">
-    *"Every weekday at 7:30am, check my calendar for today's meetings. For each one, pull any relevant email threads or docs. Give me prep notes so I walk in ready."*
-  </Accordion>
-  <Accordion title="End-of-day recap">
-    *"Every weekday at 5pm, summarize my day: meetings attended, emails sent, and tasks completed. Format it as a quick journal entry."*
-  </Accordion>
-</AccordionGroup>
+[See what Morning Briefing does →](/workflows/starter-workflows#morning-briefing)
 
-### <img src="/images/apps/slack.svg" alt="Slack" width="20" height="20" /> <img src="/images/apps/linear.svg" alt="Linear" width="20" height="20" /> For your team
+### <img src="/images/apps/gmail.svg" alt="Gmail" width="20" height="20" /> Inbox Triage
 
-<AccordionGroup>
-  <Accordion title="Standup prep">
-    *"Every weekday at 9am, check Linear for what I completed yesterday and what's assigned to me today. Format it as a standup update I can paste into Slack."*
-  </Accordion>
-  <Accordion title="Weekly summary">
-    *"Every Friday at 4pm, compile a weekly summary: emails sent and received, meetings attended, tasks completed, and Slack threads I was mentioned in."*
-  </Accordion>
-</AccordionGroup>
+Schedule for **weekdays at 8am** (or twice daily). Runner classifies every email, drafts replies for what matters, and archives the noise.
+
+[See what Inbox Triage does →](/workflows/starter-workflows#inbox-triage)
+
+### <img src="/images/apps/google-calendar.svg" alt="Google Calendar" width="20" height="20" /> <img src="/images/apps/gmail.svg" alt="Gmail" width="20" height="20" /> Weekly Review
+
+Schedule for **Fridays at 4pm**. Runner reviews your week across calendar and email, surfaces open loops, and helps you set priorities for next week.
+
+[See what Weekly Review does →](/workflows/starter-workflows#weekly-review)
 
 ---
 
@@ -85,23 +69,23 @@ Let's create a morning briefing that runs every weekday at 8am.
 
 ### See what's running
 
-Open the automations panel in your workspace to view all your active automations. Each one shows its schedule, when it last ran, and its status.
+Open the **Workflows** panel to see all your scheduled workflows. Each one shows its schedule, when it last ran, and its status.
 
 ### Pause or edit
 
-Pause an automation anytime without deleting it. To change what it does or when it runs, edit it directly.
+Pause an automation anytime without deleting it. To change when it runs, click on the workflow and update the schedule.
 
 ### Delete
 
-Remove an automation when you no longer need it. Future runs stop immediately.
+Remove a schedule when you no longer need it. The workflow itself stays — only the automation stops.
 
 ---
 
 ## Tips for good automations
 
-- **Be specific about timing.** "Every morning" is vague. "Every weekday at 8am" is clear.
-- **Describe the format you want.** "Give me a bullet list grouped by priority" gets better results than "summarize my emails."
 - **Start with one.** Try a morning briefing for a week. Once you trust the rhythm, add more.
+- **Match the schedule to the workflow.** Inbox triage works great daily. Weekly review only makes sense on Fridays.
+- **Stack them.** Morning briefing at 8am plus inbox triage at 8:05am means your whole morning is handled before you open your laptop.
 
 ---
 
@@ -111,7 +95,7 @@ Remove an automation when you no longer need it. Future runs stop immediately.
   <Card title="Heartbeat" icon="heart-pulse" href="/heartbeat/overview">
     Let Runner watch your apps and nudge you when something needs attention. No schedule required.
   </Card>
-  <Card title="Tips and tricks" icon="star" href="/tips/tips-and-tricks">
-    Get more out of every conversation with Runner.
+  <Card title="Browse workflows" icon="arrows-spin" href="/workflows/starter-workflows">
+    See all the built-in workflows you can schedule.
   </Card>
 </CardGroup>
