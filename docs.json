@@ -20,10 +20,10 @@
           {
             "group": "Get Started",
             "pages": [
+              "quickstart",
               "get-started/installation",
               "get-started/connecting-accounts",
-              "get-started/workspaces",
-              "quickstart"
+              "get-started/workspaces"
             ]
           }
         ]
