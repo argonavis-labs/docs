@@ -41,6 +41,7 @@
             "group": "Workflows & Automations",
             "pages": [
               "workflows/overview",
+              "workflows/starter-workflows",
               "workflows/creating-automations"
             ]
           },
