@@ -1,62 +1,29 @@
 ---
-title: "Chatting with Runner"
-sidebarTitle: "Chat"
-description: "Talk to Runner like a personal assistant. It's designed to do things, not just talk back."
+title: "Talking to Runner"
+sidebarTitle: "Talking to Runner"
+description: "Tell Runner what you need done. It does the work across your apps."
 ---
 
-You can use Runner the same way you'd use ChatGPT or Claude or Gemini. Open a conversation, type what you need, and Runner responds.
-
-The difference is that Runner is connected to your actual apps. So instead of just answering questions, it can read your email, check your calendar, send a Slack message, and draft a reply. It does things.
+Runner isn't a chatbot. It's connected to your actual apps and it takes real action. You tell it what you need, it does the rest.
 
 {/* TODO: Screenshot — a Runner conversation showing a natural language request and Runner taking action across apps */}
 
-## Think employee, not chatbot
+## You talk, Runner runs
 
-Other AI tools answer questions. Runner does work.
+Other AI tools give you advice and ask you to take the next step yourself. Runner does the work.
 
-| Without Runner | With Runner |
+| You say | Runner does |
 |---|---|
-| Open Gmail, scan 40 emails, decide what matters | *"Triage my inbox"* -- Runner classifies everything, drafts replies, archives the noise |
-| Open Calendar, check tomorrow, open LinkedIn, research each attendee | *"Prep me for my meetings tomorrow"* -- Runner researches everyone and builds a brief |
-| Open Gmail, open Calendar, find a free slot, draft a reply with times | *"Reply to Jordan's email with available times this week"* -- Runner checks both and sends the draft |
+| *"Triage my inbox"* | Reads your last 7 days of email. Classifies everything by urgency. Drafts replies for what matters. Archives the noise. |
+| *"Prep me for my meetings tomorrow"* | Pulls your calendar, researches every attendee, finds related email threads, builds a one-page brief for each meeting. |
+| *"Reply to Jordan's email with available times this week"* | Reads the thread, checks your calendar for open slots, drafts a reply with your availability. |
+| *"Find Series A fintech companies in the Bay Area and reach their VP of Sales"* | Searches for matching companies, identifies decision-makers, gets contact info, drafts personalized outreach for each one. |
 
-Think of it more like an incredibly capable employee who learns how you work and gets better the more you use it. You don't need to learn a special syntax or memorize commands. Just tell it what you need in plain language.
-
----
-
-## Start a conversation
-
-Click **New Chat** or use the keyboard shortcut. Type your request. That's it.
-
-Every conversation lives in your current workspace, so Runner only sees the apps connected to that workspace. If you're in your Work workspace, it sees your work email. If you're in Personal, it sees your personal email.
+No special syntax. No commands. Just say it like you'd say it to a capable colleague.
 
 ---
 
-## What you can ask
-
-Runner can do anything your connected apps can do. A few categories to give you the idea:
-
-### Questions about your stuff
-- *"What's on my calendar today?"*
-- *"Do I have any emails from Sarah this week?"*
-- *"What tasks are assigned to me in Linear?"*
-
-### Getting things done
-- *"Draft a reply to the last email from Jordan"*
-- *"Send a message to #general on Slack saying standup is pushed to 11"*
-- *"Create a task in Linear for the homepage redesign"*
-
-### Pulling things together
-- *"Give me my morning briefing: calendar, priority emails, and Slack mentions"*
-- *"Summarize the email thread about the Q2 budget"*
-- *"What did I miss in Slack overnight?"*
-
-### Thinking through stuff
-- *"Help me write a cold outreach email to this company"*
-- *"Review this budget and flag anything unusual"*
-- *"What should I prioritize this week based on my calendar and tasks?"*
-
-The more apps you connect, the more Runner can do.
+## The more you connect, the more Runner can do
 
 <CardGroup cols={6}>
   <Card icon={<img src="/images/apps/gmail.svg" alt="Gmail" width="24" height="24" />} title="Gmail" />
@@ -67,58 +34,37 @@ The more apps you connect, the more Runner can do.
   <Card icon={<img src="/images/apps/google-drive.png" alt="Drive" width="24" height="24" />} title="Drive" />
 </CardGroup>
 
-With just Gmail and Calendar, you get a solid daily assistant. Add Slack, Linear, Notion, and it becomes something closer to a chief of staff.
+With just Gmail and Calendar, Runner handles your daily briefing, inbox triage, and meeting prep. Add Slack, Linear, and Notion, and it becomes something closer to a chief of staff.
+
+[Connect your apps →](/get-started/connecting-accounts)
 
 ---
 
-## It remembers how you work
+## Runner remembers
 
-Tell Runner your preferences once and it applies them going forward:
+Tell Runner your preferences once and it applies them every time:
 
-*"When you draft emails for me, keep them short. Three sentences max. Friendly but direct."*
+- *"When you draft emails for me, keep them short. Three sentences max."*
+- *"Always check my calendar before suggesting meeting times."*
+- *"Emails from Sarah and James are always high priority."*
 
-*"I prefer bullet points over long paragraphs."*
-
-*"Always check my calendar before suggesting meeting times."*
-
-You don't need to repeat yourself. Runner remembers.
+Runner gets better the more you use it. It learns how you write, who matters to you, and how you like things done.
 
 ---
 
-## Conversations stay in your workspace
+## Voice and files
 
-Each conversation belongs to the workspace it was created in. Your work conversations stay in Work. Your personal ones stay in Personal. Nothing crosses over.
+**Voice input.** Click the mic icon to talk instead of type. Useful when you're multitasking. Works exactly like typing, just faster when your hands are busy.
 
-You can search across all your conversations with `Cmd+F` (Mac) or `Ctrl+F` (Windows/Linux).
-
----
-
-## Voice input
-
-Click the mic icon or use the keyboard shortcut to talk instead of type. Useful when you're multitasking or thinking out loud.
-
-*"Hey Runner, check my calendar for tomorrow and tell me if I have any conflicts."*
-
-Works exactly like typing, just faster when your hands are busy.
+**Attach files.** Drag a PDF, spreadsheet, or image into the conversation. *"Review this proposal and give me the three biggest concerns."*
 
 ---
 
-## Attach files
+## Tips
 
-Drag a file into the conversation for extra context. PDFs, spreadsheets, images, text files.
-
-*[Attached: proposal-v2.pdf]*
-
-*"Review this proposal and give me the three biggest concerns."*
-
----
-
-## A few tips
-
-- **Be specific.** "Check the email from Sarah about the Q2 budget" beats "check my email."
-- **Chain requests.** "Check my calendar, prep for my meetings, and draft a Slack standup" all in one message. Runner handles it.
-- **Ask why.** If Runner does something you didn't expect, ask it to explain. It will, and you can correct it.
-- **Start with questions.** When you're new, ask Runner what it can see before telling it what to do. Builds trust fast.
+- **Be specific.** *"Check the email from Sarah about the Q2 budget"* beats *"check my email."*
+- **Chain tasks.** *"Check my calendar, prep for my meetings, and draft a Slack standup"* — all in one message.
+- **Correct it.** If Runner does something unexpected, tell it what you wanted instead. It remembers for next time.
 
 ---
 
@@ -129,6 +75,6 @@ Drag a file into the conversation for extra context. PDFs, spreadsheets, images,
     Multi-step tasks that chain actions across your apps.
   </Card>
   <Card title="Automations" icon="wand-magic-sparkles" href="/workflows/creating-automations">
-    Set conversations to run on a schedule. Morning briefing at 8am, done.
+    Schedule workflows to run automatically. Morning briefing at 8am, done.
   </Card>
 </CardGroup>
