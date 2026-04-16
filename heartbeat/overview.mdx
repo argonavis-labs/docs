@@ -18,38 +18,37 @@ Think of it as a second pair of eyes on your inbox, calendar, and tasks.
 
 Heartbeat checks your connected apps on a regular basis and flags things you might miss:
 
-### Emails that need a reply
+<CardGroup cols={2}>
+  <Card title="Email" icon={<img src="/images/apps/gmail.svg" alt="Gmail" width="24" height="24" />}>
+    **Unanswered sent emails** — *"You emailed Jordan 3 days ago about the contract. Still no reply."*
 
-| What Heartbeat spots | Example |
-|---------------------|---------|
-| You sent something days ago with no response | *"You emailed Jordan 3 days ago about the contract. Still no reply."* |
-| A high-priority message came in | *"Email from your investor with subject 'Term Sheet'. Arrived 2 hours ago."* |
-| A thread is getting active | *"The Q2 planning thread has 6 new replies since you last read it."* |
+    **High-priority inbound** — *"Email from your investor with subject 'Term Sheet'. Arrived 2 hours ago."*
 
-### Calendar conflicts and prep
+    **Active threads** — *"The Q2 planning thread has 6 new replies since you last read it."*
+  </Card>
+  <Card title="Calendar" icon={<img src="/images/apps/google-calendar.svg" alt="Google Calendar" width="24" height="24" />}>
+    **Overlapping meetings** — *"You have two meetings at 2pm tomorrow."*
 
-| What Heartbeat spots | Example |
-|---------------------|---------|
-| Overlapping meetings | *"You have two meetings at 2pm tomorrow."* |
-| A big meeting is coming up | *"Board meeting in 2 hours. Here's what you should review first."* |
-| Open time for deep work | *"You have a 3-hour block free Thursday afternoon."* |
+    **Big meeting prep** — *"Board meeting in 2 hours. Here's what you should review first."*
 
-### Tasks going stale
+    **Deep work blocks** — *"You have a 3-hour block free Thursday afternoon."*
+  </Card>
+</CardGroup>
 
-| What Heartbeat spots | Example |
-|---------------------|---------|
-| Tasks stuck without updates | *"3 tasks in Linear haven't been touched in over a week."* |
-| Deadlines approaching | *"Sprint ends Friday. 4 issues still open."* |
+<CardGroup cols={2}>
+  <Card title="Tasks" icon={<img src="/images/apps/linear.svg" alt="Linear" width="24" height="24" />}>
+    **Stale tasks** — *"3 tasks in Linear haven't been touched in over a week."*
 
-### Slack and messages
+    **Approaching deadlines** — *"Sprint ends Friday. 4 issues still open."*
+  </Card>
+  <Card title="Messages" icon={<img src="/images/apps/slack.svg" alt="Slack" width="24" height="24" />}>
+    **Mentions** — *"You were tagged in #engineering 3 times today."*
 
-| What Heartbeat spots | Example |
-|---------------------|---------|
-| You were mentioned | *"You were tagged in #engineering 3 times today."* |
-| A conversation needs your input | *"Active discussion in #product about the pricing change."* |
-| Unread DMs | *"2 unread Slack DMs that look like they need a reply."* |
+    **Conversations needing input** — *"Active discussion in #product about the pricing change."*
 
-{/* TODO: Screenshot — Heartbeat notification cards stacked in Runner, each with an icon and a one-line summary */}
+    **Unread DMs** — *"2 unread Slack DMs that look like they need a reply."*
+  </Card>
+</CardGroup>
 
 ---
 

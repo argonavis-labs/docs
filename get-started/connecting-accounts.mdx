@@ -5,7 +5,20 @@ description: "Link your email, calendar, Slack, and other apps so Runner can act
 
 Runner works best when it can see the tools you already use. Connect an app and Runner can read your emails, check your calendar, send Slack messages, draft replies. All from one place.
 
-{/* TODO: Graphic — a grid of recognizable app icons (Gmail, Calendar, Slack, Linear, Notion, Jira, Drive) with lines converging into the Runner window */}
+<CardGroup cols={6}>
+  <Card icon={<img src="/images/apps/gmail.svg" alt="Gmail" width="28" height="28" />} title="Gmail" />
+  <Card icon={<img src="/images/apps/google-calendar.svg" alt="Calendar" width="28" height="28" />} title="Calendar" />
+  <Card icon={<img src="/images/apps/slack.svg" alt="Slack" width="28" height="28" />} title="Slack" />
+  <Card icon={<img src="/images/apps/linear.svg" alt="Linear" width="28" height="28" />} title="Linear" />
+  <Card icon={<img src="/images/apps/notion.png" alt="Notion" width="28" height="28" />} title="Notion" />
+  <Card icon={<img src="/images/apps/google-drive.png" alt="Drive" width="28" height="28" />} title="Drive" />
+  <Card icon={<img src="/images/apps/hubspot.svg" alt="HubSpot" width="28" height="28" />} title="HubSpot" />
+  <Card icon={<img src="/images/apps/salesforce.svg" alt="Salesforce" width="28" height="28" />} title="Salesforce" />
+  <Card icon={<img src="/images/apps/google-docs.png" alt="Docs" width="28" height="28" />} title="Docs" />
+  <Card icon={<img src="/images/apps/google-sheets.png" alt="Sheets" width="28" height="28" />} title="Sheets" />
+  <Card icon={<img src="/images/apps/mixpanel.svg" alt="Mixpanel" width="28" height="28" />} title="Mixpanel" />
+  <Card icon={<img src="/images/apps/github.svg" alt="GitHub" width="28" height="28" />} title="GitHub" />
+</CardGroup>
 
 ## How it works
 
@@ -46,54 +59,62 @@ Most people start by connecting their email and calendar. Takes about 30 seconds
 
 ## What you can connect
 
-### Gmail and Google Calendar
-
-Connect your Google account to let Runner handle your inbox and schedule together.
+<CardGroup cols={2}>
+  <Card title="Gmail" icon={<img src="/images/apps/gmail.svg" alt="Gmail" width="24" height="24" />}>
+    Read and search your inbox, draft replies, summarize threads, flag messages that need a response.
+  </Card>
+  <Card title="Google Calendar" icon={<img src="/images/apps/google-calendar.svg" alt="Google Calendar" width="24" height="24" />}>
+    Show today's meetings, create events, find open time slots, warn about scheduling conflicts.
+  </Card>
+</CardGroup>
 
 <Tip>
   Connect both Gmail and Calendar at the same time. They use the same Google account, and Runner works best when it can see your full day alongside your inbox.
 </Tip>
 
-**With Gmail, Runner can:**
-- Read and search your inbox
-- Draft replies for you to review before sending
-- Summarize long email threads
-- Flag messages that need a response
+<CardGroup cols={2}>
+  <Card title="Slack" icon={<img src="/images/apps/slack.svg" alt="Slack" width="24" height="24" />}>
+    Read channels and DMs, send messages on your behalf, summarize what you missed, find specific conversations.
+  </Card>
+  <Card title="Linear" icon={<img src="/images/apps/linear.svg" alt="Linear" width="24" height="24" />}>
+    Show assigned tasks, create issues from conversations, update status, summarize what shipped this week.
+  </Card>
+</CardGroup>
 
-**With Google Calendar, Runner can:**
-- Show you today's meetings (or any day)
-- Create new events with the right people
-- Find open time slots when someone asks to meet
-- Warn you about scheduling conflicts
+<CardGroup cols={2}>
+  <Card title="Notion" icon={<img src="/images/apps/notion.png" alt="Notion" width="24" height="24" />}>
+    Search docs, pull relevant info into conversations, create and update pages.
+  </Card>
+  <Card title="Google Drive" icon={<img src="/images/apps/google-drive.png" alt="Google Drive" width="24" height="24" />}>
+    Search across files, pull documents into context, organize and share.
+  </Card>
+</CardGroup>
 
-### Slack
+<CardGroup cols={3}>
+  <Card title="HubSpot" icon={<img src="/images/apps/hubspot.svg" alt="HubSpot" width="24" height="24" />}>
+    CRM updates, deal tracking, contact research.
+  </Card>
+  <Card title="Salesforce" icon={<img src="/images/apps/salesforce.svg" alt="Salesforce" width="24" height="24" />}>
+    Pipeline data, account management, activity logging.
+  </Card>
+  <Card title="Mixpanel" icon={<img src="/images/apps/mixpanel.svg" alt="Mixpanel" width="24" height="24" />}>
+    Product analytics, user funnels, event data.
+  </Card>
+</CardGroup>
 
-Let Runner read and send messages so you can stay on top of team conversations.
+<CardGroup cols={3}>
+  <Card title="Google Docs" icon={<img src="/images/apps/google-docs.png" alt="Google Docs" width="24" height="24" />}>
+    Read, create, and edit documents.
+  </Card>
+  <Card title="Google Sheets" icon={<img src="/images/apps/google-sheets.png" alt="Google Sheets" width="24" height="24" />}>
+    Read data, create spreadsheets, update rows.
+  </Card>
+  <Card title="GitHub" icon={<img src="/images/apps/github.svg" alt="GitHub" width="24" height="24" />}>
+    Issues, PRs, repos, and code search.
+  </Card>
+</CardGroup>
 
-**Runner can:**
-- Read messages from channels and DMs
-- Send messages on your behalf
-- Summarize what you missed in a channel
-- Find specific conversations
-
-### Linear and Jira
-
-Connect your project tracker to keep tasks moving.
-
-**Runner can:**
-- Show your assigned tasks
-- Create new issues from a conversation
-- Update task status and add comments
-- Summarize what your team shipped this week
-
-### Notion and Google Drive
-
-Give Runner access to your docs so it has more context when helping you.
-
-**Runner can:**
-- Search across your documents
-- Pull in relevant info when answering questions
-- Create and update pages
+And many more: Calendly, Dropbox, Asana, Intercom, Shopify, Typeform, WhatsApp, iMessage, and others. The list keeps growing.
 
 ---
 
