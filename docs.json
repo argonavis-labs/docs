@@ -7,7 +7,7 @@
     "light": "#7B8C84",
     "dark": "#28322F"
   },
-  "favicon": "/images/runner-logo.png",
+  "favicon": "/images/runner-favicon.svg",
   "navigation": {
     "tabs": [
       {
@@ -104,8 +104,8 @@
     }
   },
   "logo": {
-    "light": "/images/runner-logo.png",
-    "dark": "/images/runner-logo.png"
+    "light": "/images/runner-logo-light.svg",
+    "dark": "/images/runner-logo-dark.svg"
   },
   "navbar": {
     "links": [
