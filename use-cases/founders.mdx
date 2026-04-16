@@ -1,6 +1,6 @@
 ---
 title: "Runner for founders"
-description: "Prep board meetings, triage your inbox, and keep follow-ups moving — without the context switching."
+description: "Morning briefings, inbox triage, meeting prep, investor updates, and follow-up tracking. Runner acts as your AI chief of staff."
 ---
 
 Your day is fragmented. The information you need is scattered across email, calendar, Slack, docs, and a dozen other tools. Runner connects all of them and does the work that keeps falling through the cracks.
@@ -8,6 +8,26 @@ Your day is fragmented. The information you need is scattered across email, cale
 Think of it as an AI chief of staff. It looks at your email, calendar, messages, tasks, and docs, and delivers what you actually need to focus on.
 
 {/* TODO: Graphic — a founder at their desk with app icons (Gmail, Calendar, Slack, Notion, Linear) swirling around, then all flowing into one clean Runner window */}
+
+## Why founders use Runner
+
+### It runs multiple things at once
+
+Not one task at a time. Runner drafts follow-ups while pulling analytics while updating your CRM. Everything in parallel, with receipts and timestamps for each step. You see the work happening, not just the result.
+
+### It works across local and cloud
+
+Files on your machine, apps in the cloud, browser-based tools with no API. Runner handles all of it. Manages workflows wherever your stuff actually lives. Your data stays yours.
+
+### It remembers across sessions
+
+Tell Runner your preferences once. How you like emails drafted, who your VIPs are, what your board meeting cadence looks like. It remembers and applies them every time. Context that compounds over time instead of resetting every conversation.
+
+### It runs on a schedule
+
+Set a workflow once and it repeats. Morning briefing at 7:30am, every weekday, before your first meeting. Follow-up tracker at 5pm. Weekly recap on Friday. No asking required.
+
+---
 
 ## What Runner does for founders
 
@@ -39,11 +59,23 @@ Turn scattered notes into a polished update. Runner pulls from your docs, email,
 
 > *"Draft this month's investor update. Pull key metrics from the last board notes, recent product milestones from Linear, and any hiring updates from email."*
 
+### Meeting prep and research
+
+Walking into a meeting cold is a founder mistake you don't need to make. Runner researches the company, looks up every attendee, checks your email history with them, and builds a brief with talking points.
+
+> *"Research Charlie Feng, CEO at Agora. We're meeting tomorrow about a partnership. Give me the full brief."*
+
 ### Follow-up tracking
 
 Decisions mean nothing if the follow-through doesn't happen. Runner tracks what you've sent, who hasn't replied, and what's gone stale.
 
 > *"What emails and Slack messages have I sent in the last week that haven't gotten a reply? List them with how long each has been waiting."*
+
+### Sales prospecting
+
+Find your next customer without spending hours on research. Runner finds companies matching your ICP, identifies the decision-makers, gets verified contact info, and drafts personalized outreach.
+
+> *"Find Series A fintech companies in the Bay Area with 50-200 employees. I want to reach their VP of Sales."*
 
 ---
 
@@ -53,11 +85,13 @@ Decisions mean nothing if the follow-through doesn't happen. Runner tracks what 
 |------|-----------------|
 | **7:30 AM** | Morning briefing: ranked priorities, key meetings, blockers, relationship follow-ups |
 | **9:00 AM** | Meeting prep: context for your 10am with the engineering lead pulled from Slack and Linear |
+| **10:30 AM** | Inbox triage: classifies 40 emails, drafts replies for the 8 that matter, archives the rest |
 | **11:00 AM** | Drafts a reply to your investor's email with the latest ARR numbers from your docs |
 | **1:00 PM** | Post-meeting: turns your notes into action items and sends a follow-up email to attendees |
+| **3:00 PM** | Researches a potential partner company before your 4pm call |
 | **4:00 PM** | Drafts a Slack update for #leadership with this week's wins and blockers |
 | **5:00 PM** | Follow-up check: surfaces 4 threads that need your attention before the day ends |
-| **Friday PM** | Weekly summary: what shipped, what's blocked, what needs your attention next week |
+| **Friday PM** | Weekly review: where your time went, open loops, priorities for next week |
 
 {/* TODO: Graphic — a weekly planner view showing Runner activities mapped across Monday to Friday */}
 
@@ -69,11 +103,17 @@ Decisions mean nothing if the follow-through doesn't happen. Runner tracks what 
   <Accordion title="Morning briefing">
     *"Give me the founder briefing for today: key meetings, priority emails, blockers from Slack, and anything slipping in Linear. Rank by what needs attention first."*
   </Accordion>
+  <Accordion title="Inbox triage">
+    *"Triage my inbox. Classify every email, draft replies for what needs a response, and archive the noise. Show me unsubscribe candidates too."*
+  </Accordion>
   <Accordion title="Board prep">
     *"Board meeting is [date]. Help me prep: pull the last board notes, recent investor emails, ARR/growth metrics, and key updates. Draft talking points and flag open questions."*
   </Accordion>
   <Accordion title="Investor update draft">
     *"Draft this month's investor update. Include: product milestones, key metrics, team updates, and what's ahead next month. Pull from Linear, email, and my Google Docs."*
+  </Accordion>
+  <Accordion title="Meeting research">
+    *"I'm meeting [name] from [company] tomorrow. Research them: company background, funding, their career, and any email history we have. Give me talking points."*
   </Accordion>
   <Accordion title="Meeting follow-through">
     *"I just finished a meeting with [name]. Here are my notes: [paste notes]. Turn these into action items, draft a follow-up email to attendees, and create tasks for anything assigned to me."*
@@ -81,8 +121,8 @@ Decisions mean nothing if the follow-through doesn't happen. Runner tracks what 
   <Accordion title="Inbound lead qualification">
     *"Someone from [company] just reached out. Research them: what does the company do, how big are they, do they match our ICP? Draft a response and set up time to talk this week."*
   </Accordion>
-  <Accordion title="End-of-week recap">
-    *"Summarize my week: deals moved forward, tasks completed, emails sent that need replies, and meetings attended. What should I focus on next week?"*
+  <Accordion title="End-of-week review">
+    *"Run my weekly review. Where did my time go this week? What open loops am I carrying? What should I focus on next week?"*
   </Accordion>
 </AccordionGroup>
 
@@ -93,8 +133,9 @@ Decisions mean nothing if the follow-through doesn't happen. Runner tracks what 
 Once you've tried these manually, set them to run automatically:
 
 - **Morning briefing** at 7:30am, every weekday, before your day starts
+- **Inbox triage** after your morning briefing, so your inbox is clean before your first meeting
 - **Follow-up tracker** at 5pm, every evening, catch what's slipping
-- **Weekly recap** at 4pm on Friday, so you walk into Monday with clarity
+- **Weekly review** at 4pm on Friday, so you walk into Monday with clarity
 
 Stop doing the small, predictable work so you can focus on the decisions that actually move the company forward.
 
@@ -108,7 +149,7 @@ Stop doing the small, predictable work so you can focus on the decisions that ac
   <Card title="Connect your apps" icon="plug" href="/get-started/connecting-accounts">
     Link Gmail, Calendar, Slack, and your other tools.
   </Card>
-  <Card title="Set up workflows" icon="arrows-spin" href="/workflows/overview">
-    Put Runner to work across your entire stack.
+  <Card title="Browse workflows" icon="arrows-spin" href="/workflows/starter-workflows">
+    See all the built-in workflows Runner ships with.
   </Card>
 </CardGroup>

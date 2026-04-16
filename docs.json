@@ -73,6 +73,12 @@
         "tab": "Use Cases",
         "groups": [
           {
+            "group": "Use Cases",
+            "pages": [
+              "use-cases/overview"
+            ]
+          },
+          {
             "group": "For Your Role",
             "pages": [
               "use-cases/real-estate-agents",
