@@ -1,0 +1,110 @@
+---
+title: "Heartbeat"
+sidebarTitle: "Heartbeat (Beta)"
+description: "Runner watches your apps in the background and nudges you when something needs your attention."
+---
+
+<Note>
+  Heartbeat is in beta. We're actively refining it based on feedback.
+</Note>
+
+Automations run on a schedule you set. Heartbeat is different. It runs quietly in the background, checks your connected apps, and taps you on the shoulder when something actually needs your attention.
+
+Think of it as a second pair of eyes on your inbox, calendar, and tasks.
+
+{/* TODO: Graphic — a calm heartbeat/pulse line that transforms into notification cards: "Email from investor — no reply in 3 days", "Calendar conflict tomorrow at 2pm", "4 Slack mentions today" */}
+
+## What Heartbeat does
+
+Heartbeat checks your connected apps on a regular basis and flags things you might miss:
+
+### Emails that need a reply
+
+| What Heartbeat spots | Example |
+|---------------------|---------|
+| You sent something days ago with no response | *"You emailed Jordan 3 days ago about the contract. Still no reply."* |
+| A high-priority message came in | *"Email from your investor with subject 'Term Sheet'. Arrived 2 hours ago."* |
+| A thread is getting active | *"The Q2 planning thread has 6 new replies since you last read it."* |
+
+### Calendar conflicts and prep
+
+| What Heartbeat spots | Example |
+|---------------------|---------|
+| Overlapping meetings | *"You have two meetings at 2pm tomorrow."* |
+| A big meeting is coming up | *"Board meeting in 2 hours. Here's what you should review first."* |
+| Open time for deep work | *"You have a 3-hour block free Thursday afternoon."* |
+
+### Tasks going stale
+
+| What Heartbeat spots | Example |
+|---------------------|---------|
+| Tasks stuck without updates | *"3 tasks in Linear haven't been touched in over a week."* |
+| Deadlines approaching | *"Sprint ends Friday. 4 issues still open."* |
+
+### Slack and messages
+
+| What Heartbeat spots | Example |
+|---------------------|---------|
+| You were mentioned | *"You were tagged in #engineering 3 times today."* |
+| A conversation needs your input | *"Active discussion in #product about the pricing change."* |
+| Unread DMs | *"2 unread Slack DMs that look like they need a reply."* |
+
+{/* TODO: Screenshot — Heartbeat notification cards stacked in Runner, each with an icon and a one-line summary */}
+
+---
+
+## How Heartbeat stays safe
+
+Heartbeat only creates **drafts**. It never sends an email, posts a Slack message, or changes a task on its own. Everything it surfaces is a suggestion. You decide what to act on.
+
+---
+
+## Turn it on
+
+<Steps>
+  <Step title="Go to workspace settings">
+    Open settings in your Runner workspace.
+  </Step>
+  <Step title="Enable Heartbeat">
+    Find the **Heartbeat (Beta)** toggle and switch it on.
+  </Step>
+  <Step title="Pick how often it checks">
+    Choose a cadence. Anywhere from every 30 minutes to once a day.
+  </Step>
+</Steps>
+
+<Tip>
+  Start with once a day to see what kinds of nudges Heartbeat sends. If you like it, bump the frequency up.
+</Tip>
+
+---
+
+## Heartbeat vs. automations
+
+| | Heartbeat | Automations |
+|---|-----------|-------------|
+| **When it runs** | On its own, at a cadence you pick | On a specific schedule you set |
+| **What triggers it** | Runner decides based on what it finds | You define the exact task |
+| **What it does** | Nudges you about things that need attention | Runs a specific workflow and delivers results |
+| **Best for** | Catching things you didn't think to ask about | Repeatable tasks you know you want done |
+
+They work well together. Automations handle the predictable stuff. Heartbeat catches everything else.
+
+---
+
+## Give us feedback
+
+We're making Heartbeat better every week. If a nudge was helpful, or if it was noise, let us know at [support@runner.now](mailto:support@runner.now).
+
+---
+
+## What's next?
+
+<CardGroup cols={2}>
+  <Card title="Tips and tricks" icon="star" href="/tips/tips-and-tricks">
+    Quick wins and features you might not have found yet.
+  </Card>
+  <Card title="Best practices" icon="shield-check" href="/tips/best-practices">
+    How to get the most out of Runner right away.
+  </Card>
+</CardGroup>

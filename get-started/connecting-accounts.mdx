@@ -1,0 +1,191 @@
+---
+title: "Connect your apps"
+description: "Link your email, calendar, Slack, and other apps so Runner can actually do the work."
+---
+
+Runner works best when it can see the tools you already use. Connect an app and Runner can read your emails, check your calendar, send Slack messages, draft replies. All from one place.
+
+{/* TODO: Graphic — a grid of recognizable app icons (Gmail, Calendar, Slack, Linear, Notion, Jira, Drive) with lines converging into the Runner window */}
+
+## How it works
+
+You sign into an app through Runner, just like you would on any website. Runner gets permission to read and act on your behalf. You stay in control of what it can do.
+
+Most people start by connecting their email and calendar. Takes about 30 seconds per app.
+
+---
+
+## Connect your first app
+
+<Steps>
+  <Step title="Open Connected Apps">
+    In Runner, click **Connected Apps** in the sidebar.
+
+    {/* TODO: Screenshot — Runner sidebar with Connected Apps highlighted */}
+  </Step>
+  <Step title="Pick an app">
+    Browse the list or search by name. Popular choices: Gmail, Google Calendar, Slack, Linear, Notion.
+
+    {/* TODO: Screenshot — the Connected Apps browser showing app tiles */}
+  </Step>
+  <Step title="Sign in">
+    Click the app and sign in with your account. You're signing in directly with the app. Runner never sees your password.
+
+    {/* TODO: Screenshot — a Google sign-in screen */}
+  </Step>
+  <Step title="Start using it">
+    That's it. Runner can now work with that app. Try asking something like:
+
+    - *"What's on my calendar today?"*
+    - *"Show me my unread emails"*
+    - *"Send a message to #general on Slack"*
+  </Step>
+</Steps>
+
+---
+
+## What you can connect
+
+### Gmail and Google Calendar
+
+Connect your Google account to let Runner handle your inbox and schedule together.
+
+<Tip>
+  Connect both Gmail and Calendar at the same time. They use the same Google account, and Runner works best when it can see your full day alongside your inbox.
+</Tip>
+
+**With Gmail, Runner can:**
+- Read and search your inbox
+- Draft replies for you to review before sending
+- Summarize long email threads
+- Flag messages that need a response
+
+**With Google Calendar, Runner can:**
+- Show you today's meetings (or any day)
+- Create new events with the right people
+- Find open time slots when someone asks to meet
+- Warn you about scheduling conflicts
+
+### Slack
+
+Let Runner read and send messages so you can stay on top of team conversations.
+
+**Runner can:**
+- Read messages from channels and DMs
+- Send messages on your behalf
+- Summarize what you missed in a channel
+- Find specific conversations
+
+### Linear and Jira
+
+Connect your project tracker to keep tasks moving.
+
+**Runner can:**
+- Show your assigned tasks
+- Create new issues from a conversation
+- Update task status and add comments
+- Summarize what your team shipped this week
+
+### Notion and Google Drive
+
+Give Runner access to your docs so it has more context when helping you.
+
+**Runner can:**
+- Search across your documents
+- Pull in relevant info when answering questions
+- Create and update pages
+
+---
+
+## Keep work and personal separate
+
+Runner lets you create multiple **workspaces**, each with its own set of connected apps. A common setup:
+
+| Workspace | What's connected |
+|-----------|-----------------|
+| **Work** | Work Gmail, work Slack, Linear |
+| **Personal** | Personal Gmail, personal calendar |
+
+This way Runner never mixes your work emails with personal ones. Switch between workspaces anytime.
+
+{/* TODO: Graphic — two workspace cards: "Work" with work app icons and "Personal" with personal icons */}
+
+---
+
+## You stay in control
+
+Runner has three permission levels for each connected app:
+
+| Level | What it means |
+|-------|--------------|
+| **Read-only** | Runner can look but can't touch. Great for getting started. |
+| **Ask first** | Runner drafts the action and waits for you to approve it. |
+| **Autonomous** | Runner handles it and logs what it did. For tasks you trust completely. |
+
+You can mix and match. Let Runner read your email freely but require approval before sending anything. That's a solid default.
+
+---
+
+## Your data is safe
+
+We take this seriously. Here's how it works.
+
+{/* TODO: Graphic — a shield or lock icon with compliance badges (SOC 2, CASA, GDPR) arranged around it */}
+
+### We never see your password
+
+When you connect an app, you're signing in directly with that app's own login screen. Runner never sees or stores your password.
+
+### We don't use your data to train AI
+
+Your emails, calendar events, documents, and messages are processed only to do what you asked. Nothing else. We don't train models on your data.
+
+### We don't sell your data
+
+Runner doesn't sell, rent, or share your data with advertisers, data brokers, or anyone else.
+
+### Encryption
+
+All your data is encrypted in transit and at rest. Same level of encryption banks use.
+
+### You control what Runner can access
+
+You choose which apps to connect, and you can set permission levels for each one. Disconnect any app at any time and Runner stops accessing it immediately.
+
+### Your data stays separate
+
+Your data is completely isolated from other Runner users. Nobody else can see your stuff.
+
+### Compliance and certifications
+
+We're built for teams that care about this stuff.
+
+| Certification | Status |
+|--------------|--------|
+| **SOC 2 Type 1** | Compliant |
+| **SOC 2 Type 2** | In progress |
+| **CASA Tier 2** | Certified |
+| **GDPR** | In progress |
+
+If your team needs to review Runner's security posture before connecting, reach out to [support@runner.now](mailto:support@runner.now). We'll walk through the details with your compliance team.
+
+---
+
+## Reconnect or disconnect
+
+**If a connection stops working**, click the app in Connected Apps and sign in again. This refreshes your access without losing any settings.
+
+**To remove an app**, find it in Connected Apps and click **Disconnect**. Runner stops using it immediately.
+
+---
+
+## What's next?
+
+<CardGroup cols={2}>
+  <Card title="Set up a workflow" icon="arrows-spin" href="/workflows/overview">
+    Put your connected apps to work with multi-step workflows.
+  </Card>
+  <Card title="Add a custom tool" icon="server" href="/connections/connect-your-own-mcp">
+    For power users: bring in your own tools and services.
+  </Card>
+</CardGroup>
