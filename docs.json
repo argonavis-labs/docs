@@ -32,6 +32,12 @@
         "tab": "Using Runner",
         "groups": [
           {
+            "group": "Basics",
+            "pages": [
+              "using-runner/chatting"
+            ]
+          },
+          {
             "group": "Workflows & Automations",
             "pages": [
               "workflows/overview",
