@@ -94,6 +94,26 @@ After you save `mcp.json`, start a new conversation in that workspace. New conve
 
 If an existing conversation does not see the new tools, reopen the conversation or restart Runner.
 
+## Ask Runner to do it for you
+
+You don't have to edit `mcp.json` by hand. Just tell Runner what you want to connect and it can write the config for you.
+
+<CodeGroup>
+```text Remote server
+Connect my Notion MCP server at https://mcp.notion.com/mcp
+```
+
+```text Local server
+Add a local MCP server that runs "npx -y @modelcontextprotocol/server-filesystem /Users/me/Documents"
+```
+
+```text With auth
+Connect a remote MCP server at https://example.com/mcp with bearer token abc123
+```
+</CodeGroup>
+
+Runner will create or update `mcp.json` in the right place, and the tools show up in your next conversation.
+
 ## Troubleshooting
 
 - If nothing shows up, validate that the file starts with a top-level `mcpServers` object.
