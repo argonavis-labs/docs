@@ -81,8 +81,13 @@
           {
             "group": "For Your Role",
             "pages": [
+              "use-cases/founders",
+              "use-cases/sales-and-revops",
+              "use-cases/marketing-and-growth",
+              "use-cases/finance-and-ops",
+              "use-cases/product-and-engineering",
               "use-cases/real-estate-agents",
-              "use-cases/founders"
+              "use-cases/personal-and-family"
             ]
           }
         ]

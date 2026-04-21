@@ -1,0 +1,147 @@
+---
+title: "Runner for product and engineering teams"
+description: "Plan sprints with real data, trace bugs to the PR that caused them, monitor releases, and review your roadmap with evidence. Runner connects Linear, GitHub, Mixpanel, and PostHog."
+---
+
+Your standup is in five minutes. Someone says the checkout is broken. You flip to your analytics tool, see a drop, flip to GitHub, dig through recent deploys, find the PR, read the diff, and then file the bug in Linear. That's 30 minutes of context switching before you even start fixing anything.
+
+Runner connects your issue tracker, your repo, your analytics, and your project tools. You describe the problem, Runner traces it to the cause and takes the next step.
+
+## Your stack, connected
+
+Runner works across the tools product and engineering teams actually live in. Connect them once and Runner handles the rest.
+
+<CardGroup cols={3}>
+  <Card title="Linear" icon={<img src="/images/apps/linear.svg" alt="Linear" width="24" height="24" />}>
+    Sprint planning, bug filing, project tracking
+  </Card>
+  <Card title="GitHub" icon={<img src="/images/apps/github.svg" alt="GitHub" width="24" height="24" />}>
+    PRs, deploys, diffs, commit history
+  </Card>
+  <Card title="Mixpanel" icon={<img src="/images/apps/mixpanel.svg" alt="Mixpanel" width="24" height="24" />}>
+    Event tracking, funnels, feature usage
+  </Card>
+  <Card title="Slack" icon={<img src="/images/apps/slack.svg" alt="Slack" width="24" height="24" />}>
+    Deploy alerts, team updates, release summaries
+  </Card>
+  <Card title="Google Docs" icon={<img src="/images/apps/google-docs.png" alt="Google Docs" width="24" height="24" />}>
+    PRDs, specs, roadmap summaries
+  </Card>
+  <Card title="Notion" icon={<img src="/images/apps/notion.png" alt="Notion" width="24" height="24" />}>
+    Project wikis, meeting notes, team docs
+  </Card>
+</CardGroup>
+
+Runner also works with PostHog, Jira, Salesforce, and [many more](/get-started/connecting-accounts).
+
+---
+
+## What Runner does for product and engineering
+
+### Plan sprints with real data
+
+Runner pulls your backlog from Linear, checks what rolled over from last sprint, looks at analytics to see what's actually impacting users, and suggests priorities. Not based on gut feel. Based on the numbers.
+
+> *"Help me plan our sprint for next week."*
+
+14 open issues, 6 rolled over from last sprint, 3 are blocked. The onboarding flow you shipped last sprint has 23% drop-off at step 3. Runner recommends fixing that first, then 2 high-priority bugs. Updated the sprint in Linear with suggested assignments.
+
+### Trace a bug to the PR that caused it
+
+Something is broken. Runner checks your analytics for the drop, finds the deploy that lines up with the timing, pulls the diff, identifies the change, and files a P1 bug in Linear assigned to the PR author.
+
+> *"We're getting reports of a checkout bug, what's going on?"*
+
+Conversion dropped 18% starting yesterday at 3pm. Deploy at 2:45pm, PR #847 touched the payment flow. Null check was removed on line 142. Bug filed in Linear and assigned.
+
+### Measure feature impact
+
+Runner pulls usage events from Mixpanel, checks session recordings, identifies gaps, and creates action items. Not a dashboard you have to interpret. A summary with the next step already filed.
+
+> *"How is the new search feature performing?"*
+
+2,400 searches per day since launch. 34% return zero results. Top query: integrations. Runner created a Linear issue to add the integrations page to the search index. Fixing it is a 1-point ticket.
+
+### Monitor releases without babysitting
+
+Set it once. After you ship, Runner watches for the deploy, monitors error rates for the first hour, compares key conversion funnels against yesterday's baseline, and pings the team if anything degrades.
+
+> *"After we ship, keep an eye on things and let me know if anything breaks."*
+
+Runner watches deploy plus errors plus funnels and tells you if you actually have a problem. Not just a threshold alert with no context.
+
+### Review the roadmap with evidence
+
+Runner pulls completed projects from Linear, checks engagement data from Mixpanel, reviews retention cohorts from PostHog, and builds the summary. Which features drove impact, which didn't, and where to cut.
+
+> *"Help me prepare for our quarterly roadmap review."*
+
+Three features drove 80% of the engagement lift. New onboarding improved D7 retention 12%. Notifications had no measurable impact. The cuts write themselves when the data is on the page.
+
+---
+
+## A product and engineering day with Runner
+
+| Time | What Runner does |
+|------|-----------------|
+| **8:30 AM** | Morning brief: bugs filed overnight, sprint progress, any deploys that need watching |
+| **9:00 AM** | Sprint planning: pulls the backlog, suggests priorities from analytics data |
+| **10:00 AM** | Bug triage: traces a reported issue to the PR that caused it, files a P1 |
+| **11:00 AM** | Feature impact review: pulls usage data, identifies gaps, creates tickets |
+| **1:00 PM** | Release prep: checks what's shipping, preps the release notes |
+| **3:00 PM** | Post-deploy: monitors error rates and funnels for the first hour |
+| **4:00 PM** | Posts the deploy summary to #engineering |
+| **Friday PM** | Weekly review: shipped items, impact data, what to prioritize next |
+
+---
+
+## Prompts to try right now
+
+<AccordionGroup>
+  <Accordion title="Sprint planning">
+    *"Help me plan next week's sprint. Pull the Linear backlog, check what rolled over, and recommend priorities based on what analytics says is impacting users."*
+  </Accordion>
+  <Accordion title="Bug triage">
+    *"We're seeing reports of [issue]. Check analytics for a drop, find the deploy that lines up, pull the diff, and file a bug in Linear."*
+  </Accordion>
+  <Accordion title="Feature impact">
+    *"How is [feature] performing? Pull usage events from Mixpanel, check for gaps, and create a ticket for anything obvious."*
+  </Accordion>
+  <Accordion title="Release monitoring">
+    *"We're shipping today. After the deploy, monitor error rates and key funnels for the first hour. If anything degrades more than 10%, create a rollback issue and ping the team."*
+  </Accordion>
+  <Accordion title="Roadmap review">
+    *"Prep for our quarterly roadmap review. Pull everything we shipped this quarter from Linear, check the impact in Mixpanel and PostHog, and build a summary with recommended cuts."*
+  </Accordion>
+  <Accordion title="Standup prep">
+    *"What changed since yesterday? Check Linear for completed and blocked issues, any deploys, and anything that needs my attention before standup."*
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Automate the predictable stuff
+
+Once you've tried these manually, set them to run automatically:
+
+- **Morning standup prep** at 8:30am, every weekday. What shipped, what's blocked, what needs attention.
+- **Post-deploy monitoring** after every release. Error rates, funnels, and a summary to #engineering.
+- **Weekly sprint review** every Friday. What shipped, impact data, what to carry over.
+- **Feature impact check** one week after any major launch. Pull the data before the retro.
+
+Stop context-switching between four tools to answer one question. Let Runner pull the threads together so you can focus on building.
+
+[Learn how to create automations →](/workflows/creating-automations)
+
+---
+
+## What's next?
+
+<CardGroup cols={2}>
+  <Card title="Connect your apps" icon="plug" href="/get-started/connecting-accounts">
+    Link Linear, GitHub, and your analytics tools.
+  </Card>
+  <Card title="Browse workflows" icon="arrows-spin" href="/workflows/starter-workflows">
+    See all the built-in workflows Runner ships with.
+  </Card>
+</CardGroup>
