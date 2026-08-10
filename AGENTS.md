@@ -10,7 +10,7 @@
 
 ## Writing voice
 
-All docs content must follow the style guide in `STYLE_GUIDE.md`. Read it before writing or editing any page.
+All docs content must follow the style guide in `STYLE_GUIDE.md`. The voice is Kent's, built from his blog at [ewakened.com](https://ewakened.com). Read the style guide before writing or editing any page.
 
 The short version:
 - Write like a real person, not a content team
@@ -18,6 +18,9 @@ The short version:
 - No corporate jargon ("leverage", "synergy", "from day one")
 - No fake enthusiasm ("game changer", "nails it")
 - Mix short punchy lines with longer explanatory ones
+- Open with the specific thing the reader came for, no preamble
+- Ask the reader's question, then answer it: "Why the difference? Simply cost."
+- Be specific: real numbers, real times, real app names
 - Trust the reader. Don't over-explain.
 - Use contractions. Write like you talk.
 
