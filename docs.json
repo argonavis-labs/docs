@@ -42,7 +42,7 @@
             ]
           },
           {
-            "group": "Runners",
+            "group": "Runners (frmly: Automations)",
             "pages": [
               "runners/overview",
               "runners/heartbeat-and-daily-brief",
