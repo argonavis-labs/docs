@@ -1,37 +1,41 @@
 ---
 title: "Runner for sales and RevOps teams"
 sidebarTitle: "Sales and RevOps"
-description: "Find new leads, stalled deals, and opportunities with no next step."
+description: "Build an AI revenue team for leads, proposals, pipeline gaps, and renewals."
 ---
 
 A full pipeline can still be a dead pipeline.
 
 The problem usually isn't the number of records. It's the gaps: a new lead with no reply, a proposal with no follow-up, a deal with no next step, or a renewal nobody owns.
 
-Those gaps repeat every week. That makes them good work for a Runner.
+Those gaps repeat every week. They are good jobs for AI teammates.
 
 <Note>
   Writes follow your [tool permissions](/connections/tool-permissions). Keep CRM updates and email sending on **Ask** while you test. Runner stages each write as an **Action Card**. **Allow** acts without asking. **Off** blocks the tool unless the Runner has its own override.
 </Note>
 
-## Put revenue follow-through on a schedule
+## Recurring jobs for revenue
 
-| Runner | Schedule | What it finds | Finish line |
-|--------|----------|---------------|-------------|
-| **New lead check** | 8am and 4pm each weekday | Inquiries with no owner or first response | Owner named and reply ready for review |
-| **Proposal follow-up** | Every weekday morning | Sent proposals with no client reply | Specific follow-up staged, or a clear reason to stop |
-| **Pipeline gap check** | Monday and Thursday | Open deals with no next step, stale activity, or overdue tasks | Short list with owner and next action |
-| **Renewal watch** | Twice a week | Renewals approaching with open issues or no plan | Risk, owner, and next conversation named |
-| **Sales report** | Friday afternoon or month-end | Won, lost, slipped, and stage changes | Report built from CRM data, with missing fields called out |
+| AI teammate | What they own | Why they earn a seat | You stay focused on |
+|-------------|---------------|----------------------|---------------------|
+| **Lead response** | Finds new inquiries with no owner or reply, then prepares the first response | Protects the demand you already earned | Qualification and the conversation |
+| **Proposal follow-up** | Checks sent proposals and matching threads, then prepares the next message | Keeps serious opportunities from going quiet | Negotiation and the close |
+| **Pipeline inspection** | Finds deals with no next step, stale activity, or overdue tasks | Shows where revenue is stuck | Forecast judgment and coaching |
+| **Renewal watch** | Finds approaching renewals with open issues or no plan | Protects existing revenue | The customer relationship |
+| **Sales reporting** | Pulls won, lost, slipped, and missing CRM data into one report | Removes manual report assembly | The call on what changes next |
 
-Don't automate "do sales." Automate one gap you can see and measure.
+<Info>
+  Each Runner works independently. Runners can read the same source apps, but they don't pass work or results to one another automatically.
+</Info>
+
+Don't build a teammate to "do sales." Give them one gap you can see and measure.
 
 The 8am and 4pm lead check uses more of your plan. Start with the morning check until the second one is worth the cost.
 
-## Build this first: pipeline gap check
+## Start with: pipeline inspection
 
 ```text
-Create a Runner named Pipeline Gap Check.
+Create a Runner named Pipeline Inspector.
 
 Every Monday and Thursday at 8:00am in my timezone, review open opportunities
 in [HubSpot or Salesforce] and the matching Gmail threads.
@@ -58,21 +62,17 @@ show me the final name, prompt, schedule, and timezone. Wait for my confirmation
 
 The result should be small enough to act on. Ten real gaps beat a 60-page pipeline export.
 
-## Keep the state where Runner can read it
+## Keep the sources reliable
 
-Put your sales rules in a Project:
+Use a sales Project for background such as the ideal customer, deal-stage names, ownership, product facts, and source locations.
 
-- Ideal customer and disqualifiers.
-- Deal stages and what each one requires.
-- Follow-up timing and do-not-contact rules.
-- Approved product language and pricing boundaries.
-- Who owns leads, proposals, and renewals.
+Put disqualifiers, stage requirements, follow-up timing, do-not-contact rules, approved claims, and pricing boundaries in the saved prompt.
 
 Keep deal status in the CRM and conversation status in email. The next run reads those sources again. It doesn't automatically receive the previous run's output.
 
-Start with writes on **Ask**. Review the first ten email and CRM Action Cards. If a rule keeps needing correction, change the saved prompt or Project context. Don't leave the fix in one run's session.
+Start with writes on **Ask**. Review the first ten email and CRM Action Cards. If a rule keeps needing correction, change the saved prompt. Don't leave the fix in one run's session.
 
-## Add the next revenue check
+## Other jobs to schedule
 
 ### New lead response
 

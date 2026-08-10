@@ -1,35 +1,39 @@
 ---
 title: "Runner for marketing and growth teams"
 sidebarTitle: "Marketing and growth"
-description: "Catch wasted spend, connect campaigns to pipeline, and follow up on the demand you already paid for."
+description: "Add spend watch, pipeline review, lead follow-up, and content delivery."
 ---
 
 A campaign report can be perfectly accurate and still be useless.
 
 Clicks went up. CPA went down. Great. Did any of it create pipeline? Is one campaign burning through the week's budget? Is a high-value lead still waiting for a response?
 
-That's the work to put on a schedule.
+Give that job to an AI teammate and put it on a schedule.
 
 <Note>
   Writes follow your [tool permissions](/connections/tool-permissions). Keep budget changes, CRM updates, and posts on **Ask** while you test. Runner stages each write as an **Action Card**. **Allow** acts without asking. **Off** blocks the tool unless the Runner has its own override.
 </Note>
 
-## Start with spend and revenue
+## Recurring jobs for growth
 
-| Runner | What it checks | Useful result | Value |
-|--------|----------------|---------------|-------|
-| **Paid spend exception** | Ad results or spend sheet, targets, and CRM outcomes | Only campaigns outside your approved limits | Catches waste before month-end |
-| **Campaign-to-pipeline review** | Campaign data and CRM opportunities | Campaigns tied to pipeline, plus gaps in the source data | Moves the conversation past clicks |
-| **Lead aging check** | New marketing leads and CRM activity | Leads waiting without an owner or first response | Protects the demand you already paid for |
-| **Content bottleneck check** | Content board, due dates, and owners | Work blocked, overdue, or missing a next step | Keeps production from stalling |
-| **Weekly growth review** | Approved channel metrics and current experiments | What changed, what needs investigation, and who owns it | Replaces report assembly with decisions |
+| AI teammate | What they own | Why they earn a seat | You stay focused on |
+|-------------|---------------|----------------------|---------------------|
+| **Spend watch** | Checks campaign results against approved targets and CRM outcomes | Catches waste before month-end | The budget decision |
+| **Campaign-to-pipeline review** | Matches campaign and CRM records and calls out gaps | Moves the conversation past clicks | Attribution judgment and strategy |
+| **Lead aging** | Finds marketing leads with no owner or first response | Protects demand you already paid for | Qualification and follow-through |
+| **Content delivery** | Finds blocked, overdue, or ownerless work | Keeps production moving | Taste and editorial judgment |
+| **Weekly growth review** | Assembles current metrics, experiments, spend exceptions, and pipeline changes | Starts the meeting with current evidence | What to try next |
+
+<Info>
+  Each Runner works independently. Runners can read the same source apps, but they don't pass work or results to one another automatically.
+</Info>
 
 Runner can compare the sources and apply your rules. It shouldn't invent causality. A metric moving after a campaign launched doesn't prove the campaign caused it.
 
-## Build this first: paid spend exception
+## Start with: spend watch
 
 ```text
-Create a Runner named Paid Spend Exceptions.
+Create a Runner named Spend Watch.
 
 Every weekday at 8:00am in my timezone, review campaign performance in
 [connected ad source or Google Sheet], our approved targets in [Google Sheet],
@@ -57,21 +61,21 @@ timezone. Wait for my confirmation.
 
 Twenty percent is an example. Use a threshold your team already trusts.
 
-## Keep the definitions in one place
+## Add the definitions
 
-Put the rules in a marketing Project:
+Use a marketing Project for shared background:
 
-- Approved targets and where the current numbers live.
-- What counts as a qualified lead or pipeline opportunity.
+- Where the current numbers live.
+- What your team means by a qualified lead or pipeline opportunity.
 - Naming conventions for channels and campaigns.
-- Reporting windows and timezone.
-- Changes Runner may recommend but must not make.
 
-The ad source, CRM, and reporting sheet hold the live numbers. Project context holds the definitions. Previous run output doesn't carry forward automatically.
+Put approved targets, thresholds, reporting windows, timezone, and prohibited changes in the saved prompt. Use **Ask** or **Off** for changes that must wait for a person.
+
+The ad source, CRM, and reporting sheet hold the live numbers. Previous run output doesn't carry forward automatically.
 
 Run the first few checks with writes on **Ask**. If the same false positive appears twice, fix the rule in the saved prompt. Don't just correct one session and hope the next run knows.
 
-## Then automate these
+## Other jobs to schedule
 
 ### Campaign-to-pipeline review
 
@@ -91,9 +95,7 @@ Run Friday afternoon. Pull the approved metrics, current experiments, spend exce
 
 ## A report isn't the outcome
 
-The goal is to catch wasted spend early, follow up on demand, and start the team meeting with a decision instead of spending 40 minutes building the report.
-
-Build for that.
+The goal is to catch wasted spend early, follow up on demand, and start the team meeting with current evidence instead of rebuilding the report.
 
 ---
 
@@ -103,8 +105,8 @@ Build for that.
   <Card title="Sales and RevOps" icon="bullseye" href="/use-cases/sales-and-revops">
     Follow demand from first response to next step.
   </Card>
-  <Card title="What should you automate?" icon="star" href="/tips/tips-and-tricks">
-    Rank your recurring work by money and time.
+  <Card title="Who should you add next?" icon="star" href="/tips/tips-and-tricks">
+    Find the next job tied to spend, pipeline, or time.
   </Card>
   <Card title="Tool permissions" icon="shield-check" href="/connections/tool-permissions">
     Keep budget and CRM changes behind review.

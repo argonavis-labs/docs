@@ -1,18 +1,18 @@
 ---
 title: "Choose an intelligence setting"
 sidebarTitle: "Models"
-description: "Use Auto, Normal, or Ultra in a session. Scheduled Runners use Normal or Ultra."
+description: "Match the reasoning level to the job. Sessions use Auto, Normal, or Ultra. Runners use Normal or Ultra."
 ---
 
-You usually don't need to pick a model. Pick how much intelligence the job needs.
+Intelligence is the reasoning level you assign to the job. Most jobs should start on **Normal**. Move to **Ultra** only when the work needs deeper reasoning.
 
 ## Sessions have three settings
 
 | Setting | Use it for |
 |---|---|
 | **Auto** | Let Runner choose for the task in front of it. |
-| **Normal** | Email, summaries, scheduling, and everyday work. |
-| **Ultra** | Hard research, long documents, and work that needs more reasoning. |
+| **Normal** | Attention briefs, pipeline checks, summaries, scheduling, and everyday work. |
+| **Ultra** | Complex research, long documents, ambiguous comparisons, and work that needs more reasoning. |
 
 New sessions start on **Normal** unless you change **Default intelligence** under **Settings**, then **Behavior**. That preference applies to new sessions on the device where you changed it.
 
@@ -24,6 +24,10 @@ A scheduled Runner can't use **Auto**. Choose **Normal** for routine work and **
 
 New Runners start on **Normal** unless you choose **Ultra** while setting one up.
 
+<Note>
+  Changing intelligence doesn't change tool permissions. **Ultra** doesn't let Runner read, change, or send anything **Normal** couldn't.
+</Note>
+
 ## Choose what sits behind each setting
 
 Open **Settings**, then **Behavior** to choose the supported model behind **Normal** and **Ultra**. The available list can change as models are added or retired.
@@ -32,7 +36,7 @@ The session picker stays simple. It shows **Auto**, **Normal**, and **Ultra** ra
 
 ## Keep an eye on usage
 
-**Ultra** uses more of your plan than **Normal**. That matters most for a Runner that fires often.
+**Ultra** uses more of your plan than **Normal**. That matters most for a Runner that runs often.
 
 Use **Normal** for recurring triage and summaries. Move to **Ultra** when the result needs it. Simple.
 
@@ -45,6 +49,6 @@ Use **Normal** for recurring triage and summaries. Move to **Ultra** when the re
     Set **Normal** or **Ultra** for recurring work.
   </Card>
   <Card title="Tool permissions" icon="shield-check" href="/connections/tool-permissions">
-    Intelligence controls how Runner thinks. Permissions control what it can do.
+    Intelligence controls how Runner reasons. Permissions control what it can do.
   </Card>
 </CardGroup>

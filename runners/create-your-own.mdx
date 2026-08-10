@@ -1,20 +1,37 @@
 ---
 title: "Create your own Runner"
-description: "Turn one repeated job into a Runner with a prompt, schedule, and clear permissions."
+description: "Add one AI teammate with a valuable job, schedule, sources, rules, and tool permissions."
 ---
 
-There are two ways to create a Runner:
+You're adding one AI teammate, not asking a generic assistant to "help with work."
+
+Give the Runner one job. Make sure that job protects revenue, removes cost, gives back meaningful time, or keeps a customer promise from slipping.
+
+## Write the job description first
+
+| Part | What to decide |
+|------|----------------|
+| **Job** | The one result this Runner should produce |
+| **Value** | The time, cost, revenue, or customer promise attached to it |
+| **Sources** | The connected apps, files, records, or sites it should use |
+| **Schedule** | When the job runs and which timezone it follows |
+| **Stop condition** | When Runner should report that no action is needed and stop |
+| **Review** | What can happen directly and what must wait for an Action Card |
+| **Human work** | The judgment, relationship, creative choice, or final decision that stays yours |
+| **Score** | The number you'll check after the first few runs |
+
+There are two ways to add the Runner:
 
 1. Fill in the form yourself.
-2. Ask Runner to help you design it.
+2. Ask Runner to help you design the job.
 
-Use the second one when the job is still fuzzy. Use the form when you already know the prompt and schedule.
+Use the second one when the job is still fuzzy. Use the form when you already know the brief and schedule.
 
 <Warning>
   **A new Runner is active as soon as it's created.** Check every field the creation path shows before you confirm. Then open the new Runner and review its Project, model, and tool permissions before the first scheduled time arrives.
 </Warning>
 
-## Ask Runner to build it with you
+## Ask Runner to create it with you
 
 <Steps>
   <Step title="Start the setup">
@@ -34,11 +51,11 @@ Use the second one when the job is still fuzzy. Use the form when you already kn
     Confirm only when you're ready for the Runner to become active.
   </Step>
   <Step title="Review the saved details">
-    Open the new Runner. Choose a **Project** if it needs standing context, verify **Runner model**, and review **Tool permissions** before the first scheduled run.
+    Open the new Runner. Choose a **Project** if it needs shared background, verify **Runner model**, and review **Tool permissions** before the first scheduled run.
   </Step>
 </Steps>
 
-## Fill in the form yourself
+## Fill in the job yourself
 
 Open **Runners**, click **New runner**, then choose **Create manually**.
 
@@ -52,7 +69,7 @@ Fill in:
 
 Click **Create runner** only after you've checked the schedule. The new Runner starts active.
 
-## Check permissions before the first run
+## Set tool permissions
 
 For connected-app writes:
 
@@ -66,29 +83,31 @@ Start writes on **Ask** when you're testing a new Runner. Move a specific tool t
 
 [How tool permissions work →](/connections/tool-permissions)
 
-## Decide what carries forward
+## Choose what carries into each run
 
 Each run starts in a separate session. Previous run output is not automatically supplied to the next one.
 
-Use Personal Memory for durable facts. Use Project context for standing instructions about the work.
+Use Personal Memory for durable personal facts. Use Project context for background. Keep the job's instructions, thresholds, and review rules in the saved prompt.
 
 The **Carry unresolved Action Cards into new runs** switch does one narrower job. It lets an unresolved **Action Card** appear in a later run. A pending **Action Card** still expires 24 hours after it was staged.
 
-## Test it
+## Check the first three runs
 
 Open the Runner and click **Run now**. The test creates a separate session and keeps you on the Runner detail page, even if the Runner is paused.
 
-Open **Recent runs** and click the run's timestamp. Check the result, tool activity, and any **Action Cards**. Then leave the schedule active, or use the **Status** switch to pause it while you adjust the prompt.
+Open **Recent runs** and click the run's timestamp. Check the result, tool activity, and any **Action Cards**. Review the first three runs this way. Fix job instructions in the saved prompt and incorrect background in Project context. Then leave the schedule active or pause it while you adjust the job.
+
+Add another Runner after the first three runs are useful and consistent.
 
 ---
 
 ## What's next?
 
 <CardGroup cols={2}>
-  <Card title="Runner overview" icon="person-running" href="/runners/overview">
-    See what persists, what starts fresh, and where each run lives.
+  <Card title="How Runners work" icon="person-running" href="/runners/overview">
+    See what carries into each run and when actions wait for review.
   </Card>
-  <Card title="What should you automate?" icon="star" href="/tips/tips-and-tricks">
-    Find recurring work tied to revenue, cost, or time.
+  <Card title="Who should you add next?" icon="star" href="/tips/tips-and-tricks">
+    Find the next job tied to revenue, cost, time, or customer delivery.
   </Card>
 </CardGroup>

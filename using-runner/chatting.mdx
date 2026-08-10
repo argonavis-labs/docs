@@ -1,31 +1,31 @@
 ---
 title: "Talking to Runner"
 sidebarTitle: "Talking to Runner"
-description: "Tell Runner what you need done. It does the work across your apps."
+description: "Give Runner a clear brief, check the evidence, and turn useful work into a Workflow or Runner."
 ---
 
-Runner isn't a chatbot. It's connected to your actual apps and it takes real action. You tell it what you need, it does the rest.
+A session is where you work with Runner. Brief the job, answer questions, check the evidence, make the call, and improve the result.
+
+Runner can find, compare, organize, and draft across the sources you give it. You keep the judgment, relationships, creativity, and leadership that need a person.
 
 <Note>
   Writes follow your [tool permissions](/connections/tool-permissions). **Ask** stages an **Action Card** for review. **Allow** acts without asking. **Off** blocks the tool unless a user-created Runner has its own override.
 </Note>
 
-## You talk, Runner runs
+## Work together in a session
 
-Other AI tools give you advice and ask you to take the next step yourself. Runner does the work.
+| You ask | Runner handles | You decide |
+|---------|----------------|------------|
+| *"Triage email from the last seven days"* | Reads, groups, cites, and drafts from the inbox | What matters, how a reply should land, and whether to send |
+| *"Prep me for tomorrow's customer meeting"* | Pulls the calendar, relevant threads, open commitments, and named Project sources | The goal, questions, relationship, and how to lead the room |
+| *"Check proposals waiting on a reply"* | Finds the gaps, reads the thread, and drafts the next step | Timing, price, negotiation, and the final message |
+| *"Compare these invoices with the signed terms"* | Shows mismatches and links the evidence | Whether it's correct, how to handle the vendor, and whether to pay |
 
-| You say | Runner does |
-|---|---|
-| *"Triage my inbox"* | Reads your last 7 days of email. Classifies everything by urgency. Drafts replies for what matters. Archives the noise. |
-| *"Prep me for my meetings tomorrow"* | Pulls your calendar, researches every attendee, finds related email threads, builds a one-page brief for each meeting. |
-| *"Reply to Jordan's email with available times this week"* | Reads the thread, checks your calendar for open slots, drafts a reply with your availability. |
-| *"Find Series A fintech companies in the Bay Area and reach their VP of Sales"* | Searches for matching companies, identifies decision-makers, gets contact info, drafts personalized outreach for each one. |
-
-No special syntax. No commands. Just say it like you'd say it to a capable colleague.
+No special syntax. Say it like you'd say it to a capable colleague, then make the decisions that need you.
 
 ---
 
-## The more you connect, the more Runner can do
+## Give the job the right sources
 
 <CardGroup cols={6}>
   <Card icon={<img src="/images/apps/gmail.svg" alt="Gmail" width="24" height="24" />} title="Gmail" />
@@ -36,7 +36,7 @@ No special syntax. No commands. Just say it like you'd say it to a capable colle
   <Card icon={<img src="/images/apps/google-drive.png" alt="Drive" width="24" height="24" />} title="Drive" />
 </CardGroup>
 
-With just Gmail and Calendar, Runner handles your daily briefing, inbox triage, and meeting prep. Add Slack, Linear, and Notion, and it becomes a real personal assistant.
+Connect only what the job needs. Gmail and Calendar are enough for a Personal Assistant. Add Slack, Linear, or Notion when a different job needs them.
 
 [Connect your apps →](/get-started/connecting-accounts)
 
@@ -70,11 +70,22 @@ Need context from another session? Ask Runner to read another active session you
 
 ---
 
-## Tips
+## Give Runner a clear brief
 
-- **Be specific.** *"Check the email from Sarah about the Q2 budget"* beats *"check my email."*
-- **Chain tasks.** *"Check my calendar, prep for my meetings, and draft a Slack standup."* One message, three jobs.
-- **Correct it.** If Runner does something unexpected, tell it what you wanted instead. If the correction should stick, save it to **Memory**.
+- **Give one clear outcome.** *"Check the email from Sarah about the Q2 budget"* beats *"check my email."*
+- **Name the sources.** Say which inbox, Project, folder, record, or site holds the truth.
+- **Set the review point.** Say what should stay a draft. Use **Ask** or **Off** for hard action boundaries.
+- **Correct the work.** Tell Runner what was wrong and what good looks like.
+
+Feedback in one session doesn't rewrite a scheduled Runner. For a lasting job change, update its saved prompt. Put durable personal facts and preferences in Personal Memory.
+
+## When to use a session, Workflow, or Runner
+
+- Use a **session** to work through something once.
+- Save a **Workflow** when the procedure is useful again and you want to start it with `/slug`.
+- Create a **Runner** when one AI teammate should own the job on a schedule.
+
+Test the work in a session first. Save the procedure as a Workflow when you want it again. Create a Runner when the result is useful, repeatable, and ready for a schedule.
 
 ---
 
@@ -82,9 +93,9 @@ Need context from another session? Ask Runner to read another active session you
 
 <CardGroup cols={2}>
   <Card title="Workflows" icon="arrows-spin" href="/workflows/overview">
-    Save your favorite procedures and invoke them with /slug.
+    Save a useful procedure and invoke it with /slug.
   </Card>
   <Card title="Runners" icon="person-running" href="/runners/overview">
-    Put the work on a schedule. Morning brief at 8am, done, every day.
+    Put one valuable job on a schedule with rules and tool permissions.
   </Card>
 </CardGroup>

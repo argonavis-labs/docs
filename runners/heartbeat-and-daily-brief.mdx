@@ -1,11 +1,16 @@
 ---
 title: "Heartbeat and Daily Brief"
-description: "The two built-in Runners. Test one, then turn on the schedule you want."
+description: "Set up the two built-in Runners: a morning brief and a twice-daily check for messages that need a reply."
 ---
 
-Runner ships with **Heartbeat** and **Daily Brief**. Both start paused.
+Runner ships with two built-in Runners. Both start paused.
 
-Test them one at a time. It's easier to see what each one adds, and you won't create three versions of the same morning update.
+| Runner | Job | What waits for you |
+|--------|-----|--------------------|
+| **Daily Brief** | Your morning attention brief | The priorities and decisions that need you today |
+| **Heartbeat** | Checks twice each weekday for messages that need a reply | Replies and decisions that still need a person |
+
+Test them one at a time. It's easier to see what each one adds, and you won't create three versions of the same morning update. If you already built a Personal Assistant, check for overlap before turning on either schedule.
 
 ## Daily Brief
 
@@ -42,7 +47,7 @@ If you want every outward write to wait for review, keep those tools on **Ask**.
 
 [Review tool permissions →](/connections/tool-permissions)
 
-## What carries into tomorrow?
+## What carries into the next run
 
 Each built-in run starts in a separate session. It can use Personal Memory, but it doesn't automatically receive the previous run's output.
 
@@ -56,7 +61,7 @@ If a durable preference matters tomorrow, put it in Personal Memory or the saved
   <Card title="Quickstart" icon="bolt" href="/quickstart">
     Build a Personal Assistant that checks in every morning.
   </Card>
-  <Card title="Create your own Runner" icon="wand-magic-sparkles" href="/runners/create-your-own">
-    Put one repeated job on the schedule that fits it.
+  <Card title="Create a Runner" icon="wand-magic-sparkles" href="/runners/create-your-own">
+    Give one recurring job a schedule, rules, and tool permissions.
   </Card>
 </CardGroup>

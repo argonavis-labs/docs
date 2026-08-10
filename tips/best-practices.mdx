@@ -1,17 +1,17 @@
 ---
 title: "Best practices"
-description: "Build safer Runners and make the results easier to review."
+description: "Build safer Runners with clear jobs, the right sources, and results you can review."
 ---
 
-We've watched how people use Runner. These are the patterns that work.
+Treat each Runner like a new teammate. Start with one narrow job, the sources it needs, and writes on **Ask**.
 
 <Note>
   Writes follow your [tool permissions](/connections/tool-permissions). **Ask** stages an **Action Card** for review. **Allow** acts without asking. **Off** blocks the tool unless a user-created Runner has its own override.
 </Note>
 
-## Start with email and calendar
+## Start with the tools for one job
 
-Don't connect everything on day one. Start with the two apps you use most:
+Don't connect everything on day one. If your first Runner is the Personal Assistant from Quickstart, start with these:
 
 <CardGroup cols={2}>
   <Card icon={<img src="/images/apps/gmail.svg" alt="Gmail" width="24" height="24" />} title="Gmail">
@@ -22,15 +22,17 @@ Don't connect everything on day one. Start with the two apps you use most:
   </Card>
 </CardGroup>
 
-Those two give Runner enough context to handle your daily briefing, email triage, and scheduling. Once you're comfortable, add Slack, then your project tracker, then whatever else.
+Those two are enough for the morning attention brief. A Pipeline Inspector would start with your CRM and Gmail. An Invoice Check would start with the folder, inbox, and sheet where invoices and agreements live.
+
+Connect the next app only when the next job needs it.
 
 <Tip>
-  **First-day setup:** Gmail + Google Calendar. That's it. You can add more anytime.
+  **Quickstart setup:** Gmail + Google Calendar. That's it.
 </Tip>
 
 ---
 
-## One Project per context
+## Group related work in Projects
 
 Keep different parts of your life in separate Projects:
 
@@ -40,11 +42,11 @@ Keep different parts of your life in separate Projects:
 | **Personal** | Trip planning, the subscription audit, family logistics |
 | **Side project** | Every session and Runner for the newsletter |
 
-Each Project carries its own context, so Runner starts every session in it already knowing the background. Got work and personal Gmail? Connect both in **Connected Apps** with **Add account** and tell Runner which one to use: *"Reply from my work email."*
+Each Project supplies its context as background to the sessions and Runners inside it. It doesn't replace the instructions in a Runner's saved prompt. Got work and personal Gmail? Connect both in **Connected Apps** with **Add account** and tell Runner which one to use: *"Reply from my work email."*
 
 ---
 
-## Keep sending on Ask while you learn
+## Start writes on Ask
 
 Set the send tool to **Ask** and Runner stages an **Action Card** before anything goes out:
 
@@ -57,7 +59,7 @@ Later, you can move a specific send tool to **Allow**. That removes the review s
 
 ---
 
-## Start with one job, not ten prompts
+## Turn one repeated job into a Runner
 
 A one-off request shows you what Runner can do. The bigger payoff comes when you turn repeated work into a clear system.
 
@@ -95,11 +97,23 @@ Runner works across multiple apps, so precision helps:
 
 ---
 
-## Review new Runners closely
+## Review the first three runs
 
-Read the first few runs. Fix repeated mistakes in the saved prompt or Project context, not only in one run's session.
+Read the first few runs. Fix repeated job mistakes in the saved prompt, not only in one run's session. Correct inaccurate background in Project context.
 
 Once a Runner is reliable, review it monthly. Check recent runs, pause work you no longer need, and confirm the schedule and permissions still make sense.
+
+Use a simple scorecard:
+
+| Check | Ask |
+|-------|-----|
+| **Value** | Did it protect revenue, remove cost, save time, or protect a customer promise? |
+| **Quality** | Was the result accurate, sourced, and useful? |
+| **Review** | Did the right decisions wait for a person? |
+| **Cost** | Does the value justify how often it runs and the plan it uses? |
+| **Need** | Would you notice if the Runner stopped? |
+
+If the answers keep being no, fix the prompt or pause the Runner.
 
 ---
 
@@ -112,20 +126,21 @@ Here's a good first week. Each step builds on the last.
 - [ ] Click **Run now** and read the full result
 - [ ] [Find one repeated job](/tips/tips-and-tricks) tied to revenue, cost, time, or a customer commitment
 - [ ] Name its sources, schedule, useful result, and what needs your approval
-- [ ] [Create a Project](/get-started/projects) for its standing business rules
+- [ ] [Create a Project](/get-started/projects) for shared background
+- [ ] Put the job rules and review requirements in the saved prompt
 - [ ] [Create the Runner](/runners/create-your-own) with writes on **Ask**
 - [ ] Read the first three runs and fix the saved prompt when the same problem appears twice
-- [ ] Add the next Runner only after the first one earns its place
+- [ ] Add another Runner only after the first three runs are useful and consistent
 
 ---
 
 ## What's next?
 
 <CardGroup cols={2}>
-  <Card title="What should you automate?" icon="star" href="/tips/tips-and-tricks">
-    Find recurring work tied to revenue, cost, or time.
+  <Card title="Who should you add next?" icon="star" href="/tips/tips-and-tricks">
+    Find the next job tied to revenue, cost, time, or customer delivery.
   </Card>
-  <Card title="See how others use Runner" icon="lightbulb" href="/use-cases/overview">
-    Find examples for professional services, sales, operations, and more.
+  <Card title="See dream teams by role" icon="lightbulb" href="/use-cases/overview">
+    See examples for services, sales, operations, and more.
   </Card>
 </CardGroup>

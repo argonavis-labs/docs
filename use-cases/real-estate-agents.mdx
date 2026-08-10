@@ -1,32 +1,36 @@
 ---
 title: "Runner for real estate agents"
 sidebarTitle: "Real estate"
-description: "Respond to new leads, prepare showings, and keep client follow-up moving."
+description: "Add lead response, showing prep, seller updates, and pipeline follow-through."
 ---
 
 A lead arrives at 7:12pm. You mean to answer after dinner. By 9am they're already talking to somebody else.
 
 The valuable work isn't "write an email." It's checking for the lead, reading the inquiry, checking your calendar, preparing the right response, and stopping once a person has replied.
 
-That's a Runner.
+That's one AI teammate with a clear job.
 
 <Note>
   Writes follow your [tool permissions](/connections/tool-permissions). Keep messages, CRM updates, bookings, and submissions on **Ask** while you test. Runner stages each write as an **Action Card**. Browser bookings and submissions add a final confirmation before they're submitted.
 </Note>
 
-## Start with the work closest to a transaction
+## Recurring jobs around a transaction
 
-| Runner | What it checks | Useful result | Review boundary |
-|--------|----------------|---------------|-----------------|
-| **New lead response** | Gmail, connected CRM, and Calendar | New inquiries with a reply based on the inquiry and CRM record | Review the message before it sends |
-| **Lead follow-up** | Open leads and recent threads | People waiting on you, excluding anyone who replied or opted out | Keep do-not-contact rules in the source and prompt |
-| **Showing prep** | Calendar, client thread, and property materials you provide | One brief with questions, instructions, and missing details | Confirm any booking or calendar write |
-| **Seller update** | Showing calendar, feedback, and client email | A factual draft of activity and open next steps | Review claims before sending |
-| **Weekly pipeline review** | CRM status, recent threads, and upcoming dates | Leads and clients missing an owner, reply, or next step | You choose priority and outreach |
+| AI teammate | What they own | Why they earn a seat | You stay focused on |
+|-------------|---------------|----------------------|---------------------|
+| **Lead response** | Finds new buyer and seller inquiries and prepares a reply from the real context | Shortens the gap before another agent responds | The relationship and qualification |
+| **Lead follow-up** | Finds open leads with no reply or next step | Keeps serious conversations from going quiet | The personal follow-up |
+| **Showing prep** | Pulls the client thread, calendar details, and property material into one brief | Cuts prep before every showing | The client experience |
+| **Seller update** | Drafts an update from confirmed activity, feedback, and open questions | Keeps communication moving without rebuilding the story | The relationship and hard message |
+| **Pipeline review** | Finds clients and leads missing an owner, reply, or next step | Shows where a transaction may stall | Priority and outreach |
 
-Don't begin by automating the whole transaction. Begin with the lead that needs a reply.
+<Info>
+  Each Runner works independently. Runners can read the same source apps, but they don't pass work or results to one another automatically.
+</Info>
 
-## Build this first: new lead response
+Don't give one teammate the whole transaction. Start with the lead that needs a reply.
+
+## Start with: lead response
 
 ```text
 Create a Runner named New Lead Response.
@@ -66,14 +70,15 @@ Turn on **Carry unresolved Action Cards into new runs** so a pending reply can a
 
 Run it with a few test inquiries first. Read every reply. Fast and wrong isn't better than slow.
 
-## Give it your rules
+## Save the job rules
 
-Put stable rules in a real estate Project:
+Use a real estate Project for background such as service area, property types, lead owners, and source locations.
 
-- Service area, property types, and working hours.
-- Lead ownership and routing rules.
-- Your approved voice and response templates.
-- Minimum gap between follow-ups.
+Put these in the Runner's saved prompt:
+
+- Working hours and routing rules.
+- Approved voice and response templates.
+- The minimum gap between follow-ups.
 - Fair housing, brokerage, and legal boundaries.
 - Actions that always need you or your broker.
 
@@ -81,7 +86,7 @@ Keep live lead status in the CRM and conversation status in email. Each run read
 
 Start every send and CRM write on **Ask**. Keep offer, contract, booking, and submission decisions behind a person.
 
-## Add the next check
+## Other jobs to schedule
 
 ### Lead follow-up
 
@@ -113,8 +118,8 @@ Then you add the next Runner.
   <Card title="Connect your apps" icon="plug" href="/get-started/connecting-accounts">
     Link Gmail, Calendar, and the CRM you use.
   </Card>
-  <Card title="What should you automate?" icon="star" href="/tips/tips-and-tricks">
-    Find the repeated work closest to revenue or cost.
+  <Card title="Who should you add next?" icon="star" href="/tips/tips-and-tricks">
+    Find the next job closest to revenue or cost.
   </Card>
   <Card title="Tool permissions" icon="shield-check" href="/connections/tool-permissions">
     Keep messages and submissions behind review.

@@ -1,9 +1,11 @@
 ---
 title: "Tool permissions"
-description: "Decide, tool by tool, what Runner can do on its own."
+description: "Decide, tool by tool, what Runner can read, change, or send."
 ---
 
-Every connected app is a bundle of tools. Gmail has "search inbox" and "send email." Those are different powers, and you set each one on the connected account Runner will use.
+Tool permissions control what Runner can read, change, or send on each connected account.
+
+Every connected app is a bundle of tools. Gmail has "search inbox" and "send email." Those tools have separate settings, so Runner can read while every send waits for review.
 
 ## The four settings
 
@@ -37,9 +39,11 @@ Why not allow everything? Because **Allow** skips review. Start with this:
 3. **Keep sending and hard-to-undo changes on Ask.** Email sends, Slack posts, and deal updates wait as **Action Cards**.
 4. **Use Off when the tool shouldn't run.** A user-created Runner can still override **Off** for its own runs.
 
+Keep payments, legal submissions, relationship-sensitive messages, and hard-to-reverse changes on **Ask** or **Off**.
+
 ---
 
-## User-created Runner overrides
+## Runner-specific overrides
 
 Your **Connected Apps** setting is the baseline. On a user-created Runner, open **Tool permissions** to add an override. Anything you don't override stays **Inherited** and uses the **Connected Apps** setting.
 
@@ -59,7 +63,7 @@ Built-in Runners are the exception. **Heartbeat** and **Daily Brief** don't have
 
 <CardGroup cols={2}>
   <Card title="Runners" icon="person-running" href="/runners/overview">
-    The always-on automations these permissions were built for.
+    See how each Runner gets a saved job, schedule, and tool settings.
   </Card>
   <Card title="Connect your own MCP" icon="server" href="/connections/connect-your-own-mcp">
     Bring custom tools into Runner, with the same controls.

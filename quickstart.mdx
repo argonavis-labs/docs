@@ -1,14 +1,20 @@
 ---
 title: "Quickstart"
-description: "Connect Gmail and Calendar, then build a Personal Assistant that checks in every morning."
+description: "Build your first AI teammate: a Personal Assistant for your 9am attention brief."
 ---
 
-Build one useful thing first: a Personal Assistant that reads Gmail and Google Calendar, spots what needs attention, and gives you a plan every morning at 9am.
+Build your first AI teammate: a Personal Assistant for your 9am attention brief.
+
+It reads Gmail and Google Calendar, spots what needs attention, and gives you a plan. You set the priorities, review sensitive replies, and make final decisions.
+
+| Runner | Sources | Result | You decide |
+|--------|---------|--------|------------|
+| **Personal Assistant** | Gmail and Google Calendar | A short plan every morning at 9am | Priorities, sensitive replies, and final decisions |
 
 You'll connect two apps, check their permissions, create the Runner, then run it once.
 
 <Note>
-  The screenshots show mine, named Shiela: Kent's Chief of Staff. Give yours any name you want.
+  The screenshots show mine, named Shiela: Kent's Chief of Staff. That's the display name. In this guide, her only job is the 9am attention brief. Give yours any name you want.
 </Note>
 
 <Steps>
@@ -22,7 +28,7 @@ You'll connect two apps, check their permissions, create the Runner, then run it
 
     [Connect your apps →](/get-started/connecting-accounts)
   </Step>
-  <Step title="Start a new Runner">
+  <Step title="Create the Runner">
     Open **Runners** in the sidebar. You'll see **Heartbeat** and **Daily Brief** there too. Both ship paused, so leave them that way for now.
 
     Click **New runner**.
@@ -31,7 +37,7 @@ You'll connect two apps, check their permissions, create the Runner, then run it
       <img src="/images/quickstart/new-runner.png" alt="The New runner button on the Runners page" />
     </Frame>
   </Step>
-  <Step title="Ask Runner to build it">
+  <Step title="Ask Runner to set up the job">
     Choose **Ask Runner to create it**. This opens a new session with the first line already filled in.
 
     <Frame>
@@ -49,11 +55,10 @@ You'll connect two apps, check their permissions, create the Runner, then run it
     Every day at 9:00am in my timezone, review my connected Gmail and Google
     Calendar. Give me a short plan for the day with:
 
-    1. My three most important priorities.
+    1. Three items that may deserve my attention, with the source and why.
     2. Meetings that need preparation.
     3. Commitments and open loops that need attention.
     4. Schedule conflicts, deadlines, or important messages I may have missed.
-    5. One specific task I could automate with Runner.
 
     Be specific. If the source is unclear, say so instead of guessing. If a
     write action would help, stage it as an Action Card and wait for my approval.
@@ -72,14 +77,14 @@ You'll connect two apps, check their permissions, create the Runner, then run it
 
     **A user-created Runner becomes active as soon as it's created.** Confirm only when you're ready for the schedule to start.
   </Step>
-  <Step title="Review the details">
+  <Step title="Review the job description">
     Open **Runners** and select your new Personal Assistant.
 
     <Frame>
       <img src="/images/quickstart/personal-assistant-settings.png" alt="Shiela: Kent's Chief of Staff showing the Status and Action Cards controls" />
     </Frame>
 
-    Check the saved prompt, schedule, timezone, **Project**, and **Runner model**. Choose a Project if you want its context. Keep the model on **Normal** for now. Scheduled Runners don't use **Auto**. **Ultra** is for harder jobs and uses more of your plan.
+    Treat the saved prompt as the job description. Check the prompt, schedule, timezone, **Project**, and **Runner model**. Choose a Project if you want its context. Keep the model on **Normal** for now. Scheduled Runners don't use **Auto**. **Ultra** is for harder jobs and uses more of your plan.
 
     Under **Tool permissions**, leave **No overrides** while you test. The Runner uses your current **Connected Apps** settings. If you add an override later, it takes priority, including over **Off**.
 
@@ -118,24 +123,24 @@ You'll connect two apps, check their permissions, create the Runner, then run it
   </Step>
 </Steps>
 
-## What carries into tomorrow?
+## What carries into the next run
 
 Each run starts in a separate session. Your saved prompt, schedule, timezone, Project, and intelligence setting stay with the Runner. So do any Runner-specific tool permission overrides. Tools without an override use your current **Connected Apps** settings.
 
-The previous run's output doesn't come along automatically. Put standing instructions in the prompt or Project context, and durable personal details in Personal Memory.
+The previous run's output doesn't come along automatically. Put standing instructions in the saved prompt, background in Project context, and durable personal details in Personal Memory.
 
 ---
 
 ## What's next?
 
 <CardGroup cols={3}>
-  <Card title="Create your own Runner" icon="wand-magic-sparkles" href="/runners/create-your-own">
-    Go deeper on schedules, Projects, and permissions.
+  <Card title="Choose the next job" icon="wand-magic-sparkles" href="/tips/tips-and-tricks">
+    Find recurring work with a result you can measure.
   </Card>
   <Card title="Tool permissions" icon="shield-check" href="/connections/tool-permissions">
     Decide what waits for review and what can run without asking.
   </Card>
   <Card title="Personal Memory" icon="brain" href="/using-runner/memory">
-    Save the facts and preferences you want Runner to remember.
+    Save the facts and preferences your team should know about you.
   </Card>
 </CardGroup>

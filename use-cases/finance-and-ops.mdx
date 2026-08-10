@@ -1,35 +1,39 @@
 ---
 title: "Runner for finance and operations teams"
 sidebarTitle: "Finance and operations"
-description: "Find invoice exceptions, control vendor costs, and keep recurring reports current."
+description: "Add invoice checks, vendor renewal watch, receivables follow-up, and reporting."
 ---
 
 An invoice can match last month's total and still be wrong.
 
 The rate changed. The contract ended. The same invoice arrived twice. Someone notices three weeks later because the real work is buried across Gmail, Drive, and a tracking sheet.
 
-Runner checks those sources on a schedule and brings you the exceptions. You still approve every payment.
+Give that checking job to an AI teammate. It brings you the exceptions on schedule. You still approve every payment.
 
 <Note>
   Writes follow your [tool permissions](/connections/tool-permissions). Keep messages, records, and approvals on **Ask** while you test. Runner stages each write as an **Action Card**. **Allow** acts without asking. **Off** blocks the tool unless the Runner has its own override.
 </Note>
 
-## Start with the expensive exceptions
+## Recurring jobs for finance and operations
 
-| Runner | What it checks | Useful result | Boundary |
-|--------|----------------|---------------|----------|
-| **Invoice exception check** | Incoming invoices, agreements, and tracking sheet | Duplicates, rate changes, missing terms, and unmatched charges | Runner flags. A person approves or pays. |
-| **Vendor renewal watch** | Contracts, renewal notices, and spend records | Renewals approaching with owner, amount, and decision date | Runner doesn't renew or cancel on its own. |
-| **Receivables follow-up** | Open invoice list and customer email | Past-due accounts with a draft based on the customer thread | A person reviews the relationship before sending. |
-| **Report input chase** | Reporting sheet and owner list | Missing sections and draft reminders | Escalation rules stay in the prompt. |
-| **Close readiness** | Close checklist and available source files | Open items, missing evidence, and named blockers | Accounting judgment stays with finance. |
+| AI teammate | What they own | Why they earn a seat | You stay focused on |
+|-------------|---------------|----------------------|---------------------|
+| **Invoice check** | Compares new invoices with agreements and the tracking sheet | Finds duplicates, rate changes, and missing terms | Approval and payment |
+| **Vendor renewal watch** | Finds contracts approaching renewal with the owner, cost, and notice date | Creates time to cut or renegotiate spend | The vendor decision |
+| **Receivables follow-up** | Finds past-due invoices with no payment or dispute recorded | Protects cash already earned | The customer relationship and final message |
+| **Reporting input check** | Finds missing inputs and assembles submitted numbers | Removes the weekly chase and copy-paste | What the numbers mean |
+| **Close readiness check** | Reads the checklist and names open items, evidence, and owners | Shortens the exception list | Accounting judgment and sign-off |
 
-The safest first Runner doesn't move money. It tells you where to look.
+<Info>
+  Each Runner works independently. Runners can read the same source apps, but they don't pass work or results to one another automatically.
+</Info>
 
-## Build this first: invoice exception check
+The safest first teammate doesn't move money. They tell you where to look.
+
+## Start with: invoice check
 
 ```text
-Create a Runner named Invoice Exceptions.
+Create a Runner named Invoice Check.
 
 Every Friday at 9:00am in my timezone, review vendor invoices received in the
 last 7 days in [Gmail or Drive folder], active agreements in [Drive folder],
@@ -59,21 +63,20 @@ timezone. Wait for my confirmation.
 
 Run it against a small set first. Five invoices you already checked will tell you more than a perfect-looking prompt.
 
-## Give it the rules
+## Add the rules to the saved prompt
 
-Put stable rules in an operations Project:
+Put these in the Runner's saved prompt:
 
 - Where current agreements and approved vendor records live.
 - Required fields and matching tolerances.
-- Owners for vendors, reports, and close items.
 - Escalation timing.
 - Actions Runner must never take without a person.
 
-Keep invoice, contract, and checklist status in the source files. Each run starts in a separate session and doesn't automatically receive the last run's output.
+Use Project context for background such as vendor owners and business-unit names. Keep invoice, contract, and checklist status in the source files. Each run starts in a separate session and doesn't automatically receive the last run's output.
 
-Start every financial write on **Ask**. In many cases, the right permission is **Off**. Runner can do the collection and comparison without becoming the person who approves the result.
+Start every financial write on **Ask**. In many cases, the right permission is **Off**. Runner can collect and compare without approving anything.
 
-## Add the next check
+## Other jobs to schedule
 
 ### Vendor renewal watch
 
@@ -95,15 +98,15 @@ Run each weekday morning. If the close checklist isn't active, stop. During clos
 
 Runner doesn't need to "run finance." It needs to take a long list and show only the items that deserve a human decision.
 
-That's where the time and money come back.
+Measure exceptions caught before approval and the report assembly you no longer do by hand.
 
 ---
 
 ## What's next?
 
 <CardGroup cols={3}>
-  <Card title="What should you automate?" icon="star" href="/tips/tips-and-tricks">
-    Find recurring work tied to cost, time, or risk.
+  <Card title="Who should you add next?" icon="star" href="/tips/tips-and-tricks">
+    Find the next job tied to cost, time, or risk.
   </Card>
   <Card title="Connect your apps" icon="plug" href="/get-started/connecting-accounts">
     Link the sources where invoices, agreements, and trackers live.

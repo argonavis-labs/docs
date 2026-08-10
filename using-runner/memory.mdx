@@ -3,7 +3,7 @@ title: "Memory"
 description: "See, edit, and organize the facts and preferences Runner can use across sessions."
 ---
 
-Personal Memory is where Runner keeps the durable things you don't want to repeat.
+Personal Memory is where Runner keeps durable facts and preferences your AI teammates can use across jobs and sessions.
 
 - *"Keep my email drafts to three sentences max."*
 - *"Sarah and James are always high priority."*
@@ -12,6 +12,19 @@ Personal Memory is where Runner keeps the durable things you don't want to repea
 Want one of those to carry forward? Ask Runner to remember it, then check **Memory** to make sure it was saved.
 
 A session transcript isn't automatically Memory. Neither is the output from a previous Runner run. The fact has to be written to Personal Memory before another session or run can use it there.
+
+## Put each kind of context in the right place
+
+| What you want to keep | Where it belongs |
+|-----------------------|------------------|
+| A personal fact or preference | **Personal Memory** |
+| A standing rule for one Runner | That Runner's saved **Prompt** |
+| Shared background, definitions, or source locations | **Project context** |
+| A reusable procedure you choose when to start | A **Workflow** |
+| Live deal, invoice, project, or customer status | The source app the next run can read |
+| One run's result | Its session, unless you save the durable part elsewhere |
+
+Memory isn't where every result belongs. Save only the durable part another session or run should use.
 
 ## See what Runner remembers
 
@@ -47,9 +60,9 @@ Check **Memory** afterward. If the correction was saved, future sessions can use
 
 <CardGroup cols={2}>
   <Card title="Projects" icon="folder-open" href="/get-started/projects">
-    Personal Memory can be used across your sessions and Runners. Project context belongs to one Project.
+    Keep context that belongs to one Project with that Project.
   </Card>
   <Card title="Runners" icon="person-running" href="/runners/overview">
-    See exactly what a Runner gets when each new run starts.
+    See what each Runner gets when a new run starts.
   </Card>
 </CardGroup>

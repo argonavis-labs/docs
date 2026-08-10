@@ -1,30 +1,47 @@
 ---
 title: "Runners"
-description: "Put one job on a schedule and let it run in the cloud."
+description: "A Runner is one AI teammate with a recurring job, schedule, sources, rules, and tool permissions."
 ---
 
-A Runner is a saved prompt with a schedule. Tell it what to do, choose when it runs, and close your laptop.
+A Runner is one AI teammate assigned one recurring job.
+
+A Runner is a saved prompt with a schedule. Tell it what to check, which sources and rules to use, and what the result should contain. Then choose when it runs and close your laptop.
 
 Every weekday at 8am. Friday at 4pm. The first day of each month.
 
 Start with a job that costs you something when it gets missed: a proposal waiting on a reply, an invoice exception, a customer commitment, or a report you rebuild every Friday.
 
-## What stays the same between runs
+## Give every Runner a clear brief
+
+| Part | The question to answer |
+|------|------------------------|
+| **Job** | What should this Runner do every time? |
+| **Value** | Does it protect revenue, remove cost, save time, or protect a customer promise? |
+| **Tools** | Which connected apps, files, or sites does the job need? |
+| **Handoff** | What can happen directly, and what should come back to you? |
+| **Human work** | Which judgment, relationship, creative choice, or final decision stays yours? |
+
+<Info>
+  Each Runner works independently. Runners don't automatically hand work to one another or receive another Runner's output. You decide how the team fits together.
+</Info>
+
+## What carries into a run
 
 A Runner keeps its saved prompt, schedule, timezone, Project, intelligence setting, and any Runner-specific tool permission overrides. Tools without an override use your current **Connected Apps** settings.
 
 Each run itself starts in a separate session. It can use:
 
-- **Project context**, when the Runner belongs to a Project
+- **Project context** as background, when the Runner belongs to a Project
 - **Personal Memory**, for durable facts and preferences saved there
 - **Unresolved Action Cards**, when carry is turned on and the cards haven't expired
 
-It does **not** automatically receive the previous run's output. If a result needs to matter next time, put the durable fact in Personal Memory or the standing instruction in Project context.
+It does **not** automatically receive the previous run's output. If a result needs to matter next time, put a durable personal fact in Personal Memory or a standing job instruction in the saved prompt. Project context can hold shared background.
 
-## What happens when a Runner wants to write
+## When an action waits for review
 
 The tool setting decides:
 
+- **On** lets Runner read with the tool.
 - **Ask** stages an **Action Card** for review.
 - **Allow** performs the action without asking.
 - **Off** blocks the tool, unless the user-created Runner has its own override.
@@ -35,19 +52,19 @@ User-created Runners have a **Tool permissions** section for overrides. **Heartb
 
 [How tool permissions work →](/connections/tool-permissions)
 
-## What you choose
+## What you set for each Runner
 
 Each Runner has:
 
 - **Prompt.** The job, sources, rules, and output you want.
 - **Schedule.** Daily, weekdays, weekly, monthly, or custom.
 - **Timezone.** The clock the schedule follows.
-- **Project.** Optional context and organization for the work.
+- **Project.** Optional organization and background for the work.
 - **Intelligence.** **Normal** or **Ultra**. Scheduled Runners don't use **Auto**.
 - **Action Card carry.** Whether unresolved cards can appear in a later run before they expire.
 - **Avatar.** A quick way to spot it in the sidebar.
 
-## See what happened
+## Check recent runs
 
 Open a Runner to see recent runs. Each row shows whether the run was scheduled or manual, when it started, and its status.
 
@@ -63,7 +80,7 @@ Email delivery also depends on **Settings**, then **Notifications**, including y
 
 ---
 
-## Start with the built-ins
+## Built-in Runners
 
 Runner ships with two paused Runners:
 
@@ -77,8 +94,8 @@ Runner ships with two paused Runners:
 ## What's next?
 
 <CardGroup cols={2}>
-  <Card title="Create your own Runner" icon="wand-magic-sparkles" href="/runners/create-your-own">
-    Build one recurring job with the right schedule and guardrails.
+  <Card title="Create a Runner" icon="wand-magic-sparkles" href="/runners/create-your-own">
+    Add one recurring job with its schedule, rules, and tool permissions.
   </Card>
   <Card title="Tool permissions" icon="shield-check" href="/connections/tool-permissions">
     Decide what waits for review and what can run without asking.

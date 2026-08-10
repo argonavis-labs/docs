@@ -1,9 +1,11 @@
 ---
 title: "Connect your apps"
-description: "Connect your email, calendar, Slack, and other apps, then choose what each tool can do."
+description: "Connect the apps where the work lives, then choose what each tool can do."
 ---
 
-Connect the apps you already use and their tools show up in Runner. It can read email, check your calendar, draft replies, and take the actions you allow. All from one place.
+Connect the apps where the work lives, then choose what Runner can read, change, or send.
+
+Don't connect everything because you can. Start with one job and the sources it needs.
 
 <CardGroup cols={6}>
   <Card icon={<img src="/images/apps/gmail.svg" alt="Gmail" width="28" height="28" />} title="Gmail" />
@@ -18,11 +20,20 @@ Connect the apps you already use and their tools show up in Runner. It can read 
   <Card icon={<img src="/images/apps/github.svg" alt="GitHub" width="28" height="28" />} title="GitHub" />
 </CardGroup>
 
+## Connect the tools for the first job
+
+| AI teammate | Start with |
+|-------------|------------|
+| **Personal Assistant** | Gmail and Google Calendar |
+| **Pipeline Inspector** | HubSpot or Salesforce, plus Gmail |
+| **Invoice Check** | Gmail or Drive, Google Sheets, and the agreement folder |
+| **Customer-impact check** | Mixpanel, Linear, and GitHub |
+
+Add more only when the job needs them.
+
 ## How it works
 
 When you connect an app, Runner opens the provider's sign-in and permission screen. Review the access it requests, choose an account if prompted, and approve it. You can then set a permission for each tool on that account.
-
-Most people start by connecting their email and calendar.
 
 <Info>
   Security and policy details change. The current versions live on Runner's [Security](https://runner.now/security), [Privacy Policy](https://runner.now/privacy), and [Terms of Service](https://runner.now/terms) pages.
@@ -150,8 +161,8 @@ If Runner shows **Access may still be active**, you must also revoke Runner in t
 ## What's next?
 
 <CardGroup cols={2}>
-  <Card title="Set up a workflow" icon="arrows-spin" href="/workflows/overview">
-    Put your connected apps to work with multi-step workflows.
+  <Card title="Create a Runner" icon="person-running" href="/runners/create-your-own">
+    Put one valuable job on a schedule with the tools it needs.
   </Card>
   <Card title="Add a custom tool" icon="server" href="/connections/connect-your-own-mcp">
     Connect a public MCP server or save an API key.

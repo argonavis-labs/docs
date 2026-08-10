@@ -1,13 +1,13 @@
 ---
 title: "Workflows"
-description: "Reusable instructions you save once and invoke with /slug in any session."
+description: "Save instructions once, then invoke them with /slug in any session or Runner."
 ---
 
-By your second week with Runner, you'll notice something. You keep asking for the same things, the same way, with the same rules attached. "Triage my inbox, and remember: archive newsletters, never touch anything from investors, keep drafts under three sentences."
+A Workflow saves instructions you want to reuse with `/slug`. It's a playbook, not an AI teammate.
 
-A Workflow captures that once. It's a set of reusable instructions Runner loads whenever you invoke it. Every Workflow gets a slug, and you call it by typing `/its-slug` in any message.
+Say you're always asking for the same inbox triage: archive newsletters, treat investors as VIPs, and keep drafts under three sentences. A Workflow captures that procedure once.
 
-Type `/inbox-triage` and Runner runs your triage, your way, every time.
+Type `/inbox-triage` and Runner loads those instructions in that session.
 
 <Note>
   Writes follow your [tool permissions](/connections/tool-permissions). **Ask** stages an **Action Card** for review. **Allow** acts without asking. **Off** blocks the tool unless a user-created Runner has its own override.
@@ -41,11 +41,9 @@ Two ways, same as Runners: fill out the form, or have Runner build it with you.
 
 ## Workflows and Runners work together
 
-Easy way to keep them straight:
+A Runner owns the job. A Workflow says how, the schedule says when, and the Project supplies background.
 
-**A Workflow is how. A Runner is when.**
-
-A Workflow holds your procedure. A Runner puts work on a schedule. The best setups combine them: a Runner that fires every Friday at 4pm and invokes `/weekly-review` gets your procedure and your schedule in one always-on package.
+A Runner assigned the Friday review can invoke `/weekly-review` at 4pm, using those instructions and the background from its Project.
 
 | You want | Use |
 |---|---|
@@ -71,9 +69,9 @@ A Workflow holds your procedure. A Runner puts work on a schedule. The best setu
 
 <CardGroup cols={2}>
   <Card title="Starter workflows" icon="grid-2" href="/workflows/starter-workflows">
-    Proven recipes for the things you already do every day. Steal these.
+    Start with useful procedures, then make them yours.
   </Card>
   <Card title="Runners" icon="person-running" href="/runners/overview">
-    Put your Workflows on a schedule that never sleeps.
+    Put a recurring job and the right Workflow on a schedule.
   </Card>
 </CardGroup>
