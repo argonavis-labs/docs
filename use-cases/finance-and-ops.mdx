@@ -5,7 +5,11 @@ description: "Build your board pack, process invoices, refresh your forecast, an
 
 It's the last week of the month. You're chasing department leads for their numbers, reconciling invoices against contracts, and trying to get the operating model current before the board meeting on Friday. Half the work is just finding the data and moving it from one place to another.
 
-Runner connects your revenue tools, your spreadsheets, your email, and your docs. You tell it what you need and it pulls the numbers, builds the reports, and chases the people who haven't submitted yet.
+Runner connects your revenue tools, spreadsheets, email, and docs. You tell it what you need and it pulls the numbers, builds the reports, and follows up with people who haven't submitted yet.
+
+<Note>
+  Writes follow your [tool permissions](/connections/tool-permissions). **Ask** stages an **Action Card** for review. **Allow** acts without asking. **Off** blocks the tool unless a user-created Runner has its own override.
+</Note>
 
 ## Your stack, connected
 
@@ -48,7 +52,7 @@ Runner pulls live numbers from Stripe, Salesforce, and your Sheets. Revenue up 1
 
 ### Process invoices without the manual matching
 
-Drop your invoices into a session, or point Runner at a Drive folder. It reads each one, matches line items against signed agreements, and flags anomalies. Clean invoices go to an approval queue. Flagged ones come with a summary of what's off.
+Drop your invoices into a session, or point Runner at a Drive folder. It reads each one, matches line items against signed agreements, and flags anomalies. Clean invoices can go to your invoice approval queue. Flagged ones come with a summary of what's off.
 
 > *"We've got a pile of vendor invoices to process, some of them don't match our agreements."*
 
@@ -56,19 +60,19 @@ Six invoices are approval-ready. Two need a conversation before you pay them. AW
 
 ### Refresh the forecast with actual numbers
 
-Your operating model is stale the day after you update it. Runner pulls actual revenue from Stripe, actual expenses from your tracker, updates the model, and highlights the variances that matter.
+Your operating model is stale the day after you update it. Runner pulls actual revenue from Stripe and actual expenses from your tracker, updates the model, and highlights the variances that matter.
 
 > *"Our operating model is stale, can you help me update it?"*
 
-Model is current. Revenue 8% ahead, hiring spend 15% over plan. The three real variances are called out, the rest is noise you can skip.
+Once the model update runs, it's current. Revenue 8% ahead, hiring spend 15% over plan. The three real variances are called out, the rest is noise you can skip.
 
 ### Automate the weekly report
 
-Every Monday, Runner checks the reporting sheet, nudges anyone whose section is blank, pulls revenue from Stripe and pipeline from the CRM once everyone submits, and posts the summary to #leadership.
+Every Monday, Runner checks the reporting sheet, nudges anyone whose section is blank, then pulls revenue from Stripe and pipeline from the CRM and posts the summary to #leadership.
 
 > *"Every Monday, make sure all department leads have submitted their numbers for the weekly report."*
 
-Runner tracks who hasn't submitted, chases them down, and closes the loop. It's the ops person you don't have to hire.
+Runner tracks who hasn't submitted and follows up. It's the ops person you don't have to hire.
 
 ### Close the month faster
 
@@ -76,7 +80,7 @@ Runner checks your close checklist, identifies what's still open, pulls contract
 
 > *"It's month-end, what do I need to close out?"*
 
-Four of twelve items still open. Revenue recognition matches. Contractor invoices pulled. Mike is the last blocker on headcount numbers, and Runner is already pinging him.
+Four of twelve items still open. Revenue recognition matches. Contractor invoices pulled. Mike is the last blocker on headcount numbers, and Runner pings him.
 
 ---
 
@@ -86,10 +90,10 @@ Four of twelve items still open. Revenue recognition matches. Contractor invoice
 |------|-----------------|
 | **8:00 AM** | Morning brief: close items outstanding, invoices waiting, submission gaps |
 | **9:00 AM** | Processes new vendor invoices from Drive, flags anomalies against contracts |
-| **10:00 AM** | Refreshes the operating model with live numbers from Stripe and your tracker |
-| **11:00 AM** | Nudges department leads who haven't submitted their weekly numbers |
+| **10:00 AM** | Pulls live numbers from Stripe and your tracker, then updates the operating model |
+| **11:00 AM** | Nudges department leads who haven't submitted their numbers |
 | **1:00 PM** | Builds the weekly report once everyone has submitted |
-| **2:00 PM** | Preps the finance sync with the Stripe export attached to the meeting |
+| **2:00 PM** | Preps the finance sync and attaches the Stripe export to the meeting |
 | **4:00 PM** | Posts the weekly summary to #leadership |
 | **Month-end** | Runs the close checklist, reconciles revenue, chases the last blockers |
 
@@ -127,7 +131,7 @@ Four of twelve items still open. Revenue recognition matches. Contractor invoice
 
 Once you've tried these manually, turn them into Runners:
 
-- **Weekly report chase** every Monday at 8am. Check submissions, nudge stragglers, post the summary.
+- **Weekly report chase** every Monday at 8am. Check submissions, nudge stragglers, and post the summary.
 - **Invoice processing** every Friday. Pull new invoices, match against contracts, queue for approval.
 - **Forecast refresh** on the 1st and 15th of each month. Keep the model current without manual effort.
 - **Month-end close** starting 3 days before end of month. Track the checklist, chase blockers, draft the close memo.

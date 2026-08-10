@@ -1,57 +1,105 @@
 ---
-title: "Connect your own MCP server"
-sidebarTitle: "Custom tools (MCP)"
-description: "Bring your own tools and services into Runner with a custom MCP server."
+title: "Connect a custom MCP server or API"
+sidebarTitle: "Custom connections"
+description: "Connect a public MCP server or save an API key for a custom API."
 ---
 
-<Warning>
-  This page is for technical users who want to connect custom tools and services. If you're looking to connect Gmail, Calendar, Slack, or other popular apps, head to [Connect your apps](/get-started/connecting-accounts) instead.
-</Warning>
+Use **Custom MCP** when a service exposes an MCP server. Use **Custom API** when it gives you an API key and an HTTP API instead.
 
-Runner supports the Model Context Protocol, so if you have your own MCP server (internal tools, a vendor's server, something you built last weekend), you can plug it straight in. Its tools show up alongside your connected apps, with the same [per-tool permission controls](/connections/tool-permissions) as everything else.
-
-Because Runner runs on a virtual computer in the cloud, custom servers are remote: HTTP or SSE endpoints reachable over the internet.
+Both live in **Connected Apps**.
 
 <Note>
-  Coming from Runner Desktop? The `mcp.json` file and local `stdio` servers were a v1 feature. On the web you add servers through the UI instead, and they follow you to every device.
+  Looking for Gmail, Calendar, Slack, or another built-in option? Start with [Connect your apps](/get-started/connecting-accounts).
 </Note>
 
-## Add a custom MCP server
+<Warning>
+  **Never paste passwords, API keys, bearer tokens, or reusable secrets into a session.** Enter them only in the matching credential field under **Connected Apps**.
+</Warning>
+
+## Connect a custom MCP server
+
+Your MCP server needs a public HTTPS endpoint that Runner can reach. Use the full endpoint, including a path such as `/mcp` or `/sse` when the server requires one. Plain HTTP, private network addresses, query strings, and URL fragments aren't supported.
 
 <Steps>
-  <Step title="Open Connected Apps">
-    Scroll past the app catalog to the custom section and choose **Custom MCP**.
+  <Step title="Open Custom MCP">
+    In Runner, click **Connected Apps** in the sidebar. Find **Custom MCP**, then click **Connect**.
   </Step>
-  <Step title="Point it at your server">
-    Enter the full MCP endpoint URL, including the `/mcp` or `/sse` path if your server requires it. If the server needs auth, add your bearer token or auth header here. Runner stores it securely and sends it with every request.
+  <Step title="Enter the server details">
+    In **Connect an MCP server**, fill in **Name** and **HTTPS endpoint**.
+
+    For example: `https://mcp.example.com/mcp`
   </Step>
-  <Step title="Set the permissions">
-    Once connected, the server's tools appear in its **Tools** section like any other app. Decide what each one can do: On, Allow, Ask, or Off. For anything that writes, start with Ask.
+  <Step title="Choose an authentication method">
+    Open **Authentication** and choose one:
+
+    - **No authentication** for a server that doesn't require credentials.
+    - **Bearer token** to enter a token in the **Bearer token** field. Runner encrypts the token before storing it and doesn't show it again.
+    - **Sign in with the provider** for OAuth. Runner opens the provider's sign-in flow after you connect.
+  </Step>
+  <Step title="Connect the server">
+    Click **Connect server**. For OAuth, finish signing in with the provider.
+
+    Runner discovers the tools advertised by the server. The connection then appears under **Connected**, with each tool listed in its **Tools** section.
   </Step>
 </Steps>
 
-To remove a server later, open it in Connected Apps and click **Remove server**.
+Leave the advanced OAuth settings alone unless the server owner gave you a pre-registered OAuth client. In that case, click **Show Advanced** and enter its **Client ID** and optional **Client secret**. If the provider asks for a callback URL, use **Copy** beside **Callback URL** and register it there.
 
-## Or just ask Runner
+## Connect a custom API
 
-You don't have to click through anything. Tell Runner what you want to connect:
+No MCP server? If the service has an HTTP API and gives you an API key, add a **Custom API** connection instead.
 
-<CodeGroup>
-```text Remote server
-Connect my Notion MCP server at https://mcp.notion.com/mcp
-```
+<Steps>
+  <Step title="Open Custom API">
+    In **Connected Apps**, find **Custom API**, then click **Connect**.
+  </Step>
+  <Step title="Save the API key">
+    In **Connect an API key**, fill in:
 
-```text With auth
-Connect a remote MCP server at https://example.com/mcp with bearer token abc123
-```
-</CodeGroup>
+    - **Name**
+    - **API key**
+    - **Docs or API URL (optional)**, using a public HTTPS documentation page or API base URL
 
-## No MCP server? Use Custom API
+    Click **Connect API key**. Runner encrypts the key before storing it. The key doesn't appear in your session and isn't displayed again.
+  </Step>
+  <Step title="Approve the API URL">
+    Runner won't use the stored key until you approve where it can be sent.
 
-If the service you want has a REST API but no MCP server, choose **Custom API** in Connected Apps instead. Point Runner at the API and it can call it on your behalf, with the same permission controls.
+    If Runner finds a possible destination from public API documentation or the URL you entered, open the connection, review **Suggested API URL**, then click **Approve API URL**. Discovery reads only public pages and never sends your key.
 
-## Troubleshooting
+    If there's no suggestion, find **Approved API URL**, enter the public HTTPS base URL in **API URL**, then click **Save URL**.
+  </Step>
+</Steps>
 
-- If the server won't connect, confirm you used the full MCP endpoint URL, not just the domain.
-- If requests fail with auth errors, the token belongs in the connection's auth settings, not in the URL.
-- If new tools don't show up in an existing session, start a new session. Fresh sessions pick up the latest tool list.
+Once you approve the URL, the connection gets two tools:
+
+- `read` makes `GET`, `HEAD`, and `OPTIONS` requests to the approved API URL.
+- `request` makes any request to the approved API URL, including writes.
+
+### What approving an API URL does
+
+Runner approves the exact HTTPS scheme and host, not a path. If you enter `https://api.example.com/v1`, the approved URL is `https://api.example.com`. Any path, query string, or fragment is removed.
+
+Runner sends the stored key only to that approved scheme and host. A redirect never receives the key. If the suggested API host differs from the documentation host, Runner shows a warning so you can review the destination before approving it.
+
+## Set tool permissions
+
+Open either custom connection and find **Tools**. Each tool shows the settings it supports, so you may not see all four on every tool.
+
+| Setting | What it does |
+|---|---|
+| **On** | Lets Runner read with the tool. |
+| **Ask** | Runner stages an **Action Card** and waits for your approval. |
+| **Allow** | Runner acts without asking, where supported. |
+| **Off** | Blocks the tool unless a user-created Runner has its own override. |
+
+Start action tools on **Ask**. Move a tool to **Allow** only when you want Runner to use it without approval.
+
+## Manage or remove a custom connection
+
+Open the connection under **Connected** to manage it:
+
+- For an MCP server, use **Refresh tools**, **Reconnect** for OAuth, or **Remove** and then **Remove server**. For bearer authentication, enter a new value under **Bearer token**, then click **Replace token**.
+- For a Custom API connection, use **Approved API URL** and **Save URL** to change the destination, **Replace API key** and **Replace key** to store a new key, or **Remove** and then **Remove connection** to delete it.
+
+Removing a connection erases its stored credential from Runner. Revoke the token or key with the provider too.

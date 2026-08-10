@@ -1,129 +1,141 @@
 ---
 title: "Quickstart"
-description: "Sign in, connect your apps, and build your own AI Personal Assistant in about 15 minutes."
+description: "Connect Gmail and Calendar, then build a Personal Assistant that checks in every morning."
 ---
 
-By the end of this page you'll have your own Personal Assistant. A Runner that knows your calendar, tracks your commitments, and shows up every morning at 9am with something useful to say.
+Build one useful thing first: a Personal Assistant that reads Gmail and Google Calendar, spots what needs attention, and gives you a plan every morning at 9am.
 
-No download. No install. About 15 minutes.
+You'll connect two apps, check their permissions, create the Runner, then run it once.
+
+<Note>
+  The screenshots show mine, named Shiela: Kent's Chief of Staff. Give yours any name you want.
+</Note>
 
 <Steps>
-  <Step title="Sign in at app.runner.now">
-    Open any browser on any device and go to [app.runner.now](https://app.runner.now). Sign in with your Google account.
-
-    That's the whole install. Runner runs on a dedicated virtual computer in the cloud, so it works the same from your laptop, your phone, or your iPad. [Put it on your home screen →](/get-started/runner-on-your-phone)
+  <Step title="Open Runner">
+    Go to [Runner](https://app.runner.now/app) in any browser and sign in. There's nothing to install.
   </Step>
   <Step title="Connect Gmail and Google Calendar">
-    Open **Connected Apps** and connect both:
+    Open **Connected Apps** and connect Gmail and Google Calendar.
 
-    <CardGroup cols={2}>
-      <Card icon={<img src="/images/apps/gmail.svg" alt="Gmail" width="24" height="24" />} title="Gmail">
-        One click, sign in with Google. Takes 30 seconds.
-      </Card>
-      <Card icon={<img src="/images/apps/google-calendar.svg" alt="Google Calendar" width="24" height="24" />} title="Google Calendar">
-        Same Google account. Runner sees your inbox and your schedule together.
-      </Card>
-    </CardGroup>
+    Open **Tools** on each account. Set read tools to **On** and write tools to **Ask**. **On** lets Runner read. **Ask** stages an **Action Card** for review. **Allow** acts without asking. **Off** blocks the tool unless a user-created Runner has its own override.
 
-    That's all you need to start. [See all apps you can connect →](/get-started/connecting-accounts)
+    [Connect your apps →](/get-started/connecting-accounts)
   </Step>
-  <Step title="Meet your built-in Runners">
-    Head to the **Runners** tab. Two are already waiting for you:
+  <Step title="Start a new Runner">
+    Open **Runners** in the sidebar. You'll see **Heartbeat** and **Daily Brief** there too. Both ship paused, so leave them that way for now.
 
-    - **Heartbeat** monitors your connected communication channels and suggests what to do next, twice a day on weekdays.
-    - **Daily Brief** gives you a full update of everything you need to know, every day at 8am in your timezone.
+    Click **New runner**.
 
-    Both start paused so you stay in control. Open each one and hit **Enable**.
-
-    These run 24/7 in the cloud whether your laptop is open or not. For the cost of a Runner subscription, you have an always-on computer with your secure personal context that can take approved actions on your behalf.
-
-    [More on Heartbeat and Daily Brief →](/runners/heartbeat-and-daily-brief)
+    <Frame>
+      <img src="/images/quickstart/new-runner.png" alt="The New runner button on the Runners page" />
+    </Frame>
   </Step>
-  <Step title="Build your Personal Assistant">
-    Now the fun part. You're going to create your master Runner. Something you can talk to about your work, your priorities, and everything on your plate.
+  <Step title="Ask Runner to build it">
+    Choose **Ask Runner to create it**. This opens a new session with the first line already filled in.
 
-    In the **Runners** tab, click **New runner** in the top right corner, then select **Ask Runner to create it**. This opens a new session with a pre-filled prompt. Add these lines at the bottom:
+    <Frame>
+      <img src="/images/quickstart/ask-runner-to-create.png" alt="An arrow points to Ask Runner to create it in the Create a runner window" />
+    </Frame>
+
+    Set the session intelligence to **Normal** before you continue.
+  </Step>
+  <Step title="Describe your Personal Assistant">
+    Add this below the prefilled line:
 
     ```text
-    I want you to become my personal assistant. I want you to look at my
-    communications, my calendar, my commitments and give me
-    suggestions on more things that I could automate. I want you to review
-    Heartbeat and my Daily Brief and keep me organized. I want you to help me
-    save time and be more efficient so I can spend more time doing the things
-    I love in life. Keep track of my open loops, the things that I say yes to,
-    and be as proactive as possible. Finally, I want you to run every morning
-    at 9:00am and give me proactive tips for how best to use Runner each day.
+    Create a Personal Assistant Runner for me.
+
+    Every day at 9:00am in my timezone, review my connected Gmail and Google
+    Calendar. Give me a short plan for the day with:
+
+    1. My three most important priorities.
+    2. Meetings that need preparation.
+    3. Commitments and open loops that need attention.
+    4. Schedule conflicts, deadlines, or important messages I may have missed.
+    5. One specific task I could automate with Runner.
+
+    Be specific. If the source is unclear, say so instead of guessing. If a
+    write action would help, stage it as an Action Card and wait for my approval.
+
+    Don't add Runner-specific tool permission overrides. My write tools are
+    set to Ask in Connected Apps.
+
+    Ask me whatever you need. Before you create the Runner, show me the final
+    name, prompt, schedule, and timezone. Wait for my confirmation.
     ```
 
-    Hit **Send**, then have a conversation with Runner until it has what it needs.
+    Click **Send**, then answer Runner's questions. Give it real details. One current priority and one thing it shouldn't touch will do more than another paragraph about being proactive.
   </Step>
-  <Step title="Customize and run it">
-    Click on your new Runner in the Runners tab to open its details. From here you can:
+  <Step title="Confirm the setup">
+    Read the final name and prompt. Check the 9am schedule and timezone. Because you started from the main **Runners** page, it begins under **No project** with no Runner-specific tool permission overrides.
 
-    - Turn it on and off
-    - Review the full prompt Runner generated on your behalf
-    - Decide if it suggests **Action Cards**, previews of actions you can approve with one click (keep this on for now)
-    - Scroll down and set an avatar to give your Personal Assistant some personality
-
-    Hit **Save changes**, scroll back to the top, and hit **Run now**. It appears at the top of your recent sessions and gets to work.
+    **A user-created Runner becomes active as soon as it's created.** Confirm only when you're ready for the schedule to start.
   </Step>
-  <Step title="Give it feedback">
-    Your new Personal Assistant will have questions and things for you to review. Sit and chat with it for a few minutes, and remember the one thing that separates OK users from power users: feedback.
+  <Step title="Review the details">
+    Open **Runners** and select your new Personal Assistant.
 
-    Give feedback the way you would to a colleague or friend:
+    <Frame>
+      <img src="/images/quickstart/personal-assistant-settings.png" alt="Shiela: Kent's Chief of Staff showing the Status and Action Cards controls" />
+    </Frame>
 
-    - *"I didn't like that example, can you be more specific."*
-    - *"You recommended that I drive there, but I don't have a car. Please remember to use transit options next time."*
-    - *"I want to get notified of key events at least 2 days before they happen, not the morning of."*
+    Check the saved prompt, schedule, timezone, **Project**, and **Runner model**. Choose a Project if you want its context. Keep the model on **Normal** for now. Scheduled Runners don't use **Auto**. **Ultra** is for harder jobs and uses more of your plan.
 
-    Runner remembers, and every session gets better than the last.
+    Under **Tool permissions**, leave **No overrides** while you test. The Runner uses your current **Connected Apps** settings. If you add an override later, it takes priority, including over **Off**.
+
+    The **Action Cards** switch carries unresolved cards into later runs. It doesn't carry old run output, and a pending card still expires after 24 hours.
+  </Step>
+  <Step title="Give it a face">
+    Pick an avatar. It saves immediately. If you changed anything else, click **Save changes**.
+
+    <Frame>
+      <img src="/images/quickstart/choose-an-avatar.png" alt="The avatar picker and Save changes button on a Runner" />
+    </Frame>
+  </Step>
+  <Step title="Run it now">
+    Don't wait until tomorrow morning. Click **Run now**.
+
+    <Frame>
+      <img src="/images/quickstart/run-now.png" alt="An arrow points to Run now on Shiela: Kent's Chief of Staff" />
+    </Frame>
+
+    The test creates a separate session and keeps you on the Runner detail page. You can run a paused Runner this way too.
+
+    Open **Recent runs** and click the run's timestamp. You can also click your Personal Assistant's existing row under **Recent** in the sidebar.
+
+    <Frame>
+      <img src="/images/quickstart/open-recent-session.png" alt="An arrow points to Shiela: Kent's Chief of Staff under Recent" />
+    </Frame>
+  </Step>
+  <Step title="Give it useful feedback">
+    Talk to it the way you would a colleague. Be direct:
+
+    - *"I didn't like that example. Be more specific."*
+    - *"I don't have a car. Use transit options next time."*
+    - *"Tell me about key events at least two days before they happen, not the morning of."*
+
+    If the feedback should apply every morning, add it to the saved **Prompt**. Put durable facts and preferences in [Personal Memory](/using-runner/memory).
   </Step>
 </Steps>
 
-That's it. You now have an AI Personal Assistant that activates every morning with helpful things to guide you to a better day. Keep giving it feedback, keep asking it to do more, and hold it to your high standards.
+## What carries into tomorrow?
+
+Each run starts in a separate session. Your saved prompt, schedule, timezone, Project, and intelligence setting stay with the Runner. So do any Runner-specific tool permission overrides. Tools without an override use your current **Connected Apps** settings.
+
+The previous run's output doesn't come along automatically. Put standing instructions in the prompt or Project context, and durable personal details in Personal Memory.
 
 ---
 
-## What to try next
+## What's next?
 
-Your Personal Assistant is the start, not the end. Type any of these into a new session:
-
-| Say this | What happens |
-|---|---|
-| *"Triage my inbox"* | Runner classifies every email, drafts replies for what needs a response, archives the noise |
-| *"Prep me for my next meeting"* | Runner researches attendees, pulls relevant emails, builds a one-page brief |
-| *"Draft a reply to the last email from [name]"* | Runner reads the thread, checks your calendar, drafts a response you can review |
-| *"What emails did I send this week with no reply?"* | Runner checks your sent folder and flags what's gone stale |
-
----
-
-## Your first week
-
-You don't need to learn everything at once. Here's a good progression:
-
-1. **Day 1:** Sign in, connect Gmail and Calendar, build your Personal Assistant.
-2. **Day 2:** Read your Daily Brief. Tell it what you want more and less of.
-3. **Day 3:** Connect Slack. Ask Runner what you missed overnight.
-4. **Day 4:** [Add Runner to your phone](/get-started/runner-on-your-phone). Dictate a task on the go.
-5. **Day 5:** Create a second Runner for something specific: a 5am morning brief delivered to your inbox, a Friday weekly review, a follow-up tracker.
-
-By the end of the week, Runner handles most of the small, predictable work that eats your day.
-
----
-
-## Keep going
-
-<CardGroup cols={2}>
-  <Card title="Runners" icon="person-running" href="/runners/overview">
-    How always-on automations work, and how to build your own.
+<CardGroup cols={3}>
+  <Card title="Create your own Runner" icon="wand-magic-sparkles" href="/runners/create-your-own">
+    Go deeper on schedules, Projects, and permissions.
   </Card>
-  <Card title="Browse workflows" icon="arrows-spin" href="/workflows/starter-workflows">
-    Ready-made workflows for the things you already do every day.
+  <Card title="Tool permissions" icon="shield-check" href="/connections/tool-permissions">
+    Decide what waits for review and what can run without asking.
   </Card>
-  <Card title="Tips and tricks" icon="star" href="/tips/tips-and-tricks">
-    Quick wins to get more out of every session.
-  </Card>
-  <Card title="See use cases" icon="lightbulb" href="/use-cases/overview">
-    Real workflows for founders, real estate agents, and professionals.
+  <Card title="Personal Memory" icon="brain" href="/using-runner/memory">
+    Save the facts and preferences you want Runner to remember.
   </Card>
 </CardGroup>

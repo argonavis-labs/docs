@@ -3,47 +3,55 @@ title: "Tool permissions"
 description: "Decide, tool by tool, what Runner can do on its own."
 ---
 
-An assistant that can touch your email, your calendar, and your CRM needs clear rules. Runner gives you those rules at the most useful level: per tool, per app.
-
-Every connected app is a bundle of tools. Gmail has "search inbox" and it has "send email". Those are very different powers, and you control each one separately.
+Every connected app is a bundle of tools. Gmail has "search inbox" and "send email." Those are different powers, and you set each one on the connected account Runner will use.
 
 ## The four settings
 
-Open **Connected Apps**, click any app, and find the **Tools** section. Each tool has a setting:
+Open **Connected Apps**, select an account under **Connected**, and find **Tools**.
 
 | Setting | What it means |
 |---|---|
 | **On** | Runner can read with this tool. Reading tools only. |
 | **Allow** | Runner performs this action without asking. |
-| **Ask** | Runner proposes the action and waits for your approval. |
-| **Off** | Runner can't use this tool at all, except in Runners where you've specifically allowed it. |
+| **Ask** | Runner stages an **Action Card** for the action and waits for your approval. |
+| **Off** | Runner can't use this tool with this account, unless you've allowed it in a user-created Runner. |
 
-When a tool is set to **Ask**, the proposal shows up as an **Action Card**: a preview of exactly what Runner wants to do. Approve it, reject it, or dismiss it. One click each.
+**Staging an Action Card does not perform the action.** Review it, then approve or reject it.
+
+A pending **Action Card** expires 24 hours after Runner stages it. If it expires, the action hasn't happened and the card can no longer be approved. Ask Runner to stage it again if you still want it.
+
+---
+
+## Settings are per account
+
+A tool setting applies to the connected account you're viewing. If you connect two Gmail accounts, sending can be **Ask** for work and **Allow** for personal. Changing one doesn't change the other.
 
 ---
 
 ## A setup that works
 
-Why not just allow everything? Because trust is earned, even by software. Here's the progression most people follow:
+Why not allow everything? Because **Allow** skips review. Start with this:
 
-1. **Start with reads on, writes on Ask.** Runner can see everything and do nothing without a preview. You lose zero safety and get full usefulness.
-2. **Promote the boring stuff to Allow.** After a week of approving "archive this newsletter" cards, let that one run on its own. Archiving is reversible. Approval fatigue is real.
-3. **Keep the irreversible stuff on Ask.** Sending email, posting to Slack, updating deals. Some people move these to Allow eventually. No rush.
-4. **Turn Off what should never happen.** Don't want Runner deleting calendar events, ever? Off. Done thinking about it.
+1. **Start with reads on and writes on Ask.** Runner can read, while proposed writes wait for your approval.
+2. **Move routine actions to Allow when you're ready.** Runner will perform those actions without an **Action Card**.
+3. **Keep sending and hard-to-undo changes on Ask.** Email sends, Slack posts, and deal updates wait as **Action Cards**.
+4. **Use Off when the tool shouldn't run.** A user-created Runner can still override **Off** for its own runs.
 
 ---
 
-## Per-Runner overrides
+## User-created Runner overrides
 
-Your global settings are the default, and each Runner can override them in the **Tool permissions** section of its own page.
+Your **Connected Apps** setting is the baseline. On a user-created Runner, open **Tool permissions** to add an override. Anything you don't override stays **Inherited** and uses the **Connected Apps** setting.
 
-Every tool in a Runner starts as **Inherited**, meaning it uses your Connected Apps setting. Override it when a specific Runner has earned different rules:
+The Runner override takes priority during that Runner's runs, including over **Off**. It applies to that tool across the connected accounts the Runner uses.
 
-- Your inbox-triage Runner gets **Allow** on archiving, even if you keep it on Ask globally.
-- A tool that's **Off** everywhere can be allowed inside one specific Runner, and only there.
-- A research Runner can have every write tool **Off**, so it can never touch anything no matter what.
+For example:
 
-This is the setup that lets you run always-on automations and still sleep well. Each Runner has exactly the reach you gave it, nothing more.
+- An inbox-triage Runner can use **Allow** for archiving while the connected account stays on **Ask** elsewhere.
+- A research Runner can set its write tools to **Off** during its runs.
+- A user-created Runner can use a tool that's **Off** outside that Runner.
+
+Built-in Runners are the exception. **Heartbeat** and **Daily Brief** don't have per-Runner overrides. They use the tool settings in **Connected Apps**.
 
 ---
 

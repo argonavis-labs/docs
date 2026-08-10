@@ -1,9 +1,9 @@
 ---
 title: "Connect your apps"
-description: "Link your email, calendar, Slack, and other apps so Runner can actually do the work."
+description: "Connect your email, calendar, Slack, and other apps, then choose what each tool can do."
 ---
 
-Runner works best when it can see the tools you already use. Connect an app and Runner can read your emails, check your calendar, send Slack messages, draft replies. All from one place.
+Connect the apps you already use and their tools show up in Runner. It can read email, check your calendar, draft replies, and take the actions you allow. All from one place.
 
 <CardGroup cols={6}>
   <Card icon={<img src="/images/apps/gmail.svg" alt="Gmail" width="28" height="28" />} title="Gmail" />
@@ -11,23 +11,21 @@ Runner works best when it can see the tools you already use. Connect an app and 
   <Card icon={<img src="/images/apps/slack.svg" alt="Slack" width="28" height="28" />} title="Slack" />
   <Card icon={<img src="/images/apps/linear.svg" alt="Linear" width="28" height="28" />} title="Linear" />
   <Card icon={<img src="/images/apps/notion.png" alt="Notion" width="28" height="28" />} title="Notion" />
-  <Card icon={<img src="/images/apps/google-drive.png" alt="Drive" width="28" height="28" />} title="Drive" />
+  <Card icon={<img src="/images/apps/google-drive.png" alt="Google Workspace" width="28" height="28" />} title="Google Workspace" />
   <Card icon={<img src="/images/apps/hubspot.svg" alt="HubSpot" width="28" height="28" />} title="HubSpot" />
   <Card icon={<img src="/images/apps/salesforce.svg" alt="Salesforce" width="28" height="28" />} title="Salesforce" />
-  <Card icon={<img src="/images/apps/google-docs.png" alt="Docs" width="28" height="28" />} title="Docs" />
-  <Card icon={<img src="/images/apps/google-sheets.png" alt="Sheets" width="28" height="28" />} title="Sheets" />
   <Card icon={<img src="/images/apps/mixpanel.svg" alt="Mixpanel" width="28" height="28" />} title="Mixpanel" />
   <Card icon={<img src="/images/apps/github.svg" alt="GitHub" width="28" height="28" />} title="GitHub" />
 </CardGroup>
 
 ## How it works
 
-You sign into an app through Runner, just like you would on any website. Runner gets permission to read and act on your behalf. You stay in control of what it can do.
+When you connect an app, Runner opens the provider's sign-in and permission screen. Review the access it requests, choose an account if prompted, and approve it. You can then set a permission for each tool on that account.
 
-Most people start by connecting their email and calendar. Takes about 30 seconds per app.
+Most people start by connecting their email and calendar.
 
 <Info>
-  **Your data stays yours.** Runner never sees your password. We don't use your data to train AI. We don't sell it. Everything is encrypted. [Full security details below.](#your-data-is-safe)
+  Security and policy details change. The current versions live on Runner's [Security](https://runner.now/security), [Privacy Policy](https://runner.now/privacy), and [Terms of Service](https://runner.now/terms) pages.
 </Info>
 
 ---
@@ -39,20 +37,23 @@ Most people start by connecting their email and calendar. Takes about 30 seconds
     In Runner, click **Connected Apps** in the sidebar.
 
   </Step>
-  <Step title="Pick an app">
-    Browse the list or search by name. Popular choices: Gmail, Google Calendar, Slack, Linear, Notion.
+  <Step title="Connect an app">
+    Search by name or find the app under **Available**, then click **Connect**.
 
   </Step>
-  <Step title="Sign in">
-    Click the app and sign in with your account. You're signing in directly with the app. Runner never sees your password.
+  <Step title="Authorize the account">
+    If this is your first connection, review the notice and click **Connect**. Finish the provider's sign-in steps in the window that opens.
 
   </Step>
-  <Step title="Start using it">
-    That's it. Runner can now work with that app. Try asking something like:
+  <Step title="Check its tools">
+    Once the account appears under **Connected**, open it and review **Tools**. Start read tools on **On** and write tools on **Ask**.
+  </Step>
+  <Step title="Try it">
+    Ask for something small:
 
     - *"What's on my calendar today?"*
     - *"Show me my unread emails"*
-    - *"Send a message to #general on Slack"*
+    - *"Draft a message to #general on Slack. Don't send it yet."*
   </Step>
 </Steps>
 
@@ -70,15 +71,18 @@ Most people start by connecting their email and calendar. Takes about 30 seconds
 </CardGroup>
 
 <Tip>
-  Connect both Gmail and Calendar at the same time. They use the same Google account, and Runner works best when it can see your full day alongside your inbox.
+  Gmail and Google Calendar are separate connections. Connect both if you want Runner to work across your inbox and calendar.
 </Tip>
 
-<CardGroup cols={2}>
+<CardGroup cols={3}>
   <Card title="Slack" icon={<img src="/images/apps/slack.svg" alt="Slack" width="24" height="24" />}>
     Read channels and DMs, send messages on your behalf, summarize what you missed, find specific conversations.
   </Card>
   <Card title="Linear" icon={<img src="/images/apps/linear.svg" alt="Linear" width="24" height="24" />}>
     Show assigned tasks, create issues from conversations, update status, summarize what shipped this week.
+  </Card>
+  <Card title="GitHub" icon={<img src="/images/apps/github.svg" alt="GitHub" width="24" height="24" />}>
+    Issues, PRs, repos, and code search.
   </Card>
 </CardGroup>
 
@@ -86,8 +90,8 @@ Most people start by connecting their email and calendar. Takes about 30 seconds
   <Card title="Notion" icon={<img src="/images/apps/notion.png" alt="Notion" width="24" height="24" />}>
     Search docs, pull relevant info into conversations, create and update pages.
   </Card>
-  <Card title="Google Drive" icon={<img src="/images/apps/google-drive.png" alt="Google Drive" width="24" height="24" />}>
-    Search across files, pull documents into context, organize and share.
+  <Card title="Google Workspace" icon={<img src="/images/apps/google-drive.png" alt="Google Workspace" width="24" height="24" />}>
+    Search and read Drive files, create folders, and create or edit Docs, Sheets, and Slides.
   </Card>
 </CardGroup>
 
@@ -103,88 +107,43 @@ Most people start by connecting their email and calendar. Takes about 30 seconds
   </Card>
 </CardGroup>
 
-<CardGroup cols={3}>
-  <Card title="Google Docs" icon={<img src="/images/apps/google-docs.png" alt="Google Docs" width="24" height="24" />}>
-    Read, create, and edit documents.
-  </Card>
-  <Card title="Google Sheets" icon={<img src="/images/apps/google-sheets.png" alt="Google Sheets" width="24" height="24" />}>
-    Read data, create spreadsheets, update rows.
-  </Card>
-  <Card title="GitHub" icon={<img src="/images/apps/github.svg" alt="GitHub" width="24" height="24" />}>
-    Issues, PRs, repos, and code search.
-  </Card>
-</CardGroup>
-
 And many more: Calendly, Dropbox, Asana, Intercom, Shopify, Typeform, WhatsApp, and others. The list keeps growing. Missing one? Hit **Request a connector** and tell us.
 
 ---
 
 ## Work and personal, both connected
 
-Have two Gmail accounts? Connect both. Open the app in **Connected Apps** and click **Add account**. Runner keeps them straight, and you can tell it which one to use: *"Reply from my work email."*
+Have two Gmail accounts? Open **Connected Apps**, find Gmail under **Available**, and click **Add account**. Runner lists each account separately, and you can tell it which one to use: *"Reply from my work email."*
 
-To keep the work itself organized, use [Projects](/get-started/projects). Sessions and Runners grouped by what you're working on, each with its own context.
+To keep the work organized, use [Projects](/get-started/projects). A Project groups related sessions and Runners and gives them shared context.
 
 ---
 
 ## You stay in control
 
-Every connected app exposes its tools, and you decide what each tool can do on its own: **On**, **Allow**, **Ask**, or **Off**.
+Every connected account exposes its tools, and you decide what each one can do: **On**, **Allow**, **Ask**, or **Off**.
 
-Let Runner read your email freely but ask before sending anything. That's a solid default, and it's the kind of setup these controls are made for.
+Set email search to **On** and sending to **Ask**, for example. Runner can search freely. A send waits in an **Action Card** until you approve it.
 
 [How tool permissions work →](/connections/tool-permissions)
 
 ---
 
-## Your data is safe
+## Public share links
 
-We take this seriously. Here's how it works.
+When you choose **Share online** for a session or file, Runner creates a public link. Anyone with the link can view it until you choose **Stop sharing**.
 
-### We never see your password
-
-When you connect an app, you're signing in directly with that app's own login screen. Runner never sees or stores your password.
-
-### We don't use your data to train AI
-
-Your emails, calendar events, documents, and messages are processed only to do what you asked. Nothing else. We don't train models on your data.
-
-### We don't sell your data
-
-Runner doesn't sell, rent, or share your data with advertisers, data brokers, or anyone else.
-
-### Encryption
-
-All your data is encrypted in transit and at rest. Same level of encryption banks use.
-
-### You control what Runner can access
-
-You choose which apps to connect, and you can set permission levels for each one. Disconnect any app at any time and Runner stops accessing it immediately.
-
-### Your data stays separate
-
-Your data is completely isolated from other Runner users. Nobody else can see your stuff.
-
-### Compliance and certifications
-
-We're built for teams that care about this stuff.
-
-| Certification | Status |
-|--------------|--------|
-| **SOC 2 Type 1** | Compliant |
-| **SOC 2 Type 2** | In progress |
-| **CASA Tier 2** | Certified |
-| **GDPR** | In progress |
-
-If your team needs to review Runner's security posture before connecting, reach out to [support@runner.now](mailto:support@runner.now). We'll walk through the details with your compliance team.
+Open that session or file's share menu and click **Stop sharing** when you no longer want the link to work.
 
 ---
 
 ## Reconnect or disconnect
 
-**If a connection stops working**, click the app in Connected Apps and sign in again. This refreshes your access without losing any settings.
+**If a connection needs attention**, click **Reconnect** beside the account and finish the provider's sign-in steps.
 
-**To remove an app**, find it in Connected Apps and click **Disconnect**. Runner stops using it immediately.
+**To remove an account**, open its actions in **Connected Apps** and click **Disconnect**. After Runner confirms the disconnect, that account is no longer offered to Runner.
+
+If Runner shows **Access may still be active**, you must also revoke Runner in the provider's account or security settings.
 
 ---
 
@@ -195,6 +154,6 @@ If your team needs to review Runner's security posture before connecting, reach 
     Put your connected apps to work with multi-step workflows.
   </Card>
   <Card title="Add a custom tool" icon="server" href="/connections/connect-your-own-mcp">
-    For power users: bring in your own tools and services.
+    Connect a public MCP server or save an API key.
   </Card>
 </CardGroup>

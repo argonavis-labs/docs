@@ -1,60 +1,74 @@
 ---
 title: "Runners"
-description: "Prompts that run on a schedule, 24/7, on a computer that never closes its laptop."
+description: "Put one job on a schedule and let it run in the cloud."
 ---
 
-A Runner is a prompt that runs on a schedule. That's the whole idea, and it changes everything.
+A Runner is a saved prompt with a schedule. Tell it what to do, choose when it runs, and close your laptop.
 
-Write what you want done, pick when it should happen, and Runner does it on a dedicated virtual computer in the cloud. Every day at 8am. Weekdays at 5pm. The first of the month. Your laptop can be closed. You can be on a flight. The work happens anyway.
+Every weekday at 8am. Friday at 4pm. The first day of each month.
 
-Run one at 5am and your morning brief is in your inbox before you wake up.
+## What stays the same between runs
 
-## Why Runners are different from old-school automations
+A Runner keeps its saved prompt, schedule, timezone, Project, intelligence setting, and tool permissions.
 
-**They keep context between runs.** A Runner isn't a fresh robot every morning. It remembers what it found yesterday, what you told it, and what's still open. Your follow-up tracker knows which follow-ups it already flagged.
+Each run itself starts in a separate session. It can use:
 
-**They can reach you.** Ask a Runner to email you its results and it will. It only sends email when you've explicitly asked it to, and you control the daily limit in **Settings, then Notifications**.
+- **Project context**, when the Runner belongs to a Project
+- **Personal Memory**, for durable facts and preferences saved there
+- **Unresolved Action Cards**, when carry is turned on and the cards haven't expired
 
-**They propose, you approve.** When a Runner wants to take an action, like sending a reply or updating your CRM, it stages an **Action Card**: a preview you can approve, reject, or dismiss with one click. Unresolved cards can carry into the next run so nothing falls through.
+It does **not** automatically receive the previous run's output. If a result needs to matter next time, put the durable fact in Personal Memory or the standing instruction in Project context.
 
-**You control their tools.** Every Runner has its own **Tool permissions** section. Your inbox triage Runner can read email but never send it, while your Personal Assistant gets more rope. [How tool permissions work →](/connections/tool-permissions)
+## What happens when a Runner wants to write
+
+The tool setting decides:
+
+- **Ask** stages an **Action Card** for review.
+- **Allow** performs the action without asking.
+- **Off** blocks the tool, unless the user-created Runner has its own override.
+
+A pending **Action Card** expires 24 hours after it's staged. Turning on **Carry unresolved Action Cards into new runs** can show that card in the next run, but it doesn't extend the 24-hour limit.
+
+User-created Runners have a **Tool permissions** section for overrides. **Heartbeat** and **Daily Brief** don't. The built-ins use the settings under **Connected Apps**.
+
+[How tool permissions work →](/connections/tool-permissions)
+
+## What you choose
+
+Each Runner has:
+
+- **Prompt.** The job, sources, rules, and output you want.
+- **Schedule.** Daily, weekdays, weekly, monthly, or custom.
+- **Timezone.** The clock the schedule follows.
+- **Project.** Optional context and organization for the work.
+- **Intelligence.** **Normal** or **Ultra**. Scheduled Runners don't use **Auto**.
+- **Action Card carry.** Whether unresolved cards can appear in a later run before they expire.
+- **Avatar.** A quick way to spot it in the sidebar.
+
+## See what happened
+
+Open a Runner to see recent runs. Each row shows whether the run was scheduled or manual, when it started, and its status.
+
+Click the run's timestamp to open that run's session. That's where you'll find its result, tool activity, **Action Cards**, or failure message.
+
+Need a test before the next scheduled time? Click **Run now**. A paused Runner can run once without turning its schedule on.
+
+## Ask for an email when it's done
+
+Put the request in the Runner's prompt: *"Email me when this report is ready."*
+
+Email delivery also depends on **Settings**, then **Notifications**, including your daily limit.
 
 ---
 
-## The two that come built in
+## Start with the built-ins
 
-Open the **Runners** tab and two are already there, paused and waiting:
+Runner ships with two paused Runners:
 
-<CardGroup cols={2}>
-  <Card title="Heartbeat" icon="heart-pulse" href="/runners/heartbeat-and-daily-brief">
-    Sweeps your communication channels twice a day on weekdays and stages what needs you.
-  </Card>
-  <Card title="Daily Brief" icon="sun" href="/runners/heartbeat-and-daily-brief">
-    Everything you need to know today, every day at 8am, readable in 90 seconds.
-  </Card>
-</CardGroup>
+- **Heartbeat** checks communication channels twice on weekdays and surfaces what needs attention.
+- **Daily Brief** runs every day at 8am and gives you one update across your connected apps.
 
----
-
-## Anatomy of a Runner
-
-Every Runner has:
-
-- **A prompt.** What it should do on each run. This is just plain language, the same way you'd type it in a session.
-- **A schedule.** Daily, weekdays, weekly, monthly, or a custom cron expression, in your timezone. The details page shows you exactly what the schedule means and when the next runs are.
-- **An intelligence setting.** Auto, Normal, or Ultra, or pin a specific model. [More on models →](/using-runner/models)
-- **A Project (optional).** Runners can live inside a Project and inherit its context. Your pipeline-review Runner belongs in your Sales project. [More on Projects →](/get-started/projects)
-- **A run history.** Every run creates a session. Open the transcript of any run and see exactly what it did and why.
-
-You can also give it an avatar. Mine's an animal. This matters more than you'd think, because you're going to end up talking to these things every day.
-
----
-
-## Runs you can watch
-
-Each run shows up in **Recent runs** on the Runner's page, marked **Scheduled** or **Manual**, with its status. Click **Open transcript** on any of them and read the whole session.
-
-Want results right now instead of waiting for the schedule? Hit **Run now**.
+[Set up Heartbeat and Daily Brief →](/runners/heartbeat-and-daily-brief)
 
 ---
 
@@ -62,9 +76,9 @@ Want results right now instead of waiting for the schedule? Hit **Run now**.
 
 <CardGroup cols={2}>
   <Card title="Create your own Runner" icon="wand-magic-sparkles" href="/runners/create-your-own">
-    From idea to scheduled Runner in a few minutes.
+    Build one recurring job with the right schedule and guardrails.
   </Card>
-  <Card title="Heartbeat and Daily Brief" icon="heart-pulse" href="/runners/heartbeat-and-daily-brief">
-    Enable the built-ins and make them yours.
+  <Card title="Tool permissions" icon="shield-check" href="/connections/tool-permissions">
+    Decide what waits for review and what can run without asking.
   </Card>
 </CardGroup>

@@ -7,6 +7,10 @@ Your standup is in five minutes. Someone says the checkout is broken. You flip t
 
 Runner connects your issue tracker, your repo, your analytics, and your project tools. You describe the problem, Runner traces it to the cause and takes the next step.
 
+<Note>
+  Writes follow your [tool permissions](/connections/tool-permissions). **Ask** stages an **Action Card** for review. **Allow** acts without asking. **Off** blocks the tool unless a user-created Runner has its own override.
+</Note>
+
 ## Your stack, connected
 
 Runner works across the tools product and engineering teams actually live in. Connect them once and Runner handles the rest.
@@ -44,23 +48,23 @@ Runner pulls your backlog from Linear, checks what rolled over from last sprint,
 
 > *"Help me plan our sprint for next week."*
 
-14 open issues, 6 rolled over from last sprint, 3 are blocked. The onboarding flow you shipped last sprint has 23% drop-off at step 3. Runner recommends fixing that first, then 2 high-priority bugs. Updated the sprint in Linear with suggested assignments.
+14 open issues, 6 rolled over from last sprint, 3 are blocked. The onboarding flow you shipped last sprint has 23% drop-off at step 3. Runner recommends fixing that first, then 2 high-priority bugs. Runner also updates the sprint in Linear with suggested assignments.
 
 ### Trace a bug to the PR that caused it
 
-Something is broken. Runner checks your analytics for the drop, finds the deploy that lines up with the timing, pulls the diff, identifies the change, and files a P1 bug in Linear assigned to the PR author.
+Something is broken. Runner checks your analytics for the drop, finds the deploy that lines up with the timing, pulls the diff, identifies the change, and files a P1 bug in Linear for the PR author.
 
 > *"We're getting reports of a checkout bug, what's going on?"*
 
-Conversion dropped 18% starting yesterday at 3pm. Deploy at 2:45pm, PR #847 touched the payment flow. Null check was removed on line 142. Bug filed in Linear and assigned.
+Conversion dropped 18% starting yesterday at 3pm. Deploy at 2:45pm, PR #847 touched the payment flow. Null check was removed on line 142. Runner files the bug and assigns it to the PR author.
 
 ### Measure feature impact
 
-Runner pulls usage events from Mixpanel, checks session recordings, identifies gaps, and creates action items. Not a dashboard you have to interpret. A summary with the next step already filed.
+Runner pulls usage events from Mixpanel, checks session recordings, identifies gaps, and creates the next action item. Not a dashboard you have to interpret.
 
 > *"How is the new search feature performing?"*
 
-2,400 searches per day since launch. 34% return zero results. Top query: integrations. Runner created a Linear issue to add the integrations page to the search index. Fixing it is a 1-point ticket.
+2,400 searches per day since launch. 34% return zero results. Top query: integrations. Runner creates a Linear issue to add the integrations page to the search index. Fixing it is a 1-point ticket.
 
 ### Monitor releases without babysitting
 
@@ -86,8 +90,8 @@ Three features drove 80% of the engagement lift. New onboarding improved D7 rete
 |------|-----------------|
 | **8:30 AM** | Morning brief: bugs filed overnight, sprint progress, any deploys that need watching |
 | **9:00 AM** | Sprint planning: pulls the backlog, suggests priorities from analytics data |
-| **10:00 AM** | Bug triage: traces a reported issue to the PR that caused it, files a P1 |
-| **11:00 AM** | Feature impact review: pulls usage data, identifies gaps, creates tickets |
+| **10:00 AM** | Bug triage: traces a reported issue to the PR that caused it and files a P1 |
+| **11:00 AM** | Feature impact review: pulls usage data, identifies gaps, and creates tickets |
 | **1:00 PM** | Release prep: checks what's shipping, preps the release notes |
 | **3:00 PM** | Post-deploy: monitors error rates and funnels for the first hour |
 | **4:00 PM** | Posts the deploy summary to #engineering |
@@ -125,7 +129,7 @@ Three features drove 80% of the engagement lift. New onboarding improved D7 rete
 Once you've tried these manually, turn them into Runners:
 
 - **Morning standup prep** at 8:30am, every weekday. What shipped, what's blocked, what needs attention.
-- **Post-deploy monitoring** after every release. Error rates, funnels, and a summary to #engineering.
+- **Post-deploy monitoring** after every release. Error rates, funnels, and a summary for #engineering.
 - **Weekly sprint review** every Friday. What shipped, impact data, what to carry over.
 - **Feature impact check** one week after any major launch. Pull the data before the retro.
 

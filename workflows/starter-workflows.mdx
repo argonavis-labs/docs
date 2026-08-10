@@ -7,6 +7,10 @@ These are the workflows that save people the most time on things they already do
 
 Then, when you find one you keep coming back to, make it permanent. Save it with your own rules in the [Workflow Library](/workflows/overview) so you can invoke it with a slash, or [schedule it as a Runner](/runners/create-your-own) so it happens without you asking.
 
+<Note>
+  Writes follow your [tool permissions](/connections/tool-permissions). **Ask** stages an **Action Card** for review. **Allow** acts without asking. **Off** blocks the tool unless a user-created Runner has its own override. Browser checkouts and bookings add one last stop: Runner shows you the final action and asks before submitting.
+</Note>
+
 ## Find the right workflow
 
 Not sure where to start? Pick what sounds most like your day.
@@ -57,31 +61,31 @@ Runner scans your inbox from the last 7 days, classifies every email, drafts rep
 **Needs:** <img src="/images/apps/gmail.svg" alt="Gmail" width="18" height="18" />
 
 **What you get:**
-- Quick-send drafts you can fire off without reading
+- Drafts ready to review and send
 - Longer drafts for emails that need your input, with effort estimates
 - A "waiting on" list showing sent emails with no reply
 - Unsubscribe candidates with email counts per sender
 
 > *"Triage my inbox."*
 
-Runner archives notifications and marketing emails automatically. Everything it archives stays in All Mail, so nothing is permanently lost. Your inbox should only contain things that actually need you when it's done.
+With archiving on **Allow**, Runner archives notifications and marketing emails without asking. **Ask** stages each archive as an **Action Card**, and **Off** leaves the message alone. Anything archived stays in All Mail, so nothing is permanently lost.
 
 ---
 
 ### Reply to Messages
 
-Scans WhatsApp, Telegram, and LinkedIn for messages you haven't replied to. Creates draft reply cards for each one. Review, tweak, send. Inbox zero across all your messaging apps.
+Scans WhatsApp, Telegram, and LinkedIn for messages you haven't replied to, then prepares a reply for each one. Sending follows the permission you set.
 
 **Needs:** <img src="/images/apps/whatsapp.svg" alt="WhatsApp" width="18" height="18" /> WhatsApp or Telegram (also works with LinkedIn if connected)
 
 **What you get:**
-- Draft replies for every unreplied message across platforms
+- Replies for every unreplied message across platforms
 - A summary table showing who's waiting and what they need
 - Skipped group chats and bots so you're not drowning in noise
 
 > *"Reply to my messages."*
 
-Nothing goes out without your approval. Every reply is a draft card you review first.
+Sending follows the permission you set. **Ask** stages each reply as an **Action Card**, **Allow** sends without asking, and **Off** blocks the send.
 
 ---
 
@@ -153,7 +157,7 @@ Searches your email for recurring payment receipts to build a complete list of e
 - Complete subscription table with costs, frequency, and last charge date
 - Monthly and annual totals broken down by category
 - Flagged subscriptions that look forgotten or duplicated
-- Help canceling anything you want to cut
+- Help canceling anything you want to cut. Runner asks before submitting a cancellation in the browser.
 
 > *"Audit my subscriptions."*
 
@@ -171,7 +175,7 @@ Builds a targeted outreach list from scratch. Finds companies matching your idea
 - Company list matching your ICP with headcount, funding stage, and what they build
 - Decision-maker contacts with verified emails
 - Personalized draft emails referencing something specific about each company
-- Everything saved to your CRM automatically
+- A company list and draft emails ready for your CRM
 
 > *"Find Series A fintech companies in the Bay Area with 50-200 employees. I want to reach their VP of Sales."*
 
@@ -204,7 +208,7 @@ Source candidates without LinkedIn Recruiter. Finds professionals matching your 
 - Deep research summaries: career arc, skills, signals of openness
 - Verified personal email addresses (not work inbox)
 - Draft outreach messages written in founder-voice, not recruiter-voice
-- Candidates saved to your CRM
+- A candidate list ready for your CRM
 
 > *"Find Senior Backend Engineers with 5+ years, ideally from YC-backed companies. We're a Series A healthtech startup."*
 
@@ -223,7 +227,7 @@ Deep-dive on the funding landscape for your space. Finds companies matching your
 - Founder profiles with career arcs and patterns
 - VC activity: who's betting here, how aggressively, any notable absences
 - A synthesized deal brief with non-obvious observations
-- Companies and investors saved to your CRM
+- Company and investor lists ready for your CRM
 
 > *"Map AI infrastructure companies, Seed to Series A, founded after 2022. Which VCs are most active?"*
 
@@ -240,7 +244,7 @@ Finds open roles matching what you're looking for, researches the companies behi
 - Company briefs: funding, growth signals, culture, red flags
 - Hiring manager profiles with verified email addresses
 - Draft intro messages (not job applications, warm introductions)
-- Jobs and contacts saved to your CRM
+- Job and contact lists ready for your CRM
 
 > *"Find Senior Product Manager roles at remote-friendly health-tech companies, 100-500 employees, Series A or B."*
 
@@ -252,7 +256,7 @@ The whole point: bypassing the ATS. A warm email to a hiring manager is 10x more
 
 ### Order Lunch
 
-Opens Uber Eats (or DoorDash, or Grubhub) in the browser, helps you pick a restaurant, builds your order, and gets everything into your cart ready for checkout. You review and confirm the purchase yourself.
+Opens Uber Eats (or DoorDash, or Grubhub) in the browser, helps you pick a restaurant, and builds your order. Runner shows you the final purchase action and asks you to confirm before submitting.
 
 **What you get:**
 - Restaurant suggestions based on what you're craving
@@ -262,7 +266,7 @@ Opens Uber Eats (or DoorDash, or Grubhub) in the browser, helps you pick a resta
 
 > *"Order me lunch. I'm in the mood for Thai."*
 
-Runner never clicks "Place Order" or enters payment information. Your cart is ready, you do the final checkout.
+Runner doesn't submit the order until it shows you the final action and you confirm it.
 
 ---
 

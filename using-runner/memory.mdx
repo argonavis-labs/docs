@@ -1,23 +1,25 @@
 ---
 title: "Memory"
-description: "Runner remembers how you work, and it keeps its own memory organized."
+description: "See, edit, and organize the facts and preferences Runner can use across sessions."
 ---
 
-Tell Runner something once and it's remembered. Not the "oh I forgot everything from yesterday" kind of memory. Real memory. The kind where it learns how you write, who matters to you, and how you like things done, and gets smarter the more you use it.
+Personal Memory is where Runner keeps the durable things you don't want to repeat.
 
 - *"Keep my email drafts to three sentences max."*
 - *"Sarah and James are always high priority."*
 - *"I don't have a car. Transit options only."*
 
-Say it in any session, on any device. Every future session already knows.
+Want one of those to carry forward? Ask Runner to remember it, then check **Memory** to make sure it was saved.
 
-## See what Runner knows
+A session transcript isn't automatically Memory. Neither is the output from a previous Runner run. The fact has to be written to Personal Memory before another session or run can use it there.
 
-Open **Memory** in your sidebar. Every memory is a document you can read, edit, or delete, organized in folders you can nest however you like. People, projects, preferences, your company.
+## See what Runner remembers
 
-Nothing is hidden. If Runner believes something wrong about you, open the memory and fix it, or just tell it: *"That's outdated. I moved teams in June."*
+Open **Memory** in the sidebar. Each memory is a document you can read, edit, or delete. Folders can be nested, so you can organize people, preferences, company context, or anything else that needs a home.
 
-You can add memories by hand too. Click **New memory**, give it a title and a body, done. Useful for the stuff you'd otherwise repeat forever: your travel preferences, your kids' school schedule, how you like reports formatted.
+If something is wrong, open it and fix it. You can also tell Runner what changed and ask it to update the memory.
+
+You can add one yourself too. Click **New memory**, give it a title and body, done.
 
 ---
 
@@ -25,19 +27,19 @@ You can add memories by hand too. Click **New memory**, give it a title and a bo
 
 Memory that grows forever becomes a junk drawer. Runner does its own housekeeping:
 
-**It tidies.** Hit **Organize** on the Memory page and Runner files stray memories into the right folders in the background. It also does this on its own every week, consolidating duplicates and keeping the structure sane.
+**It tidies.** Open **Memory** and click **Organize**. Runner files stray memories into folders in the background. It also runs a weekly cleanup to combine duplicates and keep the structure useful.
 
-**It stays fresh.** Runner periodically sweeps your connected apps, read-only, to keep its understanding of your world current. Who you're talking to, what's active, what's gone quiet. These sweeps only ever write to your memory. They never touch your apps.
+**It stays fresh.** Runner periodically sweeps supported connected apps with read-only tools. Those sweeps can update Personal Memory, but they don't change the connected apps.
 
 ---
 
-## Feedback is memory
+## Turn feedback into memory
 
-The fastest way to build great memory is to correct Runner like you'd correct a colleague:
+Correct the result, then say what should be remembered:
 
-> *"You recommended I drive there, but I don't have a car. Please remember to use transit options next time."*
+> *"You recommended I drive there, but I don't have a car. Remember to use transit options next time."*
 
-That correction becomes memory. The next suggestion uses transit. This is the whole loop: feedback in, better output forever after.
+Check **Memory** afterward. If the correction was saved, future sessions can use it without making you repeat yourself.
 
 ---
 
@@ -45,9 +47,9 @@ That correction becomes memory. The next suggestion uses transit. This is the wh
 
 <CardGroup cols={2}>
   <Card title="Projects" icon="folder-open" href="/get-started/projects">
-    Memory is what Runner knows about you. Project context is what it knows about the work.
+    Personal Memory can be used across your sessions and Runners. Project context belongs to one Project.
   </Card>
   <Card title="Runners" icon="person-running" href="/runners/overview">
-    Runners carry memory between runs, so every run builds on the last.
+    See exactly what a Runner gets when each new run starts.
   </Card>
 </CardGroup>

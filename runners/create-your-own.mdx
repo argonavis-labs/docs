@@ -1,74 +1,90 @@
 ---
 title: "Create your own Runner"
-description: "From idea to always-on automation in a few minutes."
+description: "Turn one repeated job into a Runner with a prompt, schedule, and clear permissions."
 ---
 
-There are two ways to create a Runner. One is filling out a form. The other is telling Runner what you want and letting it build the thing for you.
+There are two ways to create a Runner:
 
-Use the second one.
+1. Fill in the form yourself.
+2. Ask Runner to help you design it.
 
-## Ask Runner to create it
+Use the second one when the job is still fuzzy. Use the form when you already know the prompt and schedule.
+
+<Warning>
+  **A new Runner is active as soon as it's created.** Review the prompt, schedule, timezone, Project, intelligence, and tool permissions before you finish. A scheduled time can arrive before you come back to edit it.
+</Warning>
+
+## Ask Runner to build it with you
 
 <Steps>
-  <Step title="Start from the Runners tab">
-    Click **New runner** in the top right corner, then choose **Ask Runner to create it**.
+  <Step title="Start the setup">
+    Open **Runners**, click **New runner**, then choose **Ask Runner to create it**.
   </Step>
-  <Step title="Describe what you want">
-    A session opens with a pre-filled prompt. Add what you actually want in plain language:
+  <Step title="Describe the job">
+    Say what you want, when it should run, and what a useful result looks like. Add this line when you want a review before creation:
 
-    > *"Every Friday at 4pm, review my week across calendar and email. What did I spend time on, what slipped, what's still open. Email me the summary."*
-
-    Runner asks follow-up questions, then creates the Runner for you: prompt, schedule, everything.
+    ```text
+    Ask me whatever you need. Show me the final prompt, schedule, timezone,
+    Project, and intelligence setting. Wait for my confirmation before you
+    create the Runner.
+    ```
   </Step>
-  <Step title="Review and enable">
-    Open your new Runner from the Runners tab. Read the prompt it generated on your behalf, adjust anything, hit **Save changes**, and make sure it's **Active**.
-  </Step>
-  <Step title="Run it once, right now">
-    Don't wait for the schedule. Hit **Run now** and watch the first run land in your recent sessions. Then give it feedback like you would a colleague. The second run is always better than the first.
+  <Step title="Check the final setup">
+    Read the proposed prompt and schedule. Confirm only when you're ready for the Runner to become active.
   </Step>
 </Steps>
 
-<Tip>
-  Prefer the form? **New runner** also lets you fill in the name, prompt, schedule, timezone, Project, and intelligence level yourself. Same result, more typing.
-</Tip>
+## Fill in the form yourself
 
----
+Open **Runners**, click **New runner**, then choose **Create manually**.
 
-## The settings that matter
+Fill in:
 
-Once a Runner exists, its details page gives you the controls:
+- **Name**
+- **Prompt**
+- **Schedule** and **Timezone**
+- **Project**, when the job belongs with other work
+- **Runner model**, using **Normal** or **Ultra**
 
-- **Active or Paused.** Paused Runners keep their prompt and history, they just don't fire. Pause instead of delete.
-- **Schedule.** Daily, weekdays, weekly, monthly, or custom cron. The page shows you in plain English when it will run next.
-- **Tool permissions.** Decide per tool what this Runner can do on its own: read your inbox, yes. Send email without asking, your call. [How permissions work →](/connections/tool-permissions)
-- **Action Cards.** Keep "carry unresolved Action Cards into new runs" on so a draft you didn't get to today shows up again tomorrow.
-- **Intelligence.** Auto is right for most Runners. Bump a hard one (deep research, long documents) to Ultra. [More on models →](/using-runner/models)
-- **Avatar.** Give it a face. You'll be working with it every day.
+Click **Create runner** only after you've checked the schedule. The new Runner starts active.
 
----
+## Check permissions before the first run
 
-## Runner ideas that earn their keep
+For connected-app writes:
 
-| Runner | Schedule | What it does |
-|---|---|---|
-| Morning brief to inbox | Daily, 5am | Emails you the day's brief before you wake up |
-| Follow-up tracker | Weekdays, 5pm | Flags sent emails with no reply and drafts nudges |
-| Weekly review | Fridays, 4pm | Where your week went, what slipped, what's next |
-| Pipeline watch | Weekdays, 8am | Reviews CRM changes and flags deals going quiet |
-| Competitor watch | Mondays, 9am | Checks competitor sites and news, reports what changed |
-| Inbox zero on messages | Daily, noon | Drafts replies to unanswered WhatsApp and Slack messages |
+- **Ask** stages an **Action Card** for review.
+- **Allow** performs the action without asking.
+- **Off** blocks the tool unless this Runner has its own override.
 
-Start with one. Trust it, then add the next.
+A user-created Runner can override the baseline setting under its own **Tool permissions**. Anything left on **Inherited** uses the connected account's setting.
+
+Start writes on **Ask** when you're testing a new Runner. Move a specific tool to **Allow** only when you want that Runner to use it without stopping for review.
+
+[How tool permissions work →](/connections/tool-permissions)
+
+## Decide what carries forward
+
+Each run starts in a separate session. Previous run output is not automatically supplied to the next one.
+
+Use Personal Memory for durable facts. Use Project context for standing instructions about the work.
+
+The **Carry unresolved Action Cards into new runs** switch does one narrower job. It lets an unresolved **Action Card** appear in a later run. A pending **Action Card** still expires 24 hours after it was staged.
+
+## Test it
+
+Open the Runner and click **Run now**. The test appears as a new session, even if the Runner is paused.
+
+Check the result, tool activity, and any **Action Cards**. Then leave the schedule active, or use the **Status** switch to pause it while you adjust the prompt.
 
 ---
 
 ## What's next?
 
 <CardGroup cols={2}>
-  <Card title="Build your Personal Assistant" icon="bolt" href="/quickstart">
-    The master Runner that ties all the others together.
+  <Card title="Runner overview" icon="person-running" href="/runners/overview">
+    See what persists, what starts fresh, and where each run lives.
   </Card>
-  <Card title="Tool permissions" icon="shield-check" href="/connections/tool-permissions">
-    Decide exactly what your Runners can do on their own.
+  <Card title="Heartbeat and Daily Brief" icon="heart-pulse" href="/runners/heartbeat-and-daily-brief">
+    Compare your Runner with the two built-ins.
   </Card>
 </CardGroup>

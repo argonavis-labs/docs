@@ -1,47 +1,40 @@
 ---
-title: "Models"
-description: "Every major model, one app. Pick one yourself or let Runner choose."
+title: "Choose an intelligence setting"
+sidebarTitle: "Models"
+description: "Use Auto, Normal, or Ultra in a session. Scheduled Runners use Normal or Ultra."
 ---
 
-Runner v1 ran on Claude. Runner v2 runs on whatever model is right for the job.
+You usually don't need to pick a model. Pick how much intelligence the job needs.
 
-Claude, OpenAI, Grok, Gemini, and strong open-source models like Kimi K3, MiniMax M3, GLM 5.2, and DeepSeek V4. All in one app, with your context, your memory, and your connected apps behind every one of them.
+## Sessions have three settings
 
-## Start with intelligence, not models
-
-You don't need to know the model landscape. Runner gives you three intelligence settings:
-
-| Setting | What it means |
+| Setting | Use it for |
 |---|---|
-| **Auto** | Runner chooses the model for you, per task. The right default for almost everyone. |
-| **Normal** | Good for everyday tasks. Efficient on usage. |
-| **Ultra** | More usage, better on hard tasks. Deep research, long documents, gnarly reasoning. |
+| **Auto** | Let Runner choose for the task in front of it. |
+| **Normal** | Email, summaries, scheduling, and everyday work. |
+| **Ultra** | Hard research, long documents, and work that needs more reasoning. |
 
-Leave it on Auto. Bump a session or a Runner to Ultra when the task is genuinely hard. That's 95% of what you need to know about models.
+New sessions start on **Normal** unless you change **Default intelligence** under **Settings**, then **Behavior**. That preference applies to new sessions on the device where you changed it.
 
-In **Settings, then Behavior**, you can choose which model sits behind Normal and which behind Ultra.
+You can still change the intelligence setting inside a session whenever the work changes.
 
----
+## Scheduled Runners use Normal or Ultra
 
-## Or pick the exact model
+A scheduled Runner can't use **Auto**. Choose **Normal** for routine work and **Ultra** when the job needs the extra depth.
 
-Want control? Open the model picker in any session and choose from the full catalog: Claude Sonnet and Opus, GPT-5.6, Grok, Gemini, Kimi K3, MiniMax M3, GLM 5.2, DeepSeek V4, and more. Runners have their own intelligence setting too, so your heavyweight research Runner and your lightweight inbox Runner can each use what fits.
+New Runners start on **Normal** unless you choose **Ultra** while setting one up.
 
-The catalog grows as new models ship. Whatever is current is in the picker.
+## Choose what sits behind each setting
 
----
+Open **Settings**, then **Behavior** to choose the supported model behind **Normal** and **Ultra**. The available list can change as models are added or retired.
 
-## How usage works
+The session picker stays simple. It shows **Auto**, **Normal**, and **Ultra** rather than a separate exact-model list.
 
-Different models cost very different amounts to run, and your usage reflects that.
+## Keep an eye on usage
 
-Each model in the picker shows its usage relative to the baseline. Frontier models like Claude Opus are the expensive end. Open-source models like GLM 5.2 and MiniMax M3 run at a fraction of that. Pricing tracks what the models actually cost, so when providers drop prices, your usage goes further.
+**Ultra** uses more of your plan than **Normal**. That matters most for a Runner that fires often.
 
-Why does the difference matter? Simply put, a Runner that fires every hour on an expensive model adds up. Match the model to the job:
-
-- **Daily briefs, triage, summaries:** Normal, or an efficient open-source model. These tasks don't need a frontier model.
-- **Research, analysis, anything you'd call "hard":** Ultra. The extra usage buys real quality.
-- **Everything else:** Auto. Let Runner make this call per task.
+Use **Normal** for recurring triage and summaries. Move to **Ultra** when the result needs it. Simple.
 
 ---
 
@@ -49,9 +42,9 @@ Why does the difference matter? Simply put, a Runner that fires every hour on an
 
 <CardGroup cols={2}>
   <Card title="Runners" icon="person-running" href="/runners/overview">
-    Set intelligence per Runner and keep your always-on work efficient.
+    Set **Normal** or **Ultra** for recurring work.
   </Card>
   <Card title="Tool permissions" icon="shield-check" href="/connections/tool-permissions">
-    Models decide how Runner thinks. Permissions decide what it can do.
+    Intelligence controls how Runner thinks. Permissions control what it can do.
   </Card>
 </CardGroup>
