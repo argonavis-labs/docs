@@ -24,12 +24,20 @@ The short version:
 - Trust the reader. Don't over-explain.
 - Use contractions. Write like you talk.
 
-## Terminology
+## Terminology (Runner v2)
 
-- "Runner" not "the Runner app" or "our product"
-- "workspace" not "project" or "environment"
-- "connected apps" not "integrations" or "connectors" (user-facing)
-- "automation" not "scheduled task" or "cron job" (user-facing)
+Runner is web-first at app.runner.now. The desktop app is legacy (v1) and only documented on `legacy/runner-desktop.mdx`.
+
+- "Runner" is the product. "a Runner" (capital R) is an always-on scheduled automation. Context carries the difference: "create a Runner", "your Runners".
+- "Project" not "workspace" or "label". Workspaces were v1.
+- "Workflow" for reusable instructions invoked with /slug. Skills were v1.
+- "connected apps" not "integrations" or "connectors" (user-facing). The page in the app is Connected Apps.
+- "Action Card" for a proposed action waiting on approval.
+- "session" not "chat" when referring to the unit in the app.
+- Intelligence settings are Auto, Normal, and Ultra. Never "Balanced".
+- Tool permission settings are On, Allow, Ask, and Off (plus Inherited on per-Runner overrides).
+- Built-in Runners: Heartbeat and Daily Brief. They ship paused.
+- No iMessage, no local files, no "on your computer". Runner runs on a cloud virtual computer.
 
 ## Style rules
 

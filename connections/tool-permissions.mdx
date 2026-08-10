@@ -1,0 +1,59 @@
+---
+title: "Tool permissions"
+description: "Decide, tool by tool, what Runner can do on its own."
+---
+
+An assistant that can touch your email, your calendar, and your CRM needs clear rules. Runner gives you those rules at the most useful level: per tool, per app.
+
+Every connected app is a bundle of tools. Gmail has "search inbox" and it has "send email". Those are very different powers, and you control each one separately.
+
+## The four settings
+
+Open **Connected Apps**, click any app, and find the **Tools** section. Each tool has a setting:
+
+| Setting | What it means |
+|---|---|
+| **On** | Runner can read with this tool. Reading tools only. |
+| **Allow** | Runner performs this action without asking. |
+| **Ask** | Runner proposes the action and waits for your approval. |
+| **Off** | Runner can't use this tool at all, except in Runners where you've specifically allowed it. |
+
+When a tool is set to **Ask**, the proposal shows up as an **Action Card**: a preview of exactly what Runner wants to do. Approve it, reject it, or dismiss it. One click each.
+
+---
+
+## A setup that works
+
+Why not just allow everything? Because trust is earned, even by software. Here's the progression most people follow:
+
+1. **Start with reads on, writes on Ask.** Runner can see everything and do nothing without a preview. You lose zero safety and get full usefulness.
+2. **Promote the boring stuff to Allow.** After a week of approving "archive this newsletter" cards, let that one run on its own. Archiving is reversible. Approval fatigue is real.
+3. **Keep the irreversible stuff on Ask.** Sending email, posting to Slack, updating deals. Some people move these to Allow eventually. No rush.
+4. **Turn Off what should never happen.** Don't want Runner deleting calendar events, ever? Off. Done thinking about it.
+
+---
+
+## Per-Runner overrides
+
+Your global settings are the default, and each Runner can override them in the **Tool permissions** section of its own page.
+
+Every tool in a Runner starts as **Inherited**, meaning it uses your Connected Apps setting. Override it when a specific Runner has earned different rules:
+
+- Your inbox-triage Runner gets **Allow** on archiving, even if you keep it on Ask globally.
+- A tool that's **Off** everywhere can be allowed inside one specific Runner, and only there.
+- A research Runner can have every write tool **Off**, so it can never touch anything no matter what.
+
+This is the setup that lets you run always-on automations and still sleep well. Each Runner has exactly the reach you gave it, nothing more.
+
+---
+
+## What's next?
+
+<CardGroup cols={2}>
+  <Card title="Runners" icon="person-running" href="/runners/overview">
+    The always-on automations these permissions were built for.
+  </Card>
+  <Card title="Connect your own MCP" icon="server" href="/connections/connect-your-own-mcp">
+    Bring custom tools into Runner, with the same controls.
+  </Card>
+</CardGroup>

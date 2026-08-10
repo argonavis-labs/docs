@@ -1,18 +1,20 @@
 ---
 title: "Quickstart"
-description: "Connect your apps and run your first workflow in under five minutes."
+description: "Sign in, connect your apps, and build your own AI Personal Assistant in about 15 minutes."
 ---
 
-## Get running in three steps
+By the end of this page you'll have your own Personal Assistant. A Runner that knows your calendar, tracks your commitments, and shows up every morning at 9am with something useful to say.
+
+No download. No install. About 15 minutes.
 
 <Steps>
-  <Step title="Install and sign in">
-    Download Runner from [runner.now](https://runner.now), open it, and sign in with your Google account. Works on Mac, Windows, and Linux.
+  <Step title="Sign in at app.runner.now">
+    Open any browser on any device and go to [app.runner.now](https://app.runner.now). Sign in with your Google account.
 
-    [Full installation guide →](/get-started/installation)
+    That's the whole install. Runner runs on a dedicated virtual computer in the cloud, so it works the same from your laptop, your phone, or your iPad. [Put it on your home screen →](/get-started/runner-on-your-phone)
   </Step>
   <Step title="Connect Gmail and Google Calendar">
-    Open **Connected Apps** in the sidebar and connect both:
+    Open **Connected Apps** and connect both:
 
     <CardGroup cols={2}>
       <Card icon={<img src="/images/apps/gmail.svg" alt="Gmail" width="24" height="24" />} title="Gmail">
@@ -25,22 +27,66 @@ description: "Connect your apps and run your first workflow in under five minute
 
     That's all you need to start. [See all apps you can connect →](/get-started/connecting-accounts)
   </Step>
-  <Step title="Run your morning briefing">
-    Start a new conversation and type:
+  <Step title="Meet your built-in Runners">
+    Head to the **Runners** tab. Two are already waiting for you:
 
-    > *"Give me my morning briefing."*
+    - **Heartbeat** monitors your connected communication channels and suggests what to do next, twice a day on weekdays.
+    - **Daily Brief** gives you a full update of everything you need to know, every day at 8am in your timezone.
 
-    Runner checks your calendar, triages your inbox, and gives you a ranked brief of what actually matters today. Meetings with prep notes. Emails sorted by urgency. Conflicts flagged. All in one scannable result.
+    Both start paused so you stay in control. Open each one and hit **Enable**.
 
-    This is the single best way to see what Runner can do.
+    These run 24/7 in the cloud whether your laptop is open or not. For the cost of a Runner subscription, you have an always-on computer with your secure personal context that can take approved actions on your behalf.
+
+    [More on Heartbeat and Daily Brief →](/runners/heartbeat-and-daily-brief)
+  </Step>
+  <Step title="Build your Personal Assistant">
+    Now the fun part. You're going to create your master Runner. Something you can talk to about your work, your priorities, and everything on your plate.
+
+    In the **Runners** tab, click **New runner** in the top right corner, then select **Ask Runner to create it**. This opens a new session with a pre-filled prompt. Add these lines at the bottom:
+
+    ```text
+    I want you to become my personal assistant. I want you to look at my
+    communications, my calendar, my commitments and give me
+    suggestions on more things that I could automate. I want you to review
+    Heartbeat and my Daily Brief and keep me organized. I want you to help me
+    save time and be more efficient so I can spend more time doing the things
+    I love in life. Keep track of my open loops, the things that I say yes to,
+    and be as proactive as possible. Finally, I want you to run every morning
+    at 9:00am and give me proactive tips for how best to use Runner each day.
+    ```
+
+    Hit **Send**, then have a conversation with Runner until it has what it needs.
+  </Step>
+  <Step title="Customize and run it">
+    Click on your new Runner in the Runners tab to open its details. From here you can:
+
+    - Turn it on and off
+    - Review the full prompt Runner generated on your behalf
+    - Decide if it suggests **Action Cards**, previews of actions you can approve with one click (keep this on for now)
+    - Scroll down and set an avatar to give your Personal Assistant some personality
+
+    Hit **Save changes**, scroll back to the top, and hit **Run now**. It appears at the top of your recent sessions and gets to work.
+  </Step>
+  <Step title="Give it feedback">
+    Your new Personal Assistant will have questions and things for you to review. Sit and chat with it for a few minutes, and remember the one thing that separates OK users from power users: feedback.
+
+    Give feedback the way you would to a colleague or friend:
+
+    - *"I didn't like that example, can you be more specific."*
+    - *"You recommended that I drive there, but I don't have a car. Please remember to use transit options next time."*
+    - *"I want to get notified of key events at least 2 days before they happen, not the morning of."*
+
+    Runner remembers, and every session gets better than the last.
   </Step>
 </Steps>
+
+That's it. You now have an AI Personal Assistant that activates every morning with helpful things to guide you to a better day. Keep giving it feedback, keep asking it to do more, and hold it to your high standards.
 
 ---
 
 ## What to try next
 
-Now that you've seen Runner in action, try a few more things:
+Your Personal Assistant is the start, not the end. Type any of these into a new session:
 
 | Say this | What happens |
 |---|---|
@@ -55,11 +101,11 @@ Now that you've seen Runner in action, try a few more things:
 
 You don't need to learn everything at once. Here's a good progression:
 
-1. **Day 1:** Connect Gmail and Calendar. Run your morning briefing.
-2. **Day 2:** Try inbox triage. Let Runner classify your emails and draft replies.
+1. **Day 1:** Sign in, connect Gmail and Calendar, build your Personal Assistant.
+2. **Day 2:** Read your Daily Brief. Tell it what you want more and less of.
 3. **Day 3:** Connect Slack. Ask Runner what you missed overnight.
-4. **Day 4:** Set up your first automation -- morning briefing at 8am, every weekday.
-5. **Day 5:** Connect your project tracker (Linear, Notion, etc.). Ask for a weekly review.
+4. **Day 4:** [Add Runner to your phone](/get-started/runner-on-your-phone). Dictate a task on the go.
+5. **Day 5:** Create a second Runner for something specific: a 5am morning brief delivered to your inbox, a Friday weekly review, a follow-up tracker.
 
 By the end of the week, Runner handles most of the small, predictable work that eats your day.
 
@@ -68,14 +114,14 @@ By the end of the week, Runner handles most of the small, predictable work that 
 ## Keep going
 
 <CardGroup cols={2}>
-  <Card title="Browse workflows" icon="arrows-spin" href="/workflows/starter-workflows">
-    See all the built-in workflows Runner ships with.
+  <Card title="Runners" icon="person-running" href="/runners/overview">
+    How always-on automations work, and how to build your own.
   </Card>
-  <Card title="Create an automation" icon="wand-magic-sparkles" href="/workflows/creating-automations">
-    Set your morning briefing to run automatically every day.
+  <Card title="Browse workflows" icon="arrows-spin" href="/workflows/starter-workflows">
+    Ready-made workflows for the things you already do every day.
   </Card>
   <Card title="Tips and tricks" icon="star" href="/tips/tips-and-tricks">
-    Quick wins to get more out of every conversation.
+    Quick wins to get more out of every session.
   </Card>
   <Card title="See use cases" icon="lightbulb" href="/use-cases/overview">
     Real workflows for founders, real estate agents, and professionals.

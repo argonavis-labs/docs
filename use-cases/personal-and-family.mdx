@@ -1,6 +1,6 @@
 ---
 title: "Runner for your personal life"
-description: "Plan vacations, audit subscriptions, order food, clean up your Mac, and keep your personal life organized. Runner connects Gmail, Calendar, iMessage, and your browser."
+description: "Plan vacations, audit subscriptions, order food, and keep your personal life organized. Runner connects Gmail, Calendar, WhatsApp, and your browser."
 ---
 
 You sit down on a Saturday morning with a coffee and think, "I should cancel those subscriptions I don't use." Thirty minutes later you've opened four emails, searched for three different login pages, and you're now looking at a Portuguese vacation instead because one of the cancellation emails was from a travel site. Nothing got done.
@@ -18,7 +18,7 @@ Runner works with the apps and tools you use at home. Not just work stuff.
   <Card title="Google Calendar" icon={<img src="/images/apps/google-calendar.svg" alt="Google Calendar" width="24" height="24" />}>
     Family events, appointments, open windows
   </Card>
-  <Card title="iMessage" icon={<img src="/images/apps/imessage.png" alt="iMessage" width="24" height="24" />}>
+  <Card title="WhatsApp" icon={<img src="/images/apps/whatsapp.svg" alt="WhatsApp" width="24" height="24" />}>
     Text the group chat, coordinate plans
   </Card>
   <Card title="Browser" icon="globe">
@@ -27,8 +27,8 @@ Runner works with the apps and tools you use at home. Not just work stuff.
   <Card title="Google Sheets" icon={<img src="/images/apps/google-sheets.png" alt="Google Sheets" width="24" height="24" />}>
     Trip comparisons, budget tracking
   </Card>
-  <Card title="Local files" icon="laptop">
-    Clean up your Mac, find files, organize Downloads
+  <Card title="Your files" icon="folder-open">
+    Drop in PDFs, spreadsheets, and photos. Runner reads and finds them.
   </Card>
 </CardGroup>
 
@@ -68,21 +68,13 @@ Runner scans your email and calendar every morning. Reminds you about birthdays,
 
 Runner reads the email, figures out it's an event, and adds it to your calendar without you building anything.
 
-### Clean up your Mac
-
-Runner scans your system, finds old downloads, cached files, and duplicate photos. Then asks before deleting anything.
-
-> *"My Mac is running slow, can you help me clear out some space?"*
-
-18GB of old downloads, 12GB of cached files, 6GB of duplicate photos. Your Downloads folder has 340 files, 280 are older than 6 months. 36GB back. Mac feels fast again.
-
 ### Find the file you saved somewhere
 
-Runner searches your local files by name, content, or description. It finds the file, opens it, and offers to share it.
+Every file you share with Runner stays in its **Files** area, searchable by name, content, or description. It finds the file and offers to share it.
 
 > *"Can you find that recipe my mom sent me? I think I saved it as a PDF."*
 
-Found it. Moms_Lasagna_Recipe.pdf in your Documents folder. Want me to email it to yourself so you can pull it up at the store?
+Found it. Moms_Lasagna_Recipe.pdf in your files. Want me to email it to you so you can pull it up at the store?
 
 ### Make weekend plans without the 12-message group thread
 
@@ -109,11 +101,8 @@ You're free Saturday afternoon. There's a food festival downtown and a new brewe
   <Accordion title="Weekly preview">
     *"Give me a preview of my week. Birthdays, appointments, school events, bills due. Anything I should know about before Monday."*
   </Accordion>
-  <Accordion title="Mac cleanup">
-    *"Scan my Mac for stuff I can clean up. Old downloads, caches, duplicate files. Tell me what you'd delete before doing anything."*
-  </Accordion>
   <Accordion title="Find a file">
-    *"Find [description of file]. I think I saved it as a [type] somewhere on my computer."*
+    *"Find [description of file]. I think I saved it as a [type] somewhere in my files."*
   </Accordion>
   <Accordion title="Weekend plans">
     *"I want to hang out with a few friends this weekend. Check my calendar, find things to do nearby, and text the group with a time."*
@@ -132,7 +121,7 @@ Once you're comfortable, automate the repeatable stuff:
 
 Your personal life doesn't need to be a second job. Let Runner handle the logistics.
 
-[Learn how to create automations →](/workflows/creating-automations)
+[Learn how to create Runners →](/runners/create-your-own)
 
 ---
 
@@ -140,9 +129,9 @@ Your personal life doesn't need to be a second job. Let Runner handle the logist
 
 <CardGroup cols={2}>
   <Card title="Connect your apps" icon="plug" href="/get-started/connecting-accounts">
-    Link Gmail, Calendar, and iMessage to get started.
+    Link Gmail, Calendar, and WhatsApp to get started.
   </Card>
   <Card title="Browse workflows" icon="arrows-spin" href="/workflows/starter-workflows">
-    See all the built-in workflows Runner ships with.
+    Starter Workflows you can call with /slug in any message.
   </Card>
 </CardGroup>

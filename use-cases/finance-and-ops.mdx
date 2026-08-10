@@ -48,7 +48,7 @@ Runner pulls live numbers from Stripe, Salesforce, and your Sheets. Revenue up 1
 
 ### Process invoices without the manual matching
 
-Runner finds invoices in your downloads, reads each one, matches line items against signed agreements, and flags anomalies. Clean invoices go to an approval queue. Flagged ones come with a summary of what's off.
+Drop your invoices into a session, or point Runner at a Drive folder. It reads each one, matches line items against signed agreements, and flags anomalies. Clean invoices go to an approval queue. Flagged ones come with a summary of what's off.
 
 > *"We've got a pile of vendor invoices to process, some of them don't match our agreements."*
 
@@ -85,7 +85,7 @@ Four of twelve items still open. Revenue recognition matches. Contractor invoice
 | Time | What Runner does |
 |------|-----------------|
 | **8:00 AM** | Morning brief: close items outstanding, invoices waiting, submission gaps |
-| **9:00 AM** | Processes vendor invoices from Downloads, flags anomalies against contracts |
+| **9:00 AM** | Processes new vendor invoices from Drive, flags anomalies against contracts |
 | **10:00 AM** | Refreshes the operating model with live numbers from Stripe and your tracker |
 | **11:00 AM** | Nudges department leads who haven't submitted their weekly numbers |
 | **1:00 PM** | Builds the weekly report once everyone has submitted |
@@ -102,12 +102,12 @@ Four of twelve items still open. Revenue recognition matches. Contractor invoice
     *"Build the board pack for this month. Pull revenue from Stripe, pipeline from the CRM, headcount from the team tracker, and burn from the operating model. Draft it in a Google Doc."*
   </Accordion>
   <Accordion title="Invoice processing">
-    *"Process the vendor invoices in my downloads. Match line items against our signed agreements. Flag anything that doesn't match and queue the rest for approval."*
+    *"Process the vendor invoices in my Drive folder. Match line items against our signed agreements. Flag anything that doesn't match and queue the rest for approval."*
   </Accordion>
   <Accordion title="Forecast refresh">
     *"Update the operating model with actual numbers. Pull revenue from Stripe and expenses from the tracker. Highlight any line item where variance is more than 10%."*
   </Accordion>
-  <Accordion title="Weekly report automation">
+  <Accordion title="Weekly report Runner">
     *"Every Monday at 8am, check the reporting sheet. If anyone's section is blank, nudge them in Slack. Once everyone submits, pull the numbers and post the summary to #leadership."*
   </Accordion>
   <Accordion title="Month-end close">
@@ -125,7 +125,7 @@ Four of twelve items still open. Revenue recognition matches. Contractor invoice
 
 ## Automate the predictable stuff
 
-Once you've tried these manually, set them to run automatically:
+Once you've tried these manually, turn them into Runners:
 
 - **Weekly report chase** every Monday at 8am. Check submissions, nudge stragglers, post the summary.
 - **Invoice processing** every Friday. Pull new invoices, match against contracts, queue for approval.
@@ -134,7 +134,7 @@ Once you've tried these manually, set them to run automatically:
 
 Stop spending your week pulling numbers from one place to another. Let Runner handle the assembly so you can focus on the decisions.
 
-[Learn how to create automations →](/workflows/creating-automations)
+[Learn how to create Runners →](/runners/create-your-own)
 
 ---
 
@@ -145,6 +145,6 @@ Stop spending your week pulling numbers from one place to another. Let Runner ha
     Link Stripe, your CRM, Sheets, and the rest.
   </Card>
   <Card title="Browse workflows" icon="arrows-spin" href="/workflows/starter-workflows">
-    See all the built-in workflows Runner ships with.
+    Starter Workflows you can call with /slug in any message.
   </Card>
 </CardGroup>

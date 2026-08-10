@@ -1,115 +1,75 @@
 ---
 title: "Workflows"
-description: "Let Runner handle multi-step tasks across your apps so you can focus on the work that matters."
+description: "Reusable instructions you save once and invoke with /slug in any session."
 ---
 
-Most of your day is bouncing between apps. Checking email, updating tasks, prepping for meetings, following up on Slack. Runner connects all of those apps and does the bouncing for you.
+By your second week with Runner, you'll notice something. You keep asking for the same things, the same way, with the same rules attached. "Triage my inbox, and remember: archive newsletters, never touch anything from investors, keep drafts under three sentences."
 
-{/* TODO: Graphic — a visual workflow chain: "You ask" → "Runner checks email, calendar, Slack" → "You get a finished result" */}
+A Workflow captures that once. It's a set of reusable instructions Runner loads whenever you invoke it. Every Workflow gets a slug, and you call it by typing `/its-slug` in any message.
 
-## What Runner can do
+Type `/inbox-triage` and Runner runs your triage, your way, every time.
 
-Runner doesn't give you answers and leave you to do the work. It does the work.
+<Note>
+  Coming from Runner Desktop? Workflows are what Skills became. Your synced Skills are already in your [Workflow Library](https://app.runner.now/app/workflows). [Migration details →](/legacy/runner-desktop)
+</Note>
 
-### Inbox follow-through
+## Create a Workflow
 
-> *"Review my unread emails. Draft replies to anything that needs a response. Check my calendar before suggesting meeting times."*
-
-Runner reads the thread, checks your schedule, pulls any relevant documents, and drafts a reply you can review and send. The whole chain happens in one step.
-
-{/* TODO: Screenshot — Runner showing an email draft card with Edit/Send buttons */}
-
-### Morning briefing
-
-> *"Give me my morning briefing: key meetings today, priority emails, and anything I missed on Slack."*
-
-Runner checks your calendar, triages your inbox, and summarizes Slack activity. Then gives you a ranked brief of what matters before your first meeting.
-
-### Meeting prep
-
-> *"My board meeting is Thursday. Help me prep."*
-
-Runner finds the meeting on your calendar, pulls notes from past meetings, reads recent investor emails, and drafts talking points. The prep starts from real context instead of memory and scramble.
-
-### Follow-up tracking
-
-> *"What emails did I send this week that haven't gotten a reply?"*
-
-Runner checks your sent folder, finds threads without responses, and gives you a list with how long each has been waiting.
-
----
-
-## How workflows work
-
-You describe what you want in plain language, and Runner figures out which apps to use and what steps to take.
+Two ways, same as Runners: fill out the form, or have Runner build it with you.
 
 <Steps>
-  <Step title="Ask for what you need">
-    Type or speak your request. The more context you give, the better the result.
+  <Step title="Open the Workflow Library">
+    Find **Workflows** in your sidebar. Click **New workflow**, or choose **Create a workflow** to have Runner interview you and write it.
   </Step>
-  <Step title="Runner does the work">
-    Runner connects to your apps (email, calendar, Slack, whatever's needed), gathers the information, and takes the actions.
+  <Step title="Write the instructions">
+    Name it (the name becomes the slug: "Listing Email" becomes `/listing-email`) and write the step-by-step guidance Runner should follow. Be as opinionated as you are in real life. That's the point.
   </Step>
-  <Step title="Review before anything goes out">
-    Emails, messages, and other outbound actions show up as drafts. You review, edit if needed, and approve before anything is sent.
-
-    {/* TODO: Screenshot — a draft review card in Runner with the approve/edit/discard options */}
+  <Step title="Invoke it anywhere">
+    Type `/listing-email` in any session, on any device. Add context right in the message: *"/listing-email for the house on Maple, emphasize the backyard."*
   </Step>
 </Steps>
 
+<Tip>
+  Just did something in a session you'll want again? Say *"turn this into a workflow."* Runner extracts the procedure from the conversation and saves it.
+</Tip>
+
 ---
 
-## Try these on day one
+## Workflows and Runners work together
 
-You don't need to set anything up. Just type any of these into a conversation:
+Easy way to keep them straight:
 
-| What you say | What happens |
+**A Workflow is how. A Runner is when.**
+
+A Workflow holds your procedure. A Runner puts work on a schedule. The best setups combine them: a Runner that fires every Friday at 4pm and invokes `/weekly-review` gets your procedure and your schedule in one always-on package.
+
+| You want | Use |
 |---|---|
-| *"Give me my morning briefing"* | Runner checks your calendar, triages your inbox, and gives you a ranked brief of what matters today |
-| *"Triage my inbox"* | Runner classifies every email, drafts replies for what needs a response, archives the noise |
-| *"Prep me for my next meeting"* | Runner researches attendees, pulls relevant email threads, builds a one-page brief |
-| *"What did I miss in Slack overnight?"* | Runner summarizes channel activity, DMs, and mentions since you last checked |
-| *"Draft a reply to Sarah's email about the budget"* | Runner reads the thread, checks your calendar, drafts a response you can review |
-| *"Find a 30-minute slot to meet with Jordan this week"* | Runner checks both calendars and suggests available times |
+| "Do this the way I like, whenever I ask" | A Workflow |
+| "Do this every morning without me asking" | A Runner |
+| "Do this the way I like, every morning, without me asking" | A Runner that invokes your Workflow |
 
 ---
 
-## Built-in workflows
+## Workflow ideas
 
-Runner ships with ready-made workflows you can run right away. Open the **Workflows** panel in your sidebar to browse them, or check out the full list with details on what each one does.
-
-{/* TODO: Screenshot — the Workflows panel showing a grid of workflow cards with icons */}
-
-<CardGroup cols={3}>
-  <Card title="Morning Briefing" icon="sun" href="/workflows/starter-workflows#morning-briefing">
-    Calendar, inbox, and priorities in one brief.
-  </Card>
-  <Card title="Inbox Triage" icon="inbox" href="/workflows/starter-workflows#inbox-triage">
-    Classify, draft, archive. Done in 2 minutes.
-  </Card>
-  <Card title="Meeting Prep" icon="calendar-check" href="/workflows/starter-workflows#meeting-prep">
-    60-second briefing before every meeting.
-  </Card>
-  <Card title="Weekly Review" icon="chart-line" href="/workflows/starter-workflows#weekly-review">
-    Where your time went and what slipped.
-  </Card>
-  <Card title="Sales Prospecting" icon="bullseye" href="/workflows/starter-workflows#sales-prospecting">
-    ICP to personalized outreach in minutes.
-  </Card>
-  <Card title="See all workflows" icon="grid-2" href="/workflows/starter-workflows">
-    Browse all 15+ built-in workflows.
-  </Card>
-</CardGroup>
+| Workflow | What's inside |
+|---|---|
+| `/inbox-triage` | Your triage rules: what gets archived, who's VIP, how drafts should sound |
+| `/meeting-prep` | Your prep format: attendees, history, open commitments, talking points |
+| `/listing-email` | Your listing email structure, tone, and the details you always include |
+| `/review-pr` | Review a pull request the way you like, with your checklist |
+| `/weekly-report` | Your report template and where to pull the numbers from |
 
 ---
 
 ## What's next?
 
 <CardGroup cols={2}>
-  <Card title="Browse all starter workflows" icon="grid-2" href="/workflows/starter-workflows">
-    See every built-in workflow with details on what it does.
+  <Card title="Starter workflows" icon="grid-2" href="/workflows/starter-workflows">
+    Proven recipes for the things you already do every day. Steal these.
   </Card>
-  <Card title="Create an automation" icon="wand-magic-sparkles" href="/workflows/creating-automations">
-    Set workflows to run on a schedule. No asking required.
+  <Card title="Runners" icon="person-running" href="/runners/overview">
+    Put your Workflows on a schedule that never sleeps.
   </Card>
 </CardGroup>

@@ -1,110 +1,44 @@
 ---
 title: "Connect your own MCP server"
 sidebarTitle: "Custom tools (MCP)"
-description: "Add a remote or local MCP server to Runner with mcp.json."
+description: "Bring your own tools and services into Runner with a custom MCP server."
 ---
 
 <Warning>
   This page is for technical users who want to connect custom tools and services. If you're looking to connect Gmail, Calendar, Slack, or other popular apps, head to [Connect your apps](/get-started/connecting-accounts) instead.
 </Warning>
 
-Runner can load your own MCP servers without any app-specific plugin work. You add them to `mcp.json`, save the file, and Runner exposes the server's tools inside the workspace.
+Runner supports the Model Context Protocol, so if you have your own MCP server (internal tools, a vendor's server, something you built last weekend), you can plug it straight in. Its tools show up alongside your connected apps, with the same [per-tool permission controls](/connections/tool-permissions) as everything else.
 
-<Info>
-  Runner reads the same top-level `mcp.json` shape used by Claude Code:
-  `{"mcpServers": { ... }}`
-</Info>
-
-## Pick the right file
-
-Use one of these files:
-
-- `~/.runner/mcp.json` for servers you want in every workspace.
-- `~/.runner/workspaces/<workspace-id>/mcp.json` for servers you want in one workspace.
-
-The workspace file wins if both files use the same slug.
+Because Runner runs on a virtual computer in the cloud, custom servers are remote: HTTP or SSE endpoints reachable over the internet.
 
 <Note>
-  `workspace-id` is the folder name inside `~/.runner/workspaces/`.
+  Coming from Runner Desktop? The `mcp.json` file and local `stdio` servers were a v1 feature. On the web you add servers through the UI instead, and they follow you to every device.
 </Note>
 
-## Use the right config shape
+## Add a custom MCP server
 
-`mcp.json` entries use the MCP server shape directly. Do not use Runner's older connector fields like `transport` or `authType` here.
+<Steps>
+  <Step title="Open Connected Apps">
+    Scroll past the app catalog to the custom section and choose **Custom MCP**.
+  </Step>
+  <Step title="Point it at your server">
+    Enter the full MCP endpoint URL, including the `/mcp` or `/sse` path if your server requires it. If the server needs auth, add your bearer token or auth header here. Runner stores it securely and sends it with every request.
+  </Step>
+  <Step title="Set the permissions">
+    Once connected, the server's tools appear in its **Tools** section like any other app. Decide what each one can do: On, Allow, Ask, or Off. For anything that writes, start with Ask.
+  </Step>
+</Steps>
 
-- For remote servers, use `type`, `url`, and optional `headers`.
-- For local servers, use `type`, `command`, optional `args`, and optional `env`.
+To remove a server later, open it in Connected Apps and click **Remove server**.
 
-## Add a remote MCP server
+## Or just ask Runner
 
-Use `type: "http"` for streamable HTTP servers or `type: "sse"` for SSE servers. Use the full MCP endpoint URL, including `/mcp` or `/sse` when your server requires it.
-
-```json
-{
-  "mcpServers": {
-    "notion": {
-      "type": "http",
-      "url": "https://mcp.notion.com/mcp"
-    },
-    "internal-tools": {
-      "type": "http",
-      "url": "https://example.com/mcp",
-      "headers": {
-        "Authorization": "Bearer YOUR_TOKEN"
-      }
-    }
-  }
-}
-```
-
-## Add a local stdio server
-
-Use `type: "stdio"` when Runner should start the MCP server on your machine.
-
-```json
-{
-  "mcpServers": {
-    "local-db": {
-      "type": "stdio",
-      "command": "npx",
-      "args": ["-y", "@your-org/db-mcp"],
-      "env": {
-        "DATABASE_URL": "postgres://localhost:5432/app"
-      }
-    }
-  }
-}
-```
-
-Before you use a local server, turn on **Settings** > **Workspace** > **Local MCP Servers**. If that setting is off, Runner skips `stdio` servers for that workspace. Remote HTTP and SSE servers still work.
-
-## Understand authentication
-
-Hand-written `mcp.json` entries do not get a built-in OAuth flow from Runner.
-
-- If a remote server needs auth, send it in `headers`.
-- If a local server needs auth, pass it through `env`.
-- If a local server depends on environment variables, set them explicitly in `env`.
-
-Runner filters many secret-looking ambient environment variables before it starts local MCP subprocesses. If you rely on a token or API key, put it in the server's `env` block instead of assuming your shell will pass it through.
-
-## Reload the server list
-
-After you save `mcp.json`, start a new conversation in that workspace. New conversations read the latest file.
-
-If an existing conversation does not see the new tools, reopen the conversation or restart Runner.
-
-## Ask Runner to do it for you
-
-You don't have to edit `mcp.json` by hand. Just tell Runner what you want to connect and it can write the config for you.
+You don't have to click through anything. Tell Runner what you want to connect:
 
 <CodeGroup>
 ```text Remote server
 Connect my Notion MCP server at https://mcp.notion.com/mcp
-```
-
-```text Local server
-Add a local MCP server that runs "npx -y @modelcontextprotocol/server-filesystem /Users/me/Documents"
 ```
 
 ```text With auth
@@ -112,12 +46,12 @@ Connect a remote MCP server at https://example.com/mcp with bearer token abc123
 ```
 </CodeGroup>
 
-Runner will create or update `mcp.json` in the right place, and the tools show up in your next conversation.
+## No MCP server? Use Custom API
+
+If the service you want has a REST API but no MCP server, choose **Custom API** in Connected Apps instead. Point Runner at the API and it can call it on your behalf, with the same permission controls.
 
 ## Troubleshooting
 
-- If nothing shows up, validate that the file starts with a top-level `mcpServers` object.
-- If a remote server fails to connect, confirm that you used the full MCP endpoint URL.
-- If a local server fails to start, run the same `command` and `args` in your terminal first.
-- If a local server stays unavailable, make sure **Local MCP Servers** is enabled for that workspace.
-- If you want one workspace to override a shared server, reuse the same slug in the workspace-level file.
+- If the server won't connect, confirm you used the full MCP endpoint URL, not just the domain.
+- If requests fail with auth errors, the token belongs in the connection's auth settings, not in the URL.
+- If new tools don't show up in an existing session, start a new session. Fresh sessions pick up the latest tool list.

@@ -1,6 +1,8 @@
 # Runner Docs
 
-This is the Runner documentation site (Mintlify). Pages are MDX files organized in folders at the repo root (`get-started/`, `using-runner/`, `connections/`, `workflows/`, `tips/`, `use-cases/`).
+This is the Runner documentation site (Mintlify). Pages are MDX files organized in folders at the repo root (`get-started/`, `using-runner/`, `runners/`, `connections/`, `workflows/`, `tips/`, `use-cases/`, `legacy/`).
+
+Runner is web-first at app.runner.now (v2). Terminology: a "Runner" is an always-on scheduled automation, "Workflows" are /slug instructions (formerly Skills), "Projects" replace workspaces. Full glossary in `AGENTS.md`.
 
 ## Writing voice
 
