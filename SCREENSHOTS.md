@@ -2,6 +2,8 @@
 
 Every page works without images, so nothing here is blocking. These are the shots that would make each page better, in rough priority order. Capture at 2x on a clean account (no real client data), drop files into `images/`, and add them to the page where noted.
 
+Checked items were pulled from the Runner v2 Notion doc and are already live on their pages (`images/migration/`, `images/mobile/`). Note: the desktop-update and sync-to-web shots show real session names in the sidebar. Worth recapturing on a clean account when you get a chance.
+
 ## High priority (the money shots)
 
 ### quickstart.mdx
@@ -14,18 +16,17 @@ Every page works without images, so nothing here is blocking. These are the shot
 
 ### legacy/runner-desktop.mdx
 
-- [ ] Desktop Settings showing the "Sync to Web" button (v1.1.38)
-- [ ] The sync progress / completion state
-- [ ] A desktop chat with `/move-to-runner-web` typed and the summary it produces
+- [x] Desktop Settings showing the version check and "Sync to Web" page (v1.1.38)
+- [x] A desktop chat with `/move-to-runner-web` typed and the summary it produces
+- [x] Mac uninstall: Applications folder, right-click Runner, Move to Trash
 - [ ] The web composer right after pasting, showing the "Context from desktop" pill
-- [ ] Mac uninstall: Applications folder, right-click Runner, Move to Trash
 
 ### get-started/runner-on-your-phone.mdx
 
-- [ ] iPhone Safari: share menu open with "Add to Home Screen" visible
-- [ ] iPhone: the confirm screen with "Web App" toggled on
+- [x] iPhone Safari: share menu open with "Add to Home Screen" visible
+- [x] iPhone: the confirm screen with "Open as Web App" toggled on
+- [x] Runner open in Safari on a phone (session with the mic button visible)
 - [ ] The Runner icon sitting on a home screen
-- [ ] Runner open full-screen on a phone (a session with the mic button visible)
 
 ## Medium priority
 

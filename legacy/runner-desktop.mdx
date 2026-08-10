@@ -40,14 +40,22 @@ The migration brings over the things Runner has learned about you:
     Use the same email address you use on desktop. Accounts are tied together by email, so your billing and credits are already there waiting for you.
   </Step>
   <Step title="Update your desktop app to v1.1.38">
-    Open Runner Desktop and update to the latest version. The migration tools shipped in v1.1.38, so anything older won't have them.
+    Open Runner Desktop, click the settings gear in the bottom left, and under **General** hit **Check Now** next to "Check for updates". The migration tools shipped in v1.1.38, so make sure the version says 1.1.38 or later.
+
+    <Frame>
+      <img src="/images/migration/desktop-update.png" alt="Runner Desktop settings showing version 1.1.38 and the Check Now button" />
+    </Frame>
   </Step>
   <Step title="Sync to Web">
     In your desktop **Settings**, click **Sync to Web**, then press the button to start.
 
     This copies your memories, skills, and automations to your web account. It takes about 1 to 5 minutes depending on how many files you have. Automations land under **Runners** turned off by default. Skills land under **Workflows**.
 
-    It's a one-way copy. Run it again anytime to refresh the web with your latest desktop state.
+    <Frame>
+      <img src="/images/migration/sync-to-web.png" alt="The Sync to Web page in Runner Desktop settings" />
+    </Frame>
+
+    It's a one-way copy. Run it again anytime (the button reads **Resync** after the first run) to refresh the web with your latest desktop state.
   </Step>
   <Step title="Move the chats you care about">
     For any individual chat session you want to keep, open that chat on desktop and type:
@@ -56,7 +64,17 @@ The migration brings over the things Runner has learned about you:
     /move-to-runner-web
     ```
 
-    Runner summarizes the full context of that chat. Copy it, open a new session on the web, and paste (`Cmd+V` or `Ctrl+V`). The web session picks up right where the desktop one left off.
+    The **Move to Runner Web** skill pops up as soon as you start typing `/move`.
+
+    <Frame>
+      <img src="/images/migration/move-to-runner-web.png" alt="Typing /move in a desktop chat surfaces the Move to Runner Web skill" />
+    </Frame>
+
+    Runner summarizes the chat's full context and copies it for you. Open a new session on the web and paste (`Cmd+V` or `Ctrl+V`). The web session picks up right where the desktop one left off.
+
+    <Frame>
+      <img src="/images/migration/context-summary.png" alt="Runner confirming the session is copied and ready to paste into Runner web" />
+    </Frame>
 
     You don't need to do this for every chat. Just the ones with context worth keeping.
   </Step>
@@ -77,6 +95,10 @@ We strongly recommend deleting Runner Desktop once you've migrated. It won't be 
 
 - **Mac:** Open your Applications folder, right-click Runner, and choose **Move to Trash**.
 - **Windows:** Start menu, then **Uninstall Programs & Applications**, and remove Runner.
+
+<Frame>
+  <img src="/images/migration/uninstall-mac.png" alt="Right-clicking Runner in the Mac Applications folder and choosing Move to Trash" />
+</Frame>
 
 ---
 
