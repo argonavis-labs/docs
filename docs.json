@@ -87,14 +87,15 @@
         "tab": "Use Cases",
         "groups": [
           {
-            "group": "Use Cases",
+            "group": "Start here",
             "pages": [
               "use-cases/overview"
             ]
           },
           {
-            "group": "For Your Role",
+            "group": "By role",
             "pages": [
+              "use-cases/professional-services",
               "use-cases/founders",
               "use-cases/sales-and-revops",
               "use-cases/marketing-and-growth",

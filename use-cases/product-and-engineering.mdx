@@ -1,151 +1,111 @@
 ---
 title: "Runner for product and engineering teams"
-description: "Plan sprints with real data, trace bugs to the PR that caused them, monitor releases, and review your roadmap with evidence. Runner connects Linear, GitHub, Mixpanel, and PostHog."
+sidebarTitle: "Product and engineering"
+description: "Catch funnel drops, find projects at risk, and connect customer reports to recent releases."
 ---
 
-Your standup is in five minutes. Someone says the checkout is broken. You flip to your analytics tool, see a drop, flip to GitHub, dig through recent deploys, find the PR, read the diff, and then file the bug in Linear. That's 30 minutes of context switching before you even start fixing anything.
+A metric drops on Tuesday. The team notices Friday.
 
-Runner connects your issue tracker, your repo, your analytics, and your project tools. You describe the problem, Runner traces it to the cause and takes the next step.
+By then you've spent three days sending more users into the same problem. Opening Mixpanel or GitHub wasn't the expensive part. Nobody was checking the metric against open issues and recent releases.
+
+That's a good job for a Runner.
 
 <Note>
-  Writes follow your [tool permissions](/connections/tool-permissions). **Ask** stages an **Action Card** for review. **Allow** acts without asking. **Off** blocks the tool unless a user-created Runner has its own override.
+  Writes follow your [tool permissions](/connections/tool-permissions). Keep issue creation, status changes, and team posts on **Ask** while you test. Runner stages each write as an **Action Card**. **Allow** acts without asking. **Off** blocks the tool unless the Runner has its own override.
 </Note>
 
-## Your stack, connected
+## Start with customer and delivery impact
 
-Runner works across the tools product and engineering teams actually live in. Connect them once and Runner handles the rest.
+| Runner | What it checks | Useful result |
+|--------|----------------|---------------|
+| **Customer-impact check** | Approved product metrics, open issues, and recent releases | Meaningful changes with evidence and one next investigation |
+| **Delivery risk** | Linear projects, due dates, blockers, and pull requests | Work likely to slip because the owner, dependency, or next step is missing |
+| **Bug intake** | Support or feedback source and existing issues | New reports grouped with duplicates and a draft issue for review |
+| **Release summary** | Merged pull requests, completed issues, and release notes | A summary tied to the work that actually merged |
+| **Weekly product review** | Shipped work and approved usage metrics | What moved, what didn't, and where the data is still inconclusive |
 
-<CardGroup cols={3}>
-  <Card title="Linear" icon={<img src="/images/apps/linear.svg" alt="Linear" width="24" height="24" />}>
-    Sprint planning, bug filing, project tracking
-  </Card>
-  <Card title="GitHub" icon={<img src="/images/apps/github.svg" alt="GitHub" width="24" height="24" />}>
-    PRs, deploys, diffs, commit history
-  </Card>
-  <Card title="Mixpanel" icon={<img src="/images/apps/mixpanel.svg" alt="Mixpanel" width="24" height="24" />}>
-    Event tracking, funnels, feature usage
-  </Card>
-  <Card title="Slack" icon={<img src="/images/apps/slack.svg" alt="Slack" width="24" height="24" />}>
-    Deploy alerts, team updates, release summaries
-  </Card>
-  <Card title="Google Docs" icon={<img src="/images/apps/google-docs.png" alt="Google Docs" width="24" height="24" />}>
-    PRDs, specs, roadmap summaries
-  </Card>
-  <Card title="Notion" icon={<img src="/images/apps/notion.png" alt="Notion" width="24" height="24" />}>
-    Project wikis, meeting notes, team docs
-  </Card>
-</CardGroup>
+Runner can connect the evidence. It can't prove that one deploy caused a metric change just because the timestamps are close.
 
-Runner also works with PostHog, Jira, Salesforce, and [many more](/get-started/connecting-accounts).
+## Build this first: customer-impact check
 
----
+```text
+Create a Runner named Customer Impact Check.
 
-## What Runner does for product and engineering
+Every weekday at 8:30am in my timezone, review the approved product metrics in
+Mixpanel, high-priority open issues in Linear, and recent releases in GitHub.
 
-### Plan sprints with real data
+Use the thresholds in this Runner's Project. Only include:
+- a key metric outside its approved range
+- a funnel step that changed more than the approved threshold
+- a new high-priority issue with no owner or next step
+- a release with a related open issue or documented customer report
 
-Runner pulls your backlog from Linear, checks what rolled over from last sprint, looks at analytics to see what's actually impacting users, and suggests priorities. Not based on gut feel. Based on the numbers.
+For each item, cite the metric period, event or funnel, Linear issue, and GitHub
+release used. Separate facts from possible explanations. A nearby release is a
+lead to investigate, not proof of cause.
 
-> *"Help me plan our sprint for next week."*
+Recommend one next check. Don't roll back code, change issue status, assign an
+owner, or post to Slack. Draft a Linear issue or team update only when the
+sources contain enough detail for a person to review it.
 
-14 open issues, 6 rolled over from last sprint, 3 are blocked. The onboarding flow you shipped last sprint has 23% drop-off at step 3. Runner recommends fixing that first, then 2 high-priority bugs. Runner also updates the sprint in Linear with suggested assignments.
+If nothing matches, say that clearly and stop. Before you create the Runner,
+show me the final name, prompt, schedule, and timezone. Wait for my confirmation.
+```
 
-### Trace a bug to the PR that caused it
+**A user-created Runner becomes active as soon as it's created.** Open it, assign the Project that contains your approved thresholds, review its schedule and permissions, then click **Run now**.
 
-Something is broken. Runner checks your analytics for the drop, finds the deploy that lines up with the timing, pulls the diff, identifies the change, and files a P1 bug in Linear for the PR author.
+Use a schedule that matches how quickly your team can respond. A daily check nobody reads is worse than a twice-weekly check somebody owns.
 
-> *"We're getting reports of a checkout bug, what's going on?"*
+## Keep the rules out of one run
 
-Conversion dropped 18% starting yesterday at 3pm. Deploy at 2:45pm, PR #847 touched the payment flow. Null check was removed on line 142. Runner files the bug and assigns it to the PR author.
+Put the rules in a product Project:
 
-### Measure feature impact
+- The handful of metrics that actually matter.
+- Approved thresholds, comparison windows, and timezone.
+- Severity definitions and team ownership.
+- Release and issue naming conventions.
+- Actions Runner may draft but must not take.
 
-Runner pulls usage events from Mixpanel, checks session recordings, identifies gaps, and creates the next action item. Not a dashboard you have to interpret.
+Metrics, issues, and releases are the live state. Project context holds the rules. Previous run output doesn't carry forward automatically.
 
-> *"How is the new search feature performing?"*
+Review the first few results with write tools on **Ask**. Tighten a noisy threshold. Remove a vanity metric. Add the missing owner. That work belongs in the saved prompt or Project, not in feedback left inside one run.
 
-2,400 searches per day since launch. 34% return zero results. Top query: integrations. Runner creates a Linear issue to add the integrations page to the search index. Fixing it is a 1-point ticket.
+## What comes next
 
-### Monitor releases without babysitting
+### Delivery risk
 
-Set it once. After you ship, Runner watches for the deploy, monitors error rates for the first hour, compares key conversion funnels against yesterday's baseline, and pings the team if anything degrades.
+Run each weekday morning. Find projects due in the next 14 days with blocked work, missing owners, overdue dependencies, or no recent update. Name the evidence and draft the question for the owner.
 
-> *"After we ship, keep an eye on things and let me know if anything breaks."*
+### Bug intake
 
-Runner watches deploy plus errors plus funnels and tells you if you actually have a problem. Not just a threshold alert with no context.
+Run each weekday morning. Group new reports by the product area and symptoms shown in the source. Search existing Linear issues before drafting a new one. A person still chooses severity and priority.
 
-### Review the roadmap with evidence
+### Release summary
 
-Runner pulls completed projects from Linear, checks engagement data from Mixpanel, reviews retention cohorts from PostHog, and builds the summary. Which features drove impact, which didn't, and where to cut.
+Run Friday after your normal release window. If no release appears in the source since the previous check, stop. Otherwise, pull merged work and completed issues into a customer-facing and internal draft. Don't claim impact before the data exists.
 
-> *"Help me prepare for our quarterly roadmap review."*
+### Weekly product review
 
-Three features drove 80% of the engagement lift. New onboarding improved D7 retention 12%. Notifications had no measurable impact. The cuts write themselves when the data is on the page.
+Run Friday afternoon. Compare shipped work with the approved metrics and open customer reports. Call out missing or inconclusive data instead of forcing a win.
 
----
+## Protect the work that already shipped
 
-## A product and engineering day with Runner
+The goal isn't more tickets. It's catching a customer problem earlier, keeping an important project from slipping, and giving the team evidence before it makes a decision.
 
-| Time | What Runner does |
-|------|-----------------|
-| **8:30 AM** | Morning brief: bugs filed overnight, sprint progress, any deploys that need watching |
-| **9:00 AM** | Sprint planning: pulls the backlog, suggests priorities from analytics data |
-| **10:00 AM** | Bug triage: traces a reported issue to the PR that caused it and files a P1 |
-| **11:00 AM** | Feature impact review: pulls usage data, identifies gaps, and creates tickets |
-| **1:00 PM** | Release prep: checks what's shipping, preps the release notes |
-| **3:00 PM** | Post-deploy: monitors error rates and funnels for the first hour |
-| **4:00 PM** | Posts the deploy summary to #engineering |
-| **Friday PM** | Weekly review: shipped items, impact data, what to prioritize next |
-
----
-
-## Prompts to try right now
-
-<AccordionGroup>
-  <Accordion title="Sprint planning">
-    *"Help me plan next week's sprint. Pull the Linear backlog, check what rolled over, and recommend priorities based on what analytics says is impacting users."*
-  </Accordion>
-  <Accordion title="Bug triage">
-    *"We're seeing reports of [issue]. Check analytics for a drop, find the deploy that lines up, pull the diff, and file a bug in Linear."*
-  </Accordion>
-  <Accordion title="Feature impact">
-    *"How is [feature] performing? Pull usage events from Mixpanel, check for gaps, and create a ticket for anything obvious."*
-  </Accordion>
-  <Accordion title="Release monitoring">
-    *"We're shipping today. After the deploy, monitor error rates and key funnels for the first hour. If anything degrades more than 10%, create a rollback issue and ping the team."*
-  </Accordion>
-  <Accordion title="Roadmap review">
-    *"Prep for our quarterly roadmap review. Pull everything we shipped this quarter from Linear, check the impact in Mixpanel and PostHog, and build a summary with recommended cuts."*
-  </Accordion>
-  <Accordion title="Standup prep">
-    *"What changed since yesterday? Check Linear for completed and blocked issues, any deploys, and anything that needs my attention before standup."*
-  </Accordion>
-</AccordionGroup>
-
----
-
-## Automate the predictable stuff
-
-Once you've tried these manually, turn them into Runners:
-
-- **Morning standup prep** at 8:30am, every weekday. What shipped, what's blocked, what needs attention.
-- **Post-deploy monitoring** after every release. Error rates, funnels, and a summary for #engineering.
-- **Weekly sprint review** every Friday. What shipped, impact data, what to carry over.
-- **Feature impact check** one week after any major launch. Pull the data before the retro.
-
-Stop context-switching between four tools to answer one question. Let Runner pull the threads together so you can focus on building.
-
-[Learn how to create Runners →](/runners/create-your-own)
+That saves engineering time and protects revenue without pretending the system knows more than the sources do.
 
 ---
 
 ## What's next?
 
-<CardGroup cols={2}>
+<CardGroup cols={3}>
   <Card title="Connect your apps" icon="plug" href="/get-started/connecting-accounts">
-    Link Linear, GitHub, and your analytics tools.
+    Link Linear, GitHub, Mixpanel, and the sources your team trusts.
   </Card>
-  <Card title="Browse workflows" icon="arrows-spin" href="/workflows/starter-workflows">
-    Starter Workflows you can call with /slug in any message.
+  <Card title="What should you automate?" icon="star" href="/tips/tips-and-tricks">
+    Rank recurring work by customer and business impact.
+  </Card>
+  <Card title="Create a Runner" icon="wand-magic-sparkles" href="/runners/create-your-own">
+    Put one scheduled check behind clear rules.
   </Card>
 </CardGroup>

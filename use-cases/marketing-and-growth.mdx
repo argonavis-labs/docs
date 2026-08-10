@@ -1,154 +1,112 @@
 ---
-title: "Runner for growth and marketing teams"
-description: "Review campaigns, plan content, map attribution, and monitor ad spend. Runner connects to HubSpot, Mixpanel, Google Ads, and your project tools so you can spend smarter and grow faster."
+title: "Runner for marketing and growth teams"
+sidebarTitle: "Marketing and growth"
+description: "Catch wasted spend, connect campaigns to pipeline, and follow up on the demand you already paid for."
 ---
 
-Half your job is pulling numbers from one tool so you can put them in another tool. Campaign data in Google Ads, leads in the CRM, traffic in Analytics, content in Notion, and none of it talks to each other. So you spend your morning building the report instead of acting on it.
+A campaign report can be perfectly accurate and still be useless.
 
-Runner connects all of it. You ask the question, Runner pulls the data, builds the answer, and takes the next step.
+Clicks went up. CPA went down. Great. Did any of it create pipeline? Is one campaign burning through the week's budget? Is a high-value lead still waiting for a response?
+
+That's the work to put on a schedule.
 
 <Note>
-  Writes follow your [tool permissions](/connections/tool-permissions). **Ask** stages an **Action Card** for review. **Allow** acts without asking. **Off** blocks the tool unless a user-created Runner has its own override.
+  Writes follow your [tool permissions](/connections/tool-permissions). Keep budget changes, CRM updates, and posts on **Ask** while you test. Runner stages each write as an **Action Card**. **Allow** acts without asking. **Off** blocks the tool unless the Runner has its own override.
 </Note>
 
-## Your stack, connected
+## Start with spend and revenue
 
-Runner works across the tools marketing and growth teams actually live in. Connect them once and Runner handles the rest.
+| Runner | What it checks | Useful result | Value |
+|--------|----------------|---------------|-------|
+| **Paid spend exception** | Ad results or spend sheet, targets, and CRM outcomes | Only campaigns outside your approved limits | Catches waste before month-end |
+| **Campaign-to-pipeline review** | Campaign data and CRM opportunities | Campaigns tied to pipeline, plus gaps in the source data | Moves the conversation past clicks |
+| **Lead aging check** | New marketing leads and CRM activity | Leads waiting without an owner or first response | Protects the demand you already paid for |
+| **Content bottleneck check** | Content board, due dates, and owners | Work blocked, overdue, or missing a next step | Keeps production from stalling |
+| **Weekly growth review** | Approved channel metrics and current experiments | What changed, what needs investigation, and who owns it | Replaces report assembly with decisions |
 
-<CardGroup cols={3}>
-  <Card title="HubSpot" icon={<img src="/images/apps/hubspot.svg" alt="HubSpot" width="24" height="24" />}>
-    Lead data, campaign attribution, CRM context
-  </Card>
-  <Card title="Mixpanel" icon={<img src="/images/apps/mixpanel.svg" alt="Mixpanel" width="24" height="24" />}>
-    Event tracking, funnels, user behavior
-  </Card>
-  <Card title="Google Sheets" icon={<img src="/images/apps/google-sheets.png" alt="Google Sheets" width="24" height="24" />}>
-    Reports, dashboards, budget trackers
-  </Card>
-  <Card title="Notion" icon={<img src="/images/apps/notion.png" alt="Notion" width="24" height="24" />}>
-    Content calendars, sprint boards, marketing wikis
-  </Card>
-  <Card title="Slack" icon={<img src="/images/apps/slack.svg" alt="Slack" width="24" height="24" />}>
-    Team updates, weekly summaries, campaign alerts
-  </Card>
-  <Card title="Gmail" icon={<img src="/images/apps/gmail.svg" alt="Gmail" width="24" height="24" />}>
-    Outreach, vendor communication, campaign briefs
-  </Card>
-</CardGroup>
+Runner can compare the sources and apply your rules. It shouldn't invent causality. A metric moving after a campaign launched doesn't prove the campaign caused it.
 
-Runner also works with Salesforce, Google Ads, Google Analytics, Search Console, and [many more](/get-started/connecting-accounts).
+## Build this first: paid spend exception
 
----
+```text
+Create a Runner named Paid Spend Exceptions.
 
-## What Runner does for marketing teams
+Every weekday at 8:00am in my timezone, review campaign performance in
+[connected ad source or Google Sheet], our approved targets in [Google Sheet],
+and pipeline outcomes in [HubSpot or Salesforce].
 
-### Review campaign performance with real numbers
+Only include a campaign when one of these is true:
+- daily spend is more than 20% above its approved pace
+- cost per qualified lead is more than 20% above target
+- spend increased but the connected CRM shows no matching qualified leads
+- required campaign or source data is missing
 
-Not a dashboard you have to squint at. Runner pulls spend and conversion data from your ad platforms, cross-references with leads in your CRM, and builds a report that tells you the story, not just the numbers.
+For each exception, show campaign, spend, target, variance, qualified leads or
+pipeline shown in the CRM, and the exact source period. Separate facts from
+possible explanations. Don't claim why a metric changed unless a source says it.
 
-> *"How did our Q1 campaigns perform?"*
+Recommend one thing for a person to inspect. Don't change budgets, pause ads,
+post messages, or update the CRM. Draft a short team summary for my review.
+If nothing is outside the rules, say that clearly and stop.
 
-Runner builds a channel-by-channel breakdown. Paid search drove 62% of pipeline, organic closed at 2x the rate of paid. That's where next quarter's budget should go.
+Before you create the Runner, show me the final name, prompt, schedule, and
+timezone. Wait for my confirmation.
+```
 
-### Keep the content calendar honest
+**A user-created Runner becomes active as soon as it's created.** Review its schedule and permissions, then click **Run now**.
 
-Runner checks your content calendar in Notion, flags what's overdue, pulls top-performing keywords from Analytics to prioritize topics, and updates the board with real publish dates.
+Twenty percent is an example. Use a threshold your team already trusts.
 
-> *"What content should we publish this week?"*
+## Keep the definitions in one place
 
-Three drafts are due this week, one is overdue from last Friday. After the board update, the overdue piece is top of the queue and every draft has a real publish date.
+Put the rules in a marketing Project:
 
-### Map attribution to actual revenue
+- Approved targets and where the current numbers live.
+- What counts as a qualified lead or pipeline opportunity.
+- Naming conventions for channels and campaigns.
+- Reporting windows and timezone.
+- Changes Runner may recommend but must not make.
 
-Which campaigns are driving sales? Not clicks. Sales. Runner pulls closed-won deals from your CRM, matches lead sources back to ad campaigns, and tells you which campaigns to double down on and which to cut.
+The ad source, CRM, and reporting sheet hold the live numbers. Project context holds the definitions. Previous run output doesn't carry forward automatically.
 
-> *"Which campaigns are actually driving sales?"*
+Run the first few checks with writes on **Ask**. If the same false positive appears twice, fix the rule in the saved prompt. Don't just correct one session and hope the next run knows.
 
-Two campaigns to pause today. One to double down on. That's where next quarter's budget should go.
+## Then automate these
 
-### Monitor ad spend without babysitting
+### Campaign-to-pipeline review
 
-Set it once. Runner monitors your campaigns daily, flags anything that exceeds CPA targets by 20%, checks if underperforming ads are sending traffic to the right pages, and posts a weekly spend summary to your marketing channel.
+Run Monday morning. Match campaign and lead records using the identifiers your data actually provides. Show matched pipeline, unmatched records, and missing fields. Don't turn correlation into attribution.
 
-> *"Keep an eye on our Google Ads spend and let me know if anything looks off."*
+### Lead aging check
 
-Runner doesn't just alert you when a number crosses a threshold. It understands why the number moved and what to do about it.
+Run each weekday morning. Find new marketing leads with no owner or first response, then stage an alert or CRM update. Stop when the source record shows the lead is handled.
 
-### Plan the marketing sprint with data
+### Content bottleneck check
 
-Runner pulls your backlog from Notion, checks what shipped last sprint and what rolled over, looks at traffic data to suggest priorities, and updates the sprint board with its recommendations.
+Run each weekday morning. Find content due in the next seven days with no owner, blocked status, or overdue dependency. Draft the nudge, then let a person decide what moves.
 
-> *"Help me plan our marketing sprint for next week."*
+### Weekly growth review
 
-After the update, the sprint is on the board. The SEO push is prioritized because the numbers said so, not because it felt right.
+Run Friday afternoon. Pull the approved metrics, current experiments, spend exceptions, and pipeline changes into one short report. Flag missing data instead of smoothing over it.
 
----
+## A report isn't the outcome
 
-## A marketing team's day with Runner
+The goal is to catch wasted spend early, follow up on demand, and start the team meeting with a decision instead of spending 40 minutes building the report.
 
-| Time | What Runner does |
-|------|-----------------|
-| **8:00 AM** | Morning brief: campaign metrics, content due today, ad spend alerts |
-| **9:00 AM** | Pulls yesterday's ad performance, flags anything over CPA target |
-| **10:00 AM** | Reviews the content calendar and nudges the team on overdue work |
-| **11:00 AM** | Builds an attribution report for the weekly marketing sync |
-| **1:00 PM** | Preps the sprint board with recommended priorities from analytics data |
-| **3:00 PM** | Drafts a customer story from interview notes and CRM data |
-| **4:00 PM** | Posts the weekly spend summary to #marketing |
-| **Friday PM** | Weekly report: what performed, what didn't, where to shift budget |
-
----
-
-## Prompts to try right now
-
-<AccordionGroup>
-  <Accordion title="Campaign review">
-    *"How did our campaigns perform last quarter? Pull data from Google Ads, Analytics, and the CRM. Build a channel-by-channel breakdown with pipeline attribution."*
-  </Accordion>
-  <Accordion title="Content calendar check">
-    *"Check our content calendar in Notion. What's due this week? What's overdue? Suggest priorities based on what's performing in Analytics."*
-  </Accordion>
-  <Accordion title="Lead attribution">
-    *"Which campaigns are actually driving closed-won deals? Pull from the CRM and match against ad campaigns. Flag anything burning budget with zero pipeline."*
-  </Accordion>
-  <Accordion title="Ad spend monitoring">
-    *"Monitor our Google Ads campaigns. If any campaign exceeds our CPA target by 20%, flag it with a recommendation. Post a weekly spend summary to #marketing."*
-  </Accordion>
-  <Accordion title="Sprint planning">
-    *"Help me plan next week's marketing sprint. Pull the backlog from Notion, check what rolled over, and recommend priorities based on traffic and engagement data."*
-  </Accordion>
-  <Accordion title="Weekly marketing report">
-    *"Build our weekly marketing report. Pull traffic, campaign performance, and lead data. Post it to #marketing with a summary of what changed and what to do about it."*
-  </Accordion>
-  <Accordion title="Customer story draft">
-    *"Draft a customer story from [customer name]. Pull from our interview notes, CRM data, and any emails. Keep it real, not salesy."*
-  </Accordion>
-</AccordionGroup>
-
----
-
-## Automate the predictable stuff
-
-Once you've tried these manually, turn them into Runners:
-
-- **Daily ad spend check** every morning at 8am. Flag anything over target.
-- **Content calendar review** every Monday. What's due, what's overdue, what to prioritize.
-- **Weekly spend summary** every Friday at 3pm. Post it to #marketing with what changed.
-- **Monthly attribution report** on the first of each month. Which campaigns drove revenue.
-
-Stop pulling numbers from one tool into another. Let Runner do the legwork so you can focus on the decisions that move the needle.
-
-[Learn how to create Runners →](/runners/create-your-own)
+Build for that.
 
 ---
 
 ## What's next?
 
-<CardGroup cols={2}>
-  <Card title="Connect your apps" icon="plug" href="/get-started/connecting-accounts">
-    Link your CRM, analytics, and project tools.
+<CardGroup cols={3}>
+  <Card title="Sales and RevOps" icon="bullseye" href="/use-cases/sales-and-revops">
+    Follow demand from first response to next step.
   </Card>
-  <Card title="Browse workflows" icon="arrows-spin" href="/workflows/starter-workflows">
-    Starter Workflows you can call with /slug in any message.
+  <Card title="What should you automate?" icon="star" href="/tips/tips-and-tricks">
+    Rank your recurring work by money and time.
+  </Card>
+  <Card title="Tool permissions" icon="shield-check" href="/connections/tool-permissions">
+    Keep budget and CRM changes behind review.
   </Card>
 </CardGroup>

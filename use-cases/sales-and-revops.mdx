@@ -1,160 +1,113 @@
 ---
 title: "Runner for sales and RevOps teams"
-description: "Prep your calls, review your pipeline, draft follow-ups, and keep your CRM honest. Runner connects to Salesforce, HubSpot, Gmail, and Calendar so you spend less time updating and more time closing."
+sidebarTitle: "Sales and RevOps"
+description: "Find new leads, stalled deals, and opportunities with no next step."
 ---
 
-You know the drill. You have a call in 20 minutes, the deal record is half-filled out, and the last email thread is buried somewhere in your inbox. You're supposed to show up sharp but instead you're scrambling between four tabs trying to piece together what happened last time.
+A full pipeline can still be a dead pipeline.
 
-Runner connects your CRM, inbox, calendar, and docs. You ask, it does the work.
+The problem usually isn't the number of records. It's the gaps: a new lead with no reply, a proposal with no follow-up, a deal with no next step, or a renewal nobody owns.
+
+Those gaps repeat every week. That makes them good work for a Runner.
 
 <Note>
-  Writes follow your [tool permissions](/connections/tool-permissions). **Ask** stages an **Action Card** for review. **Allow** acts without asking. **Off** blocks the tool unless a user-created Runner has its own override.
+  Writes follow your [tool permissions](/connections/tool-permissions). Keep CRM updates and email sending on **Ask** while you test. Runner stages each write as an **Action Card**. **Allow** acts without asking. **Off** blocks the tool unless the Runner has its own override.
 </Note>
 
-## Your stack, connected
+## Put revenue follow-through on a schedule
 
-Runner works across the tools sales and RevOps teams actually live in. Connect them once and Runner handles the rest.
+| Runner | Schedule | What it finds | Finish line |
+|--------|----------|---------------|-------------|
+| **New lead check** | 8am and 4pm each weekday | Inquiries with no owner or first response | Owner named and reply ready for review |
+| **Proposal follow-up** | Every weekday morning | Sent proposals with no client reply | Specific follow-up staged, or a clear reason to stop |
+| **Pipeline gap check** | Monday and Thursday | Open deals with no next step, stale activity, or overdue tasks | Short list with owner and next action |
+| **Renewal watch** | Twice a week | Renewals approaching with open issues or no plan | Risk, owner, and next conversation named |
+| **Sales report** | Friday afternoon or month-end | Won, lost, slipped, and stage changes | Report built from CRM data, with missing fields called out |
 
-<CardGroup cols={3}>
-  <Card title="Salesforce" icon={<img src="/images/apps/salesforce.svg" alt="Salesforce" width="24" height="24" />}>
-    Deal records, pipeline data, activity logging
-  </Card>
-  <Card title="HubSpot" icon={<img src="/images/apps/hubspot.svg" alt="HubSpot" width="24" height="24" />}>
-    CRM updates, deal tracking, engagement signals
-  </Card>
-  <Card title="Gmail" icon={<img src="/images/apps/gmail.svg" alt="Gmail" width="24" height="24" />}>
-    Thread context, draft replies, follow-up tracking
-  </Card>
-  <Card title="Google Calendar" icon={<img src="/images/apps/google-calendar.svg" alt="Google Calendar" width="24" height="24" />}>
-    Meeting booking, conflict checks, call blocks
-  </Card>
-  <Card title="Google Sheets" icon={<img src="/images/apps/google-sheets.png" alt="Google Sheets" width="24" height="24" />}>
-    Pipeline reports, deal-by-deal breakdowns
-  </Card>
-  <Card title="Google Docs" icon={<img src="/images/apps/google-docs.png" alt="Google Docs" width="24" height="24" />}>
-    Proposals, briefs, meeting notes
-  </Card>
-</CardGroup>
+Don't automate "do sales." Automate one gap you can see and measure.
 
-Runner also works with Attio, Calendly, Mixpanel, Slack, and [many more](/get-started/connecting-accounts).
+The 8am and 4pm lead check uses more of your plan. Start with the morning check until the second one is worth the cost.
 
----
+## Build this first: pipeline gap check
 
-## What Runner does for sales teams
+```text
+Create a Runner named Pipeline Gap Check.
 
-### Prep calls without the scramble
+Every Monday and Thursday at 8:00am in my timezone, review open opportunities
+in [HubSpot or Salesforce] and the matching Gmail threads.
 
-You have a call in 30 minutes. Runner pulls the deal record from your CRM, checks recent email threads, researches the company, and builds a brief with talking points. Not a generic checklist. Actual context from your actual data.
+Include a deal when at least one of these is true:
+- there is no next step or next-step date
+- the next-step date has passed
+- there has been no recorded activity for 7 days
+- a proposal was sent at least 3 business days ago with no client reply
 
-> *"I have a call with Acme Corp in 30 minutes, what should I know?"*
+Exclude deals marked won, lost, paused, or do not contact.
 
-Runner pulls the deal history, checks that they went dark for 2 weeks after pricing and just re-engaged, finds that they raised a Series B, and builds your brief: lead with the funding, ask about team size, don't discount.
+For each deal, read the CRM record and latest email thread. Return the deal,
+stage, value shown in the CRM, days since activity, owner, missing field, and
+one recommended next step. If a follow-up is appropriate, draft it from the
+real context and stage the send as an Action Card. Don't invent urgency,
+pricing, product claims, or a deadline.
 
-### Review your pipeline honestly
+If no deals match, say that clearly and stop. Before you create the Runner,
+show me the final name, prompt, schedule, and timezone. Wait for my confirmation.
+```
 
-Not the optimistic version. The honest one. Runner pulls all open opportunities, flags deals that have been sitting in the same stage too long, and builds a report with real numbers.
+**A user-created Runner becomes active as soon as it's created.** Review its schedule and permissions, then click **Run now**.
 
-> *"How's our pipeline looking this quarter?"*
+The result should be small enough to act on. Ten real gaps beat a 60-page pipeline export.
 
-Runner finds $1.2M weighted pipeline, flags that 40% is stuck in Demo Completed with no next step, and identifies 3 deals that have been in the same stage for 20+ days. Then asks if you want nudge emails drafted.
+## Keep the state where Runner can read it
 
-### Book demos without the tab shuffle
+Put your sales rules in a Project:
 
-Runner finds the contact in your CRM and checks both calendars. It then sends the invite with a Zoom link and moves the deal to Demo Scheduled.
+- Ideal customer and disqualifiers.
+- Deal stages and what each one requires.
+- Follow-up timing and do-not-contact rules.
+- Approved product language and pricing boundaries.
+- Who owns leads, proposals, and renewals.
 
-> *"Book a demo with the VP of Sales at Nexus this week."*
+Keep deal status in the CRM and conversation status in email. The next run reads those sources again. It doesn't automatically receive the previous run's output.
 
-Once those actions run, the demo is on the calendar and the deal stage is updated. You didn't touch a scheduling link.
+Start with writes on **Ask**. Review the first ten email and CRM Action Cards. If a rule keeps needing correction, change the saved prompt or Project context. Don't leave the fix in one run's session.
 
-### Know who to call today
+## Add the next revenue check
 
-Runner scans your pipeline for urgency signals, checks who opened your emails in the last 24 hours, drafts follow-ups with CRM context, and blocks time on your calendar for the calls.
+### New lead response
 
-> *"Who should I be calling today?"*
+Run at the start and end of each workday. Find new inbound leads with no owner or reply, read the available company and CRM context, and stage a short first response. Stop as soon as the record or thread shows somebody handled it.
 
-Three calls that actually move your number. Drafts written. Runner puts the call blocks on your calendar.
+### Proposal follow-up
 
-### Build the monthly report without starting from scratch
+Run each weekday morning. Check proposals sent 3 to 14 business days ago. Draft the next message only when the client hasn't replied and the opportunity is still open.
 
-Runner pulls closed-won and lost deals, cross-references outreach activity by rep, and builds a report with revenue by rep, win rate, cycle time, and top loss reasons.
+### Renewal watch
 
-> *"Build the March sales report for me and the VP."*
+Run twice a week. Find renewals in the next 60 days, then gather recent email, open issues, usage data that is actually connected, and the named owner. Surface missing plans early.
 
-The report has the numbers and the narrative. What moved, what stalled, and why.
+### Weekly sales report
 
-### Track follow-ups
+Run Friday afternoon. Pull what changed from the CRM, not from memory. Show won, lost, slipped, stale, and missing data. Keep forecast judgment with the sales owner.
 
-The deal dies when follow-ups fall through the cracks. Runner tracks what's pending and who's gone quiet.
+## Measure the gap, not the output
 
-> *"What emails have I sent in the last week that haven't gotten a reply? Draft follow-ups for each one."*
+Don't count how many emails Runner drafted. Count leads that got a first response, proposals that received a next step, and open deals that stopped sitting without an owner.
 
----
-
-## A sales team's day with Runner
-
-| Time | What Runner does |
-|------|-----------------|
-| **8:00 AM** | Morning briefing: priority deals, engagement signals, calls to make today |
-| **9:00 AM** | Preps you for a 10am call with deal record, email history, and talking points |
-| **10:30 AM** | Post-call: drafts the CRM log, follow-up email, and next steps, then writes them to the right apps |
-| **12:00 PM** | Pipeline review: flags stalled deals, drafts nudge emails for the stuck ones |
-| **1:30 PM** | Books a demo, updates the deal stage, and sends the invite |
-| **3:00 PM** | Researches an inbound lead: company background, ICP match, contact info |
-| **5:00 PM** | End-of-day: surfaces threads that need attention before tomorrow |
-| **Friday PM** | Weekly pipeline report with deal-by-deal breakdown and month-over-month trends |
-
----
-
-## Prompts to try right now
-
-<AccordionGroup>
-  <Accordion title="Call prep">
-    *"I have a call with [company] in 30 minutes. Pull the deal record, recent email threads, and any company news. Give me talking points."*
-  </Accordion>
-  <Accordion title="Pipeline review">
-    *"How's our pipeline looking? Show me weighted pipeline, deals that have stalled, and anything at risk. Build it in a Sheet."*
-  </Accordion>
-  <Accordion title="Book a demo">
-    *"Book a demo with [name] at [company] this week. Check both calendars, send the invite, and update the deal stage in our CRM."*
-  </Accordion>
-  <Accordion title="Daily outreach plan">
-    *"Who should I be calling today? Check my pipeline for urgency signals, see who opened my emails recently, and draft follow-ups for the top 3."*
-  </Accordion>
-  <Accordion title="Monthly sales report">
-    *"Build the [month] sales report. Pull closed-won and lost from the CRM, break it down by rep, and show win rate and cycle time. Email it to me and the VP."*
-  </Accordion>
-  <Accordion title="Follow-up tracker">
-    *"Check my sent emails from the last week. Flag anyone who hasn't replied. Draft a short follow-up for each one."*
-  </Accordion>
-  <Accordion title="Lead qualification">
-    *"Someone from [company] reached out. Research them: what do they do, how big are they, do they match our ICP? Draft a response."*
-  </Accordion>
-</AccordionGroup>
-
----
-
-## Automate the predictable stuff
-
-Once you've tried these manually, turn them into Runners:
-
-- **Morning pipeline brief** at 8am, every weekday. Engagement signals, stalled deals, calls to make.
-- **Follow-up tracker** at 5pm, every evening. Catch what's slipping before it goes cold.
-- **Monthly sales report** on the last day of each month. Revenue, win rate, and the narrative.
-- **Pipeline review** every Monday morning. Start the week knowing where you stand.
-
-Stop doing the small, predictable work so you can focus on the calls that actually close deals.
-
-[Learn how to create Runners →](/runners/create-your-own)
+That's the revenue work.
 
 ---
 
 ## What's next?
 
-<CardGroup cols={2}>
-  <Card title="Connect your apps" icon="plug" href="/get-started/connecting-accounts">
-    Link your CRM, Gmail, Calendar, and the rest.
+<CardGroup cols={3}>
+  <Card title="Professional services" icon="briefcase" href="/use-cases/professional-services">
+    Build proposal follow-up and client onboarding Runners.
   </Card>
-  <Card title="Browse workflows" icon="arrows-spin" href="/workflows/starter-workflows">
-    Starter Workflows you can call with /slug in any message.
+  <Card title="Connect your apps" icon="plug" href="/get-started/connecting-accounts">
+    Link your CRM and Gmail, then review their tools.
+  </Card>
+  <Card title="Create a Runner" icon="wand-magic-sparkles" href="/runners/create-your-own">
+    Save the check, schedule, and review boundary.
   </Card>
 </CardGroup>

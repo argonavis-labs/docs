@@ -11,26 +11,30 @@ There are two ways to create a Runner:
 Use the second one when the job is still fuzzy. Use the form when you already know the prompt and schedule.
 
 <Warning>
-  **A new Runner is active as soon as it's created.** Review the prompt, schedule, timezone, Project, intelligence, and tool permissions before you finish. A scheduled time can arrive before you come back to edit it.
+  **A new Runner is active as soon as it's created.** Check every field the creation path shows before you confirm. Then open the new Runner and review its Project, model, and tool permissions before the first scheduled time arrives.
 </Warning>
 
 ## Ask Runner to build it with you
 
 <Steps>
   <Step title="Start the setup">
-    Open **Runners**, click **New runner**, then choose **Ask Runner to create it**.
+    Open **Runners**, click **New runner**, then choose **Ask Runner to create it**. Set the new session to **Normal** before you continue.
   </Step>
   <Step title="Describe the job">
-    Say what you want, when it should run, and what a useful result looks like. Add this line when you want a review before creation:
+    Say what should happen, which sources to use, when it should run, what needs review, and what a useful result looks like. Add this line when you want a review before creation:
 
     ```text
-    Ask me whatever you need. Show me the final prompt, schedule, timezone,
-    Project, and intelligence setting. Wait for my confirmation before you
-    create the Runner.
+    Ask me whatever you need. Show me the final name, prompt, schedule, and
+    timezone. Wait for my confirmation before you create the Runner.
     ```
   </Step>
   <Step title="Check the final setup">
-    Read the proposed prompt and schedule. Confirm only when you're ready for the Runner to become active.
+    Read the proposed name, prompt, schedule, and timezone. Starting from the main **Runners** page creates it under **No project** with no Runner-specific tool permission overrides.
+
+    Confirm only when you're ready for the Runner to become active.
+  </Step>
+  <Step title="Review the saved details">
+    Open the new Runner. Choose a **Project** if it needs standing context, verify **Runner model**, and review **Tool permissions** before the first scheduled run.
   </Step>
 </Steps>
 
@@ -56,7 +60,7 @@ For connected-app writes:
 - **Allow** performs the action without asking.
 - **Off** blocks the tool unless this Runner has its own override.
 
-A user-created Runner can override the baseline setting under its own **Tool permissions**. Anything left on **Inherited** uses the connected account's setting.
+A new Runner starts with **No overrides** and uses your current **Connected Apps** settings. Add a Runner-specific override only when this one job needs a different rule. That override takes priority, including over **Off**.
 
 Start writes on **Ask** when you're testing a new Runner. Move a specific tool to **Allow** only when you want that Runner to use it without stopping for review.
 
@@ -72,9 +76,9 @@ The **Carry unresolved Action Cards into new runs** switch does one narrower job
 
 ## Test it
 
-Open the Runner and click **Run now**. The test appears as a new session, even if the Runner is paused.
+Open the Runner and click **Run now**. The test creates a separate session and keeps you on the Runner detail page, even if the Runner is paused.
 
-Check the result, tool activity, and any **Action Cards**. Then leave the schedule active, or use the **Status** switch to pause it while you adjust the prompt.
+Open **Recent runs** and click the run's timestamp. Check the result, tool activity, and any **Action Cards**. Then leave the schedule active, or use the **Status** switch to pause it while you adjust the prompt.
 
 ---
 
@@ -84,7 +88,7 @@ Check the result, tool activity, and any **Action Cards**. Then leave the schedu
   <Card title="Runner overview" icon="person-running" href="/runners/overview">
     See what persists, what starts fresh, and where each run lives.
   </Card>
-  <Card title="Heartbeat and Daily Brief" icon="heart-pulse" href="/runners/heartbeat-and-daily-brief">
-    Compare your Runner with the two built-ins.
+  <Card title="What should you automate?" icon="star" href="/tips/tips-and-tricks">
+    Find recurring work tied to revenue, cost, or time.
   </Card>
 </CardGroup>

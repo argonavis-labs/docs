@@ -1,6 +1,6 @@
 ---
 title: "Best practices"
-description: "Set up Runner the right way and get consistent, reliable results."
+description: "Build safer Runners and make the results easier to review."
 ---
 
 We've watched how people use Runner. These are the patterns that work.
@@ -57,17 +57,19 @@ Later, you can move a specific send tool to **Allow**. That removes the review s
 
 ---
 
-## Start with questions, not commands
+## Start with one job, not ten prompts
 
-When you're new to Runner, ask questions before giving orders. It helps you learn what Runner can see and do.
+A one-off request shows you what Runner can do. The bigger payoff comes when you turn repeated work into a clear system.
 
-| Instead of | Try first |
-|------------|-----------|
-| "Send an email to John" | "What's the latest email thread with John? Can you draft a follow-up?" |
-| "Create a meeting" | "Do I have any open slots this week for a 30-minute call?" |
-| "Update the task" | "What's the status of that task? What should I change?" |
+| Too vague | Ready to test |
+|-----------|---------------|
+| "Help with sales" | "Every weekday at 8am, find open proposals that have waited 3 business days without a reply." |
+| "Keep an eye on invoices" | "Every Friday, match new vendor invoices in Drive against the active agreements folder and flag differences." |
+| "Watch product metrics" | "Every weekday at 8:30am, check the three approved funnels in Mixpanel and report changes above 15%." |
 
-Once you're confident, give direct commands. Runner handles them fine. Starting with questions just builds trust faster.
+Name the sources, schedule, rules, what needs your approval, and what the result should contain. Then click **Run now** and read the first result.
+
+If you're not sure which job to pick, [start with the work tied to revenue, cost, or time](/tips/tips-and-tricks).
 
 ---
 
@@ -93,9 +95,11 @@ Runner works across multiple apps, so precision helps:
 
 ---
 
-## Review your Runners once a month
+## Review new Runners closely
 
-If you set up Runners, check on them every once in a while. Pause or delete any you don't need anymore. Keeps things clean.
+Read the first few runs. Fix repeated mistakes in the saved prompt or Project context, not only in one run's session.
+
+Once a Runner is reliable, review it monthly. Check recent runs, pause work you no longer need, and confirm the schedule and permissions still make sense.
 
 ---
 
@@ -103,25 +107,25 @@ If you set up Runners, check on them every once in a while. Pause or delete any 
 
 Here's a good first week. Each step builds on the last.
 
-- [ ] [Open Runner](https://app.runner.now/app). No download, works in any browser
 - [ ] [Connect Gmail and Google Calendar](/get-started/connecting-accounts)
 - [ ] [Build your Personal Assistant](/quickstart)
-- [ ] Ask Runner: *"Give me my morning briefing"*
-- [ ] Ask Runner: *"Triage my inbox"*
-- [ ] Enable the [Daily Brief Runner](/runners/heartbeat-and-daily-brief) from the Runners tab. Your morning briefing, daily at 8am
-- [ ] [Connect Slack](/get-started/connecting-accounts) and ask: *"What did I miss overnight?"*
-- [ ] Try voice dictation for at least one request (click the mic icon)
-- [ ] [Create your first Project](/get-started/projects) and write its context so Runner knows the background
+- [ ] Click **Run now** and read the full result
+- [ ] [Find one repeated job](/tips/tips-and-tricks) tied to revenue, cost, time, or a customer commitment
+- [ ] Name its sources, schedule, useful result, and what needs your approval
+- [ ] [Create a Project](/get-started/projects) for its standing business rules
+- [ ] [Create the Runner](/runners/create-your-own) with writes on **Ask**
+- [ ] Read the first three runs and fix the saved prompt when the same problem appears twice
+- [ ] Add the next Runner only after the first one earns its place
 
 ---
 
 ## What's next?
 
 <CardGroup cols={2}>
-  <Card title="Tips and tricks" icon="star" href="/tips/tips-and-tricks">
-    Quick wins and features you might not have found yet.
+  <Card title="What should you automate?" icon="star" href="/tips/tips-and-tricks">
+    Find recurring work tied to revenue, cost, or time.
   </Card>
   <Card title="See how others use Runner" icon="lightbulb" href="/use-cases/overview">
-    Real workflows for founders, real estate agents, and more.
+    Find examples for professional services, sales, operations, and more.
   </Card>
 </CardGroup>

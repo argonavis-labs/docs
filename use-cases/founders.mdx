@@ -1,191 +1,108 @@
 ---
-title: "Runner for founders"
-description: "Morning briefings, inbox triage, meeting prep, investor updates, and follow-up tracking. Runner acts as your AI personal assistant."
+title: "Runner for owners and executives"
+sidebarTitle: "Owners and executives"
+description: "Watch revenue, customer risk, commitments, and the operating numbers that need a decision."
 ---
 
-Your day is fragmented. The information you need is scattered across email, calendar, Slack, docs, and a dozen other tools. Runner connects all of them and does the work that keeps falling through the cracks.
+A morning brief is useful. A brief that tells you which proposal went quiet, which customer promise is slipping, and which number needs a decision is much more useful.
 
-Think of it as an AI personal assistant. It looks at your email, calendar, messages, tasks, and docs, and delivers what you actually need to focus on.
+That's the move with Runner. Start with personal work you already understand. Then aim the same system at the parts of the business that make or lose money.
 
 <Note>
   Writes follow your [tool permissions](/connections/tool-permissions). **Ask** stages an **Action Card** for review. **Allow** acts without asking. **Off** blocks the tool unless a user-created Runner has its own override.
 </Note>
 
-## Your stack, connected
+## Put the important work on a schedule
 
-Runner works across the tools founders actually live in. Connect them once and Runner handles the rest.
+| Runner | What it checks | Useful result |
+|--------|----------------|---------------|
+| **Executive watchlist** | Gmail, Calendar, CRM, project tracker, and your metrics sheet | A ranked list of revenue, customer, cost, and delivery decisions |
+| **Revenue follow-through** | Open proposals, deals without a next step, and unanswered threads | The three opportunities most likely to need action today |
+| **Customer risk** | Recent customer email, open issues, commitments, and renewal dates | A short list of accounts that need an owner or response |
+| **Weekly operating review** | Team metrics, open projects, hiring, cash, and blockers | One report that names what changed and where you need to decide |
+| **Board and investor update** | Approved metrics, milestones, hiring notes, and prior update format | A first draft based on approved sources, with missing inputs called out |
 
-<CardGroup cols={3}>
-  <Card title="Gmail" icon={<img src="/images/apps/gmail.svg" alt="Gmail" width="24" height="24" />}>
-    Inbox triage, draft replies, follow-up tracking
-  </Card>
-  <Card title="Google Calendar" icon={<img src="/images/apps/google-calendar.svg" alt="Google Calendar" width="24" height="24" />}>
-    Meeting prep, conflict detection, scheduling
-  </Card>
-  <Card title="Slack" icon={<img src="/images/apps/slack.svg" alt="Slack" width="24" height="24" />}>
-    Channel summaries, team updates, mentions
-  </Card>
-  <Card title="Linear" icon={<img src="/images/apps/linear.svg" alt="Linear" width="24" height="24" />}>
-    Sprint progress, blockers, task creation
-  </Card>
-  <Card title="Notion" icon={<img src="/images/apps/notion.png" alt="Notion" width="24" height="24" />}>
-    Docs, tasks, project status, meeting notes
-  </Card>
-  <Card title="Google Docs" icon={<img src="/images/apps/google-docs.png" alt="Google Docs" width="24" height="24" />}>
-    Board decks, investor updates, proposals
-  </Card>
-  <Card title="Google Sheets" icon={<img src="/images/apps/google-sheets.png" alt="Google Sheets" width="24" height="24" />}>
-    Metrics, financial models, pipeline data
-  </Card>
-  <Card title="HubSpot" icon={<img src="/images/apps/hubspot.svg" alt="HubSpot" width="24" height="24" />}>
-    CRM updates, deal tracking, contact research
-  </Card>
-  <Card title="Google Drive" icon={<img src="/images/apps/google-drive.png" alt="Google Drive" width="24" height="24" />}>
-    File search, document organization, sharing
-  </Card>
-</CardGroup>
+The point isn't a prettier summary. It's catching the thing you would have found next Thursday and seeing it today.
 
-Runner also works with Salesforce, Calendly, Mixpanel, GitHub, Granola, Fireflies, and [many more](/get-started/connecting-accounts).
+## Build this first: executive watchlist
 
----
+```text
+Create a Runner named Executive Watchlist.
 
-## Why founders use Runner
+Every weekday at 7:30am in my timezone, review my connected Gmail, Google
+Calendar, [CRM], [project tracker], and the current operating metrics in
+[Google Sheet].
 
-### It runs multiple things at once
+Only include items that need my attention in the next 7 days:
+1. Revenue: new leads, proposals, or open deals with no clear next step.
+2. Customers: commitments, risks, or questions waiting on us.
+3. Cost: unusual changes or deadlines shown in the sources.
+4. Delivery: blocked work, missed dates, or decisions waiting on me.
+5. Today: meetings that need preparation.
 
-Not one task at a time. Runner drafts follow-ups while pulling analytics and updates your CRM at the same time. Everything in parallel, with receipts and timestamps for each step. You see the work happening, not just the result.
+For every item, cite the source, explain why it matters, name the owner if one
+is shown, and give me one recommended next step. Don't invent a cause, owner,
+deadline, or dollar value. If the source is unclear, say so.
 
-### It runs in the cloud, 24/7
+Don't send messages or update records. Draft anything useful for my review.
+Return no more than 10 items. Rank them by money at risk and how soon I need to act.
 
-Runner lives at [app.runner.now](https://app.runner.now) and works in any browser, on any device. Your Runners keep going even when your laptop is closed.
+Before you create it, show me the final name, prompt, schedule, and timezone.
+Wait for my confirmation.
+```
 
-### It uses the context you save
+**A user-created Runner becomes active as soon as it's created.** Review its schedule and permissions, then run it once. If the list is full of noise, don't ask Runner to "be smarter." Tighten the sources, thresholds, and exclusions in the saved prompt.
 
-Put durable preferences in [Personal Memory](/using-runner/memory): how you like emails drafted, who your VIPs are, what your board meeting cadence looks like. Future sessions can use those saved facts. The transcript itself doesn't carry forward.
+## Give it the business context
 
-### It runs on a schedule
+Create a Project for the operating context this Runner should use:
 
-Set up a Runner once and it repeats. Morning briefing at 7:30am, every weekday, before your first meeting. Follow-up tracker at 5pm. Weekly recap on Friday. No repeat prompt required.
+- Current priorities and the metrics you actually care about.
+- Your definition of an at-risk customer or stalled deal.
+- Who owns which part of the business.
+- The format for operating, board, and investor updates.
+- Decisions Runner should never make for you.
 
----
+The Project holds standing context. Your CRM, inbox, project tracker, and metrics sheet hold live status. Each run starts in a separate session, so don't rely on yesterday's output being there tomorrow.
 
-## What Runner does for founders
+Keep write tools on **Ask** while the Runner is learning your business. A suggested email can wait in an Action Card. The final decision is still yours.
 
-### Morning briefing
+## Build the next Runner
 
-Start the day with signal, not scramble. Runner checks your inbox, calendar, Slack, and tasks. Then gives you a ranked brief of what actually matters before your first meeting.
+### Proposal and pipeline follow-through
 
-> *"Give me my morning briefing: priority emails, today's meetings with prep notes, anything blocked on Slack, and tasks that are due."*
+Check open revenue every weekday morning. Find proposals with no reply and deals with no next step. Stage a specific follow-up using the real thread and account context.
 
-### Board meeting prep
+### Weekly operating review
 
-Stop rebuilding board context by hand. Runner finds the meeting on your calendar, pulls notes from past board meetings, reads recent investor emails, and drafts a prep doc with talking points.
+Run Friday afternoon. Compare the approved metrics with the prior period, pull blockers from the project tracker, and draft the questions that need an answer. Don't claim a cause unless a source states it.
 
-> *"My board meeting is Thursday. Pull last quarter's board notes, any investor emails from the last month, and the latest metrics. Draft prep materials with talking points."*
+### Customer risk review
 
-The board meeting gets prepped from real context instead of memory and scramble.
+Run twice a week. Look for unresolved customer questions, missed commitments, open high-priority issues, and renewals approaching. Rank the list, then name an owner.
 
-### Inbox follow-through
+### Board or investor update assembly
 
-Instead of staring at your inbox trying to decide what to answer first, let Runner do the sorting. It reads the thread, checks your calendar, pulls the right docs, and drafts the reply.
+Run on the date you normally start each monthly or quarterly update. Pull approved metrics and milestones into the existing format. Flag every missing number instead of guessing.
 
-> *"Review my priority inbox threads. Draft replies for anything that needs a response. Check my calendar before suggesting any meeting times."*
+## Build toward the business
 
-### Investor updates
+Your Personal Assistant can give you a better morning. These Runners can keep revenue, customers, and decisions from slipping between meetings.
 
-Turn scattered notes into a polished update. Runner pulls from your docs, email, and project tracker to draft the update so you're not starting from a blank page. Key metrics like ARR, growth, and runway. Pulled from your actual docs instead of typed from memory.
-
-> *"Draft this month's investor update. Pull key metrics from the last board notes, recent product milestones from Linear, and any hiring updates from email."*
-
-### Meeting prep and research
-
-Walking into a meeting cold is a founder mistake you don't need to make. Runner researches the company, looks up every attendee, checks your email history with them, and builds a brief with talking points.
-
-> *"Research Charlie Feng, CEO at Agora. We're meeting tomorrow about a partnership. Give me the full brief."*
-
-### Follow-up tracking
-
-Decisions mean nothing if the follow-through doesn't happen. Runner tracks what you've sent, who hasn't replied, and what's gone stale.
-
-> *"What emails and Slack messages have I sent in the last week that haven't gotten a reply? List them with how long each has been waiting."*
-
-### Sales prospecting
-
-Find your next customer without spending hours on research. Runner finds companies matching your ICP, identifies the decision-makers, gets verified contact info, and drafts personalized outreach.
-
-> *"Find Series A fintech companies in the Bay Area with 50-200 employees. I want to reach their VP of Sales."*
-
----
-
-## A founder's day with Runner
-
-| Time | What Runner does |
-|------|-----------------|
-| **7:30 AM** | Morning briefing: ranked priorities, key meetings, blockers, relationship follow-ups |
-| **9:00 AM** | Meeting prep: context for your 10am with the engineering lead pulled from Slack and Linear |
-| **10:30 AM** | Inbox triage: classifies 40 emails, drafts replies for the 8 that matter, and archives the rest |
-| **11:00 AM** | Drafts a reply to your investor's email with the latest ARR numbers from your docs |
-| **1:00 PM** | Post-meeting: turns your notes into action items and sends a follow-up to attendees |
-| **3:00 PM** | Researches a potential partner company before your 4pm call |
-| **4:00 PM** | Drafts a Slack update for #leadership with this week's wins and blockers |
-| **5:00 PM** | Follow-up check: surfaces 4 threads that need your attention before the day ends |
-| **Friday PM** | Weekly review: where your time went, open loops, priorities for next week |
-
----
-
-## Prompts to try right now
-
-<AccordionGroup>
-  <Accordion title="Morning briefing">
-    *"Give me the founder briefing for today: key meetings, priority emails, blockers from Slack, and anything slipping in Linear. Rank by what needs attention first."*
-  </Accordion>
-  <Accordion title="Inbox triage">
-    *"Triage my inbox. Classify every email, draft replies for what needs a response, and archive the noise. Show me unsubscribe candidates too."*
-  </Accordion>
-  <Accordion title="Board prep">
-    *"Board meeting is [date]. Help me prep: pull the last board notes, recent investor emails, ARR/growth metrics, and key updates. Draft talking points and flag open questions."*
-  </Accordion>
-  <Accordion title="Investor update draft">
-    *"Draft this month's investor update. Include: product milestones, key metrics, team updates, and what's ahead next month. Pull from Linear, email, and my Google Docs."*
-  </Accordion>
-  <Accordion title="Meeting research">
-    *"I'm meeting [name] from [company] tomorrow. Research them: company background, funding, their career, and any email history we have. Give me talking points."*
-  </Accordion>
-  <Accordion title="Meeting follow-through">
-    *"I just finished a meeting with [name]. Here are my notes: [paste notes]. Turn these into action items, draft a follow-up email to attendees, and create tasks for anything assigned to me."*
-  </Accordion>
-  <Accordion title="Inbound lead qualification">
-    *"Someone from [company] just reached out. Research them: what does the company do, how big are they, do they match our ICP? Draft a response and set up time to talk this week."*
-  </Accordion>
-  <Accordion title="End-of-week review">
-    *"Run my weekly review. Where did my time go this week? What open loops am I carrying? What should I focus on next week?"*
-  </Accordion>
-</AccordionGroup>
-
----
-
-## Automate the predictable stuff
-
-Once you've tried these manually, turn them into Runners:
-
-- **Morning briefing** at 7:30am, every weekday, before your day starts
-- **Inbox triage** after your morning briefing, so your inbox is clean before your first meeting
-- **Follow-up tracker** at 5pm, every evening, catch what's slipping
-- **Weekly review** at 4pm on Friday, so you walk into Monday with clarity
-
-Stop doing the small, predictable work so you can focus on the decisions that actually move the company forward.
-
-[Learn how to create Runners →](/runners/create-your-own)
+That's where the bigger value lives.
 
 ---
 
 ## What's next?
 
-<CardGroup cols={2}>
-  <Card title="Connect your apps" icon="plug" href="/get-started/connecting-accounts">
-    Link Gmail, Calendar, Slack, and your other tools.
+<CardGroup cols={3}>
+  <Card title="Professional services" icon="briefcase" href="/use-cases/professional-services">
+    Follow proposals and client delivery from source to next step.
   </Card>
-  <Card title="Browse workflows" icon="arrows-spin" href="/workflows/starter-workflows">
-    Starter Workflows you can call with /slug in any message.
+  <Card title="What should you automate?" icon="star" href="/tips/tips-and-tricks">
+    Find the recurring work with a number attached.
+  </Card>
+  <Card title="Create a Runner" icon="wand-magic-sparkles" href="/runners/create-your-own">
+    Put one valuable job on a schedule.
   </Card>
 </CardGroup>

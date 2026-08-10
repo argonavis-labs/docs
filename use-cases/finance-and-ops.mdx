@@ -1,154 +1,114 @@
 ---
-title: "Runner for finance and ops teams"
-description: "Build your board pack, process invoices, refresh your forecast, and close the month faster. Runner connects to Stripe, QuickBooks, your CRM, and Sheets so the numbers are always current."
+title: "Runner for finance and operations teams"
+sidebarTitle: "Finance and operations"
+description: "Find invoice exceptions, control vendor costs, and keep recurring reports current."
 ---
 
-It's the last week of the month. You're chasing department leads for their numbers, reconciling invoices against contracts, and trying to get the operating model current before the board meeting on Friday. Half the work is just finding the data and moving it from one place to another.
+An invoice can match last month's total and still be wrong.
 
-Runner connects your revenue tools, spreadsheets, email, and docs. You tell it what you need and it pulls the numbers, builds the reports, and follows up with people who haven't submitted yet.
+The rate changed. The contract ended. The same invoice arrived twice. Someone notices three weeks later because the real work is buried across Gmail, Drive, and a tracking sheet.
+
+Runner checks those sources on a schedule and brings you the exceptions. You still approve every payment.
 
 <Note>
-  Writes follow your [tool permissions](/connections/tool-permissions). **Ask** stages an **Action Card** for review. **Allow** acts without asking. **Off** blocks the tool unless a user-created Runner has its own override.
+  Writes follow your [tool permissions](/connections/tool-permissions). Keep messages, records, and approvals on **Ask** while you test. Runner stages each write as an **Action Card**. **Allow** acts without asking. **Off** blocks the tool unless the Runner has its own override.
 </Note>
 
-## Your stack, connected
+## Start with the expensive exceptions
 
-Runner works across the tools finance and ops teams actually live in. Connect them once and Runner handles the rest.
+| Runner | What it checks | Useful result | Boundary |
+|--------|----------------|---------------|----------|
+| **Invoice exception check** | Incoming invoices, agreements, and tracking sheet | Duplicates, rate changes, missing terms, and unmatched charges | Runner flags. A person approves or pays. |
+| **Vendor renewal watch** | Contracts, renewal notices, and spend records | Renewals approaching with owner, amount, and decision date | Runner doesn't renew or cancel on its own. |
+| **Receivables follow-up** | Open invoice list and customer email | Past-due accounts with a draft based on the customer thread | A person reviews the relationship before sending. |
+| **Report input chase** | Reporting sheet and owner list | Missing sections and draft reminders | Escalation rules stay in the prompt. |
+| **Close readiness** | Close checklist and available source files | Open items, missing evidence, and named blockers | Accounting judgment stays with finance. |
 
-<CardGroup cols={3}>
-  <Card title="Google Sheets" icon={<img src="/images/apps/google-sheets.png" alt="Google Sheets" width="24" height="24" />}>
-    Operating models, trackers, reports, close checklists
-  </Card>
-  <Card title="Gmail" icon={<img src="/images/apps/gmail.svg" alt="Gmail" width="24" height="24" />}>
-    Invoices, vendor emails, approval chains
-  </Card>
-  <Card title="Google Docs" icon={<img src="/images/apps/google-docs.png" alt="Google Docs" width="24" height="24" />}>
-    Board decks, close memos, process docs
-  </Card>
-  <Card title="Slack" icon={<img src="/images/apps/slack.svg" alt="Slack" width="24" height="24" />}>
-    Submission nudges, weekly summaries, leadership updates
-  </Card>
-  <Card title="Google Drive" icon={<img src="/images/apps/google-drive.png" alt="Google Drive" width="24" height="24" />}>
-    Contracts, agreements, vendor files
-  </Card>
-  <Card title="Salesforce" icon={<img src="/images/apps/salesforce.svg" alt="Salesforce" width="24" height="24" />}>
-    Pipeline and forecast numbers for the board pack
-  </Card>
-</CardGroup>
+The safest first Runner doesn't move money. It tells you where to look.
 
-Runner also works with Stripe, QuickBooks, HubSpot, and [many more](/get-started/connecting-accounts).
+## Build this first: invoice exception check
 
----
+```text
+Create a Runner named Invoice Exceptions.
 
-## What Runner does for finance and ops
+Every Friday at 9:00am in my timezone, review vendor invoices received in the
+last 7 days in [Gmail or Drive folder], active agreements in [Drive folder],
+and the invoice tracking sheet in [Google Sheet].
 
-### Build the board pack without the assembly work
+For each invoice that isn't already marked reviewed in the tracking sheet,
+extract the vendor, invoice number, invoice date, service
+period, line items, total, currency, and payment terms shown in the source.
+Compare those fields with the matching active agreement and tracking sheet.
 
-Stop pulling numbers from five different sources by hand. Runner grabs MRR and revenue from Stripe, pipeline from your CRM, headcount from your team tracker, burn rate from your operating model, and assembles the deck. You review it, not build it.
+Flag only:
+- a possible duplicate invoice number or amount
+- a rate, quantity, or total that doesn't match the agreement
+- a charge outside the agreement dates or scope
+- missing agreement, purchase reference, or required field
+- payment terms that changed
 
-> *"I need to build the board pack before Friday."*
+Cite the invoice and agreement used for every flag. If a document is missing
+or unreadable, say so. Don't approve, reject, pay, or edit an accounting
+record. Return a table for review and a short list of questions for the owner.
 
-Runner pulls live numbers from Stripe, Salesforce, and your Sheets. Revenue up 14%, burn on track, 2 open roles. Board pack is drafted and ready for your review.
+Before you create the Runner, show me the final name, prompt, schedule, and
+timezone. Wait for my confirmation.
+```
 
-### Process invoices without the manual matching
+**A user-created Runner becomes active as soon as it's created.** Review its schedule and permissions, then click **Run now**.
 
-Drop your invoices into a session, or point Runner at a Drive folder. It reads each one, matches line items against signed agreements, and flags anomalies. Clean invoices can go to your invoice approval queue. Flagged ones come with a summary of what's off.
+Run it against a small set first. Five invoices you already checked will tell you more than a perfect-looking prompt.
 
-> *"We've got a pile of vendor invoices to process, some of them don't match our agreements."*
+## Give it the rules
 
-Six invoices are approval-ready. Two need a conversation before you pay them. AWS bill is 22% over contracted rate, and the agency invoiced outside the SOW.
+Put stable rules in an operations Project:
 
-### Refresh the forecast with actual numbers
+- Where current agreements and approved vendor records live.
+- Required fields and matching tolerances.
+- Owners for vendors, reports, and close items.
+- Escalation timing.
+- Actions Runner must never take without a person.
 
-Your operating model is stale the day after you update it. Runner pulls actual revenue from Stripe and actual expenses from your tracker, updates the model, and highlights the variances that matter.
+Keep invoice, contract, and checklist status in the source files. Each run starts in a separate session and doesn't automatically receive the last run's output.
 
-> *"Our operating model is stale, can you help me update it?"*
+Start every financial write on **Ask**. In many cases, the right permission is **Off**. Runner can do the collection and comparison without becoming the person who approves the result.
 
-Once the model update runs, it's current. Revenue 8% ahead, hiring spend 15% over plan. The three real variances are called out, the rest is noise you can skip.
+## Add the next check
 
-### Automate the weekly report
+### Vendor renewal watch
 
-Every Monday, Runner checks the reporting sheet, nudges anyone whose section is blank, then pulls revenue from Stripe and pipeline from the CRM and posts the summary to #leadership.
+Run Monday morning. Find agreements renewing in the next 60 days, then show owner, current cost, notice deadline, and any renewal email. Draft the question. Don't renew or cancel.
 
-> *"Every Monday, make sure all department leads have submitted their numbers for the weekly report."*
+### Receivables follow-up
 
-Runner tracks who hasn't submitted and follows up. It's the ops person you don't have to hire.
+Run twice a week. Read the approved open-invoice list and matching customer thread. Draft a follow-up only when the source says the invoice is past due and no payment or dispute is recorded.
 
-### Close the month faster
+### Weekly operating report
 
-Runner checks your close checklist, identifies what's still open, pulls contractor invoices from Gmail to match against POs, reconciles revenue against your recognition schedule, and pings the last blocker.
+Run after the reporting deadline. Pull submitted numbers into the agreed format, identify missing inputs, and draft reminders for the owners. Don't invent a number to complete the page.
 
-> *"It's month-end, what do I need to close out?"*
+### Close readiness
 
-Four of twelve items still open. Revenue recognition matches. Contractor invoices pulled. Mike is the last blocker on headcount numbers, and Runner pings him.
+Run each weekday morning. If the close checklist isn't active, stop. During close, list open items and missing support, then name the source or owner shown. Keep reconciliations and sign-off with finance.
 
----
+## The useful result is a shorter exception list
 
-## A finance and ops day with Runner
+Runner doesn't need to "run finance." It needs to take a long list and show only the items that deserve a human decision.
 
-| Time | What Runner does |
-|------|-----------------|
-| **8:00 AM** | Morning brief: close items outstanding, invoices waiting, submission gaps |
-| **9:00 AM** | Processes new vendor invoices from Drive, flags anomalies against contracts |
-| **10:00 AM** | Pulls live numbers from Stripe and your tracker, then updates the operating model |
-| **11:00 AM** | Nudges department leads who haven't submitted their numbers |
-| **1:00 PM** | Builds the weekly report once everyone has submitted |
-| **2:00 PM** | Preps the finance sync and attaches the Stripe export to the meeting |
-| **4:00 PM** | Posts the weekly summary to #leadership |
-| **Month-end** | Runs the close checklist, reconciles revenue, chases the last blockers |
-
----
-
-## Prompts to try right now
-
-<AccordionGroup>
-  <Accordion title="Board pack">
-    *"Build the board pack for this month. Pull revenue from Stripe, pipeline from the CRM, headcount from the team tracker, and burn from the operating model. Draft it in a Google Doc."*
-  </Accordion>
-  <Accordion title="Invoice processing">
-    *"Process the vendor invoices in my Drive folder. Match line items against our signed agreements. Flag anything that doesn't match and queue the rest for approval."*
-  </Accordion>
-  <Accordion title="Forecast refresh">
-    *"Update the operating model with actual numbers. Pull revenue from Stripe and expenses from the tracker. Highlight any line item where variance is more than 10%."*
-  </Accordion>
-  <Accordion title="Weekly report Runner">
-    *"Every Monday at 8am, check the reporting sheet. If anyone's section is blank, nudge them in Slack. Once everyone submits, pull the numbers and post the summary to #leadership."*
-  </Accordion>
-  <Accordion title="Month-end close">
-    *"It's month-end. Check the close checklist, tell me what's still open, reconcile revenue against the recognition schedule, and ping whoever is holding things up."*
-  </Accordion>
-  <Accordion title="Find a contract">
-    *"Find the vendor MSA we signed last quarter. I need to check the payment terms."*
-  </Accordion>
-  <Accordion title="Finance sync prep">
-    *"Grab the Stripe export I downloaded and drop it into the finance sheet. Attach it to the sync meeting invite."*
-  </Accordion>
-</AccordionGroup>
-
----
-
-## Automate the predictable stuff
-
-Once you've tried these manually, turn them into Runners:
-
-- **Weekly report chase** every Monday at 8am. Check submissions, nudge stragglers, and post the summary.
-- **Invoice processing** every Friday. Pull new invoices, match against contracts, queue for approval.
-- **Forecast refresh** on the 1st and 15th of each month. Keep the model current without manual effort.
-- **Month-end close** starting 3 days before end of month. Track the checklist, chase blockers, draft the close memo.
-
-Stop spending your week pulling numbers from one place to another. Let Runner handle the assembly so you can focus on the decisions.
-
-[Learn how to create Runners →](/runners/create-your-own)
+That's where the time and money come back.
 
 ---
 
 ## What's next?
 
-<CardGroup cols={2}>
-  <Card title="Connect your apps" icon="plug" href="/get-started/connecting-accounts">
-    Link Stripe, your CRM, Sheets, and the rest.
+<CardGroup cols={3}>
+  <Card title="What should you automate?" icon="star" href="/tips/tips-and-tricks">
+    Find recurring work tied to cost, time, or risk.
   </Card>
-  <Card title="Browse workflows" icon="arrows-spin" href="/workflows/starter-workflows">
-    Starter Workflows you can call with /slug in any message.
+  <Card title="Connect your apps" icon="plug" href="/get-started/connecting-accounts">
+    Link the sources where invoices, agreements, and trackers live.
+  </Card>
+  <Card title="Tool permissions" icon="shield-check" href="/connections/tool-permissions">
+    Keep high-stakes writes behind a person.
   </Card>
 </CardGroup>

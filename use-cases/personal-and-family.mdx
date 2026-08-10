@@ -1,141 +1,106 @@
 ---
 title: "Runner for your personal life"
-description: "Plan vacations, audit subscriptions, order food, and keep your personal life organized. Runner connects Gmail, Calendar, WhatsApp, and your browser."
+sidebarTitle: "Personal and family"
+description: "Keep up with your calendar, commitments, renewals, and family plans."
 ---
 
-You sit down on a Saturday morning with a coffee and think, "I should cancel those subscriptions I don't use." Thirty minutes later you've opened four emails, searched for three different login pages, and you're now looking at a Portuguese vacation instead because one of the cancellation emails was from a travel site. Nothing got done.
+Your personal life already has workflows. They're just living in your head.
 
-Runner does the thing you meant to do. You say it, Runner does it.
+Check the school email. Remember the dentist. Notice the subscription renewal. Look at the calendar before promising Saturday afternoon. None of it is hard. It just keeps coming back.
+
+Personal work is a good place to build your first Runner because you know what right looks like.
 
 <Note>
-  Writes follow your [tool permissions](/connections/tool-permissions). **Ask** stages an **Action Card** for review. **Allow** acts without asking. **Off** blocks the tool unless a user-created Runner has its own override. Browser checkouts and bookings add one last stop: Runner shows you the final action and asks before submitting.
+  Writes follow your [tool permissions](/connections/tool-permissions). Keep messages, calendar changes, purchases, cancellations, and bookings on **Ask** while you test. Browser checkouts and submissions add a final confirmation before they're submitted.
 </Note>
 
-## Your tools, connected
+## Start with the work you repeat
 
-Runner works with the apps and tools you use at home. Not just work stuff.
+| Runner | What it checks | Useful result |
+|--------|----------------|---------------|
+| **Personal Assistant** | Gmail and Google Calendar | A short plan with priorities, meetings, conflicts, and commitments |
+| **Open-loop check** | Sent email and upcoming calendar | People waiting on you and promises without a next step |
+| **Sunday family preview** | Family calendar and relevant email | The week ahead, missing details, and conflicts to solve |
+| **Renewal review** | Receipts, renewal notices, and your tracking sheet | Charges approaching, with amount and decision date shown in the source |
+| **Trip research** | Calendar, preferences, and browser results | A comparison you can review before booking anything |
 
-<CardGroup cols={3}>
-  <Card title="Gmail" icon={<img src="/images/apps/gmail.svg" alt="Gmail" width="24" height="24" />}>
-    Subscription receipts, bills, family emails
-  </Card>
-  <Card title="Google Calendar" icon={<img src="/images/apps/google-calendar.svg" alt="Google Calendar" width="24" height="24" />}>
-    Family events, appointments, open windows
-  </Card>
-  <Card title="WhatsApp" icon={<img src="/images/apps/whatsapp.svg" alt="WhatsApp" width="24" height="24" />}>
-    Text the group chat, coordinate plans
-  </Card>
-  <Card title="Browser" icon="globe">
-    Order food, search flights, find local events
-  </Card>
-  <Card title="Google Sheets" icon={<img src="/images/apps/google-sheets.png" alt="Google Sheets" width="24" height="24" />}>
-    Trip comparisons, budget tracking
-  </Card>
-  <Card title="Your files" icon="folder-open">
-    Drop in PDFs, spreadsheets, and photos. Runner reads and finds them.
-  </Card>
-</CardGroup>
+Start with the Personal Assistant. It gives you a useful result every morning while you learn how connected apps, schedules, and permissions work.
 
----
+## Build this first: Personal Assistant
 
-## What Runner does for your personal life
+```text
+Create a Personal Assistant Runner for me.
 
-### Plan a vacation that actually works for your family
+Every day at 9:00am in my timezone, review my connected Gmail and Google
+Calendar. Give me a short plan with:
 
-Runner checks your calendar for open weeks, searches flights and hotels, compares options in a spreadsheet, and asks if you want to send the shortlist to your partner so you can decide together.
+1. My three most important priorities.
+2. Meetings that need preparation.
+3. Commitments and open loops that need attention.
+4. Schedule conflicts, deadlines, or important messages I may have missed.
+5. One repeated piece of personal admin that may be worth automating.
 
-> *"I want to plan a trip to Portugal with my family in August."*
+Cite the email or event behind each item. If the source is unclear, say so.
+Don't send messages, change my calendar, buy, book, or cancel anything. Draft
+or suggest the next step for my review.
 
-Aug 9-17 works for everyone. Three flight options and five family suites in Lisbon and the Algarve, ready to compare in a spreadsheet. Want me to send it to your wife?
+Before you create it, show me the final name, prompt, schedule, and timezone.
+Wait for my confirmation.
+```
 
-### Audit your subscriptions
+**A user-created Runner becomes active as soon as it's created.** Review its schedule and permissions, then click **Run now**.
 
-You're paying for stuff you forgot about. Runner scans your email for recurring receipts, finds the ones you haven't logged into in 90+ days, and opens the cancellation pages for you.
+The full walkthrough is in [Quickstart](/quickstart), including Gmail and Calendar permissions, testing with **Run now**, and saving feedback where it lasts.
 
-> *"I feel like I'm paying for a bunch of stuff I don't use anymore."*
+## Make the useful parts stick
 
-23 active subscriptions totaling $487/month. Six you haven't used in 90+ days: Headspace, Dropbox Plus, Adobe Stock, Calm, MasterClass, NYT Cooking. That's $89/month back in your pocket. Cancellation pages are open.
+Put stable preferences in [Personal Memory](/using-runner/memory):
 
-### Order food for a party without the research spiral
+- How early you want to hear about an event.
+- Travel, food, and transportation preferences.
+- Names and relationships you want Runner to understand.
+- The tone you use for personal messages.
 
-Hosting people? Runner checks your past orders, finds catering options on Uber Eats near you, compares prices, and builds an order for delivery an hour before your guests arrive. Runner shows you the final purchase action and asks you to confirm before submitting.
+Put standing instructions in the saved prompt or a Personal Project. Keep live dates, replies, and charges in Calendar, Gmail, or the tracking sheet Runner reads.
 
-> *"I'm hosting 20 people on Saturday, can you help me figure out food?"*
+Each run starts in a separate session. Last week's output doesn't automatically come along. If a fact should last, save it to Personal Memory. If a rule should apply every time, put it in the Runner's prompt.
 
-Four options deliver Saturday: taco bar $180, BBQ $220, pizza $140, Mediterranean $200. Pick a menu, then confirm the final purchase action before Runner submits the order.
+## Build the next one
 
-### Keep your personal life organized
+### Open-loop check
 
-Runner scans your email and calendar every morning. Reminds you about birthdays, appointments, and school events. Flags bills due this week. If someone emails about plans, it suggests adding them to your calendar. On Sundays, you get a preview of the week ahead.
+Run at 4:30pm each weekday. Look for messages you sent that still need a reply and commitments due soon. Draft the next follow-up, but don't send it.
 
-> *"Keep my personal life organized, I always forget stuff."*
+### Sunday family preview
 
-Runner reads the email, figures out it's an event, and adds it to your calendar.
+Run Sunday at 6pm. Read the next seven days of Calendar and relevant family email. List appointments, school events, travel, conflicts, and anything missing a time or place.
 
-### Find the file you saved somewhere
+### Renewal review
 
-Every file you share with Runner stays in its **Files** area, searchable by name, content, or description. It finds the file and offers to share it.
+Run on the first of each month. Find renewal notices and recurring receipts in email, then show the amount and renewal date stated in the source. A receipt doesn't prove whether you still use something, so ask before recommending a cancellation.
 
-> *"Can you find that recipe my mom sent me? I think I saved it as a PDF."*
+### Trip research
 
-Found it. Moms_Lasagna_Recipe.pdf in your files. Want me to email it to you so you can pull it up at the store?
+Run when you're planning, or on a schedule while prices matter. Compare options against the dates and preferences you give it. Runner shows the final browser purchase or booking action and asks before submitting.
 
-### Make weekend plans without the 12-message group thread
+## Learn here, then move up
 
-Runner checks your calendar, suggests times, and texts the group. Once everyone agrees, Runner shows you the final reservation action and asks you to confirm before submitting.
+A morning plan gives you time back. A renewal review can save a little money. Once those work, take the same structure into your business: clear sources, clear rules, clear review points, and a schedule.
 
-> *"I want to get together with a few friends this weekend, help me figure it out."*
-
-You're free Saturday afternoon. There's a food festival downtown and a new brewery. Runner texts the group and suggests 3pm. Once everyone agrees, it shows you the final reservation action and asks you to confirm before submitting.
-
----
-
-## Prompts to try right now
-
-<AccordionGroup>
-  <Accordion title="Plan a trip">
-    *"I want to plan a trip to [destination] with my family in [month]. Check our calendars for open dates, search flights and hotels, and put the options in a spreadsheet."*
-  </Accordion>
-  <Accordion title="Subscription audit">
-    *"Scan my email for recurring subscriptions. Find anything I haven't used in the last 90 days. Tell me what I'm paying and open the cancellation pages."*
-  </Accordion>
-  <Accordion title="Party food">
-    *"I'm hosting [number] people on [day]. Find catering options near me, compare prices, and schedule delivery for an hour before they arrive."*
-  </Accordion>
-  <Accordion title="Weekly preview">
-    *"Give me a preview of my week. Birthdays, appointments, school events, bills due. Anything I should know about before Monday."*
-  </Accordion>
-  <Accordion title="Find a file">
-    *"Find [description of file]. I think I saved it as a [type] somewhere in my files."*
-  </Accordion>
-  <Accordion title="Weekend plans">
-    *"I want to hang out with a few friends this weekend. Check my calendar, find things to do nearby, and text the group with a time."*
-  </Accordion>
-</AccordionGroup>
-
----
-
-## Set it and forget it
-
-Once you're comfortable, automate the repeatable stuff:
-
-- **Sunday evening preview** of the week ahead. Birthdays, appointments, deadlines, anything you'd forget.
-- **Monthly subscription audit** on the first of each month. What you're paying for, what you're not using.
-- **Morning personal brief** every weekday at 7:30am. Bills, events, things that need attention today.
-
-Your personal life doesn't need to be a second job. Let Runner handle the logistics.
-
-[Learn how to create Runners →](/runners/create-your-own)
+That's how one useful assistant turns into several useful Runners.
 
 ---
 
 ## What's next?
 
-<CardGroup cols={2}>
-  <Card title="Connect your apps" icon="plug" href="/get-started/connecting-accounts">
-    Link Gmail, Calendar, and WhatsApp to get started.
+<CardGroup cols={3}>
+  <Card title="Build your Personal Assistant" icon="bolt" href="/quickstart">
+    Connect Gmail and Calendar, then run it once.
   </Card>
-  <Card title="Browse workflows" icon="arrows-spin" href="/workflows/starter-workflows">
-    Starter Workflows you can call with /slug in any message.
+  <Card title="What should you automate?" icon="star" href="/tips/tips-and-tricks">
+    Find personal and business work worth putting on a schedule.
+  </Card>
+  <Card title="Personal Memory" icon="brain" href="/using-runner/memory">
+    Save facts and preferences that should carry into future sessions.
   </Card>
 </CardGroup>
